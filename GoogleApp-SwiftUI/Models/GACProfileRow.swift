@@ -16,7 +16,7 @@ struct GACProfileRow {
     init(imageName: Utility.ImageName,
          title: String,
          divider: GACProfileDividerView = .none,
-         dividerInset: CGFloat) {
+         dividerInset: CGFloat = 0) {
         self.imageName = imageName
         self.title = title
         self.divider = divider
