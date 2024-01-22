@@ -16,7 +16,8 @@ struct HomePage: View {
         GACSearchOptionsView(title: "Shop for products", subtitle: "in your screenshots", image: .tag),
         GACSearchOptionsView(title: "Homework help", subtitle: "using your camera", image: .degree)
     ]
-    @State var profileScreenOrigin: CGPoint = .zero
+    @State var profileIconFrame: CGRect = .zero
+    @State var profileScreenShown: Bool = false
     
     var body: some View {
         NavigationView {
@@ -37,9 +38,12 @@ struct HomePage: View {
                             .overlay {
                                 GeometryReader { proxy in
                                     Color.clear.onAppear {
-                                        profileScreenOrigin = proxy.frame(in: .global).origin
+                                        profileIconFrame = proxy.frame(in: .global)
                                     }
                                 }
+                            }
+                            .onTapGesture {
+                                profileScreenShown = true
                             }
                         }
                     HStack {
@@ -113,6 +117,9 @@ struct HomePage: View {
                 }
             }
             .preferredColorScheme(.dark)
+            .sheet(isPresented: $profileScreenShown) {
+                GACProfile(profileScreenShown: $profileScreenShown)
+            }
         }
     }
 }

@@ -21,6 +21,7 @@ struct GACProfile: View {
         GACProfileRow(imageName: .help, title: "Help & Feedback",
                       divider: .bottom)
     ]
+    @Binding var profileScreenShown: Bool
     
     var body: some View {
         ZStack {
@@ -52,7 +53,7 @@ struct GACProfile: View {
                                         .foregroundColor(.white)
                                         .padding(.leading, Dimensions.Padding.padding15)
                                         .onTapGesture {
-                                            print("Ordered to close")
+                                            profileScreenShown.toggle()
                                         }
                                     Spacer()
                                 }
