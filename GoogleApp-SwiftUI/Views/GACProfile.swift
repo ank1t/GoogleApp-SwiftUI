@@ -48,7 +48,7 @@ struct GACProfile: View {
                                         .renderingMode(.template)
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
-                                        .frame(width: Dimensions.FrameSize.size20)
+                                        .frame(width: Dimensions.FrameSize.size15)
                                         .foregroundColor(.white)
                                         .padding(.leading, Dimensions.Padding.padding15)
                                         .onTapGesture {
@@ -57,7 +57,7 @@ struct GACProfile: View {
                                     Spacer()
                                 }
                             }
-                            .padding(Dimensions.Padding.padding10)
+                            .padding(.vertical, Dimensions.Padding.padding15)
                             ForEach(options, id: \.self) { option in
                                 GACProfileRowView(profileRow: option)
                             }
@@ -67,6 +67,7 @@ struct GACProfile: View {
                         .cornerRadius(Dimensions.CornerRadius.cornerRadius10)
                     }
                     .frame(width: proxy.frame(in: .global).width * 0.95)
+                    Spacer()
                 }
             }
         }

@@ -26,11 +26,11 @@ struct Utility {
         case addUser = "add-user"
         case userSettings = "user-settings"
         case incognito
-        case history
+        case history = "clock"
         case speaker = "speaker.wave.2"
         case settings = "gear.circle"
-        case help
-        case close
+        case help = "questionmark.circle"
+        case close = "xmark"
         
         var icon: String {
             return self.rawValue
