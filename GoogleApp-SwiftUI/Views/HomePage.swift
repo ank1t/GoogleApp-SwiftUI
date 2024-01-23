@@ -16,9 +16,8 @@ struct HomePage: View {
         GACSearchOptionsView(title: "Shop for products", subtitle: "in your screenshots", image: .tag),
         GACSearchOptionsView(title: "Homework help", subtitle: "using your camera", image: .degree)
     ]
-    @State var profileIconFrame: CGRect = .zero
     @State var profileScreenShown: Bool = false
-    @State var screenFrame: CGRect = .zero
+    @Namespace private var animation
     
     var body: some View {
         NavigationView {
@@ -36,16 +35,16 @@ struct HomePage: View {
                             .frame(width: Dimensions.FrameSize.size25)
                             .padding([.top, .trailing])
                             .foregroundColor(.accentColor)
-                            .overlay {
-                                GeometryReader { proxy in
-                                    Color.clear.onAppear {
-                                        profileIconFrame = proxy.frame(in: .global)
-                                    }
+                            .onTapGesture {
+                                withAnimation(.spring()) {
+                                    profileScreenShown.toggle()
                                 }
                             }
-                            .onTapGesture {
-                                profileScreenShown = true
-                            }
+                            .matchedGeometryEffect(id: "Profile-Transition", in: animation)
+                        GACProfile(profileScreenShown: $profileScreenShown)
+                                .frame(width: profileScreenShown ? UIScreen.main.bounds.width : 0,
+                                       height: profileScreenShown ? UIScreen.main.bounds.height : 0)
+                                .zIndex(100)
                         }
                     HStack {
                         Spacer()
@@ -118,17 +117,6 @@ struct HomePage: View {
                 }
             }
             .preferredColorScheme(.dark)
-            .overlay {
-                GeometryReader { proxy in
-                    Color.clear.onAppear {
-                        screenFrame = proxy.frame(in: .global)
-                    }
-                }
-            }
-            .sheet(isPresented: $profileScreenShown) {
-                GACProfile(profileScreenShown: $profileScreenShown)
-                    .Popup(
-            }
         }
     }
 }

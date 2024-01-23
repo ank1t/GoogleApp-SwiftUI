@@ -72,5 +72,8 @@ struct GACProfile: View {
                 }
             }
         }
+        .onTapGesture {
+            profileScreenShown.toggle()
+        }
     }
 }
