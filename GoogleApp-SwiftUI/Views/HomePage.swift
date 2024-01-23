@@ -2,7 +2,7 @@
 //  HomePAge.swift
 //  GoogleAppClone-SwiftUI
 //
-//  Created by Admin on 2024-01-19.
+//  Created by Singh, Ankit on 2024-01-19.
 //
 
 import SwiftUI
@@ -18,6 +18,7 @@ struct HomePage: View {
     ]
     @State var profileIconFrame: CGRect = .zero
     @State var profileScreenShown: Bool = false
+    @State var screenFrame: CGRect = .zero
     
     var body: some View {
         NavigationView {
@@ -117,8 +118,16 @@ struct HomePage: View {
                 }
             }
             .preferredColorScheme(.dark)
+            .overlay {
+                GeometryReader { proxy in
+                    Color.clear.onAppear {
+                        screenFrame = proxy.frame(in: .global)
+                    }
+                }
+            }
             .sheet(isPresented: $profileScreenShown) {
                 GACProfile(profileScreenShown: $profileScreenShown)
+                    .Popup(
             }
         }
     }

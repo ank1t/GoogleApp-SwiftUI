@@ -2,7 +2,7 @@
 //  GoogleApp_SwiftUIApp.swift
 //  GoogleApp-SwiftUI
 //
-//  Created by Admin on 2024-01-19.
+//  Created by Singh, Ankit on 2024-01-19.
 //
 
 import SwiftUI
