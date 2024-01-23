@@ -53,7 +53,9 @@ struct GACProfile: View {
                                         .foregroundColor(.white)
                                         .padding(.leading, Dimensions.Padding.padding15)
                                         .onTapGesture {
-                                            profileScreenShown.toggle()
+                                            withAnimation(.spring()) {
+                                                profileScreenShown.toggle()
+                                            }
                                         }
                                     Spacer()
                                 }
@@ -73,7 +75,9 @@ struct GACProfile: View {
             }
         }
         .onTapGesture {
-            profileScreenShown.toggle()
+            withAnimation(.spring()) {
+                profileScreenShown.toggle()
+            }
         }
     }
 }
