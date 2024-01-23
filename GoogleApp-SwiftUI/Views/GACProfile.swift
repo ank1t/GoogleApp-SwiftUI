@@ -26,7 +26,7 @@ struct GACProfile: View {
     var body: some View {
         ZStack {
             GeometryReader { proxy in
-                Color.clear
+                Color.black.opacity(0.3)
                     .ignoresSafeArea()
                 
                 VStack {
@@ -79,5 +79,6 @@ struct GACProfile: View {
                 profileScreenShown.toggle()
             }
         }
+        .ignoresSafeArea()
     }
 }

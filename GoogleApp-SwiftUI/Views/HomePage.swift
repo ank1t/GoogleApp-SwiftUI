@@ -41,11 +41,6 @@ struct HomePage: View {
                                 }
                             }
                             .matchedGeometryEffect(id: "Profile-Transition", in: animation)
-                        GACProfile(profileScreenShown: $profileScreenShown)
-                                .frame(width: profileScreenShown ? UIScreen.main.bounds.width : 0,
-                                       height: profileScreenShown ? UIScreen.main.bounds.height : 0)
-                                .zIndex(100)
-                                .ignoresSafeArea()
                         }
                     HStack {
                         Spacer()
@@ -116,6 +111,9 @@ struct HomePage: View {
                         }
                     }
                 }
+                GACProfile(profileScreenShown: $profileScreenShown)
+                    .frame(width: profileScreenShown ? UIScreen.main.bounds.width : 0,
+                           height: profileScreenShown ? UIScreen.main.bounds.height : 0)
             }
             .preferredColorScheme(.dark)
         }
