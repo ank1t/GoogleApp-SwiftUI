@@ -43,7 +43,7 @@ struct HomePage: View {
                                 }
                             }
                             .onTapGesture {
-                                withAnimation(.easeOut(duration: 0.05)) {
+                                withAnimation(.easeOut(duration: Constants.profileScreenAnimationDuration)) {
                                     profileScreenShown.toggle()
                                 }
                             }
@@ -117,7 +117,7 @@ struct HomePage: View {
                     }
                 }
                 if profileScreenShown {
-                    Color.black.opacity(0.3)
+                    Color.black.opacity(Constants.overlayOpacity)
                         .ignoresSafeArea()
                         .onTapGesture {
                             profileScreenShown.toggle()

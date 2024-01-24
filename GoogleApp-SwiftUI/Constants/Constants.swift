@@ -13,3 +13,8 @@ struct LightTheme {
     static let searchBarPlaceholderColor = Color(uiColor: UIColor(red: 154/255.0, green: 157/255.0, blue: 164/255.0, alpha: 1))
     static let gray400 = UIColor(red: 55/255.0, green: 55/255.0, blue: 54/255.0, alpha: 0.75).cgColor
 }
+
+struct Constants {
+    static let overlayOpacity: CGFloat = 0.3
+    static let profileScreenAnimationDuration: CGFloat = 0.05
+}
