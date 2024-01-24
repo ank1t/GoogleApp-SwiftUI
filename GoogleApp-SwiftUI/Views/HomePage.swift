@@ -40,7 +40,6 @@ struct HomePage: View {
                                     profileScreenShown.toggle()
                                 }
                             }
-                            .matchedGeometryEffect(id: "Profile-Transition", in: animation)
                         }
                     HStack {
                         Spacer()
@@ -111,9 +110,6 @@ struct HomePage: View {
                         }
                     }
                 }
-                GACProfile(profileScreenShown: $profileScreenShown)
-                    .frame(width: profileScreenShown ? UIScreen.main.bounds.width : 0,
-                           height: profileScreenShown ? UIScreen.main.bounds.height : 0)
             }
             .preferredColorScheme(.dark)
         }
