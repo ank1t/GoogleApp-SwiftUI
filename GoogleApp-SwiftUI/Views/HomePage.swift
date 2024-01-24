@@ -14,14 +14,14 @@ struct HomePage: View {
         GACSearchOptionsView(title: "Search inside photos", subtitle: "from your camera", image: .searchImage),
         GACSearchOptionsView(title: "Identify song", subtitle: "by listening", image: .note),
         GACSearchOptionsView(title: "Shop for products", subtitle: "in your screenshots", image: .tag),
-        GACSearchOptionsView(title: "Homework help", subtitle: "using your camera", image: .degree)
-    ]
+        GACSearchOptionsView(title: "Homework help", subtitle: "using your camera", image: .degree)]
     @State var profileScreenShown: Bool = false
     @Namespace private var animation
+    @State var profileIconFrame: CGRect = .zero
     
     var body: some View {
         NavigationView {
-            ZStack {
+            ZStack(alignment: .topTrailing) {
                 LightTheme.tabBarBGColor
                     .ignoresSafeArea()
                 
@@ -35,12 +35,19 @@ struct HomePage: View {
                             .frame(width: Dimensions.FrameSize.size25)
                             .padding([.top, .trailing])
                             .foregroundColor(.accentColor)
+                            .overlay {
+                                GeometryReader { proxy in
+                                    Color.clear.onAppear {
+                                        profileIconFrame = proxy.frame(in: .global)
+                                    }
+                                }
+                            }
                             .onTapGesture {
-                                withAnimation(.spring()) {
+                                withAnimation(.interactiveSpring()) {
                                     profileScreenShown.toggle()
                                 }
                             }
-                        }
+                    }
                     HStack {
                         Spacer()
                         ZStack {
@@ -57,7 +64,6 @@ struct HomePage: View {
                                 }
                             }
                         }
-                        Spacer()
                     }
                     .padding(.top, Dimensions.Padding.padding20)
                     
@@ -110,6 +116,9 @@ struct HomePage: View {
                         }
                     }
                 }
+                GACProfile(profileScreenShown: $profileScreenShown)
+                    .frame(width: profileScreenShown ? UIScreen.main.bounds.width : 0, height: profileScreenShown ? UIScreen.main.bounds.height : 0)
+                    .offset(x: profileScreenShown ? 0 : profileIconFrame.midX, y: 0)
             }
             .preferredColorScheme(.dark)
         }

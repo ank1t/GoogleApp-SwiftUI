@@ -26,11 +26,11 @@ struct GACProfile: View {
     var body: some View {
         ZStack {
             GeometryReader { proxy in
-                Color.black.opacity(0.3)
-                    .ignoresSafeArea()
+//                Color.black.opacity(0.3)
+//                    .ignoresSafeArea()
                 
                 VStack {
-                    Spacer()
+//                    Spacer()
                     HStack {
                         Spacer(minLength: proxy.frame(in: .global).width * 0.05)
                         VStack(alignment: .leading, spacing: Dimensions.Spacing.spacing10) {
@@ -53,7 +53,7 @@ struct GACProfile: View {
                                         .foregroundColor(.white)
                                         .padding(.leading, Dimensions.Padding.padding15)
                                         .onTapGesture {
-                                            withAnimation(.spring()) {
+                                            withAnimation(.interactiveSpring()) {
                                                 profileScreenShown.toggle()
                                             }
                                         }
@@ -70,12 +70,12 @@ struct GACProfile: View {
                         .cornerRadius(Dimensions.CornerRadius.cornerRadius10)
                     }
                     .frame(width: proxy.frame(in: .global).width * 0.95)
-                    Spacer()
+//                    Spacer()
                 }
             }
         }
         .onTapGesture {
-            withAnimation(.spring()) {
+            withAnimation(.interactiveSpring()) {
                 profileScreenShown.toggle()
             }
         }
