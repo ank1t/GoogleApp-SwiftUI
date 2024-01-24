@@ -16,8 +16,8 @@ struct HomePage: View {
         GACSearchOptionsView(title: "Shop for products", subtitle: "in your screenshots", image: .tag),
         GACSearchOptionsView(title: "Homework help", subtitle: "using your camera", image: .degree)]
     @State var profileScreenShown: Bool = false
-    @Namespace private var animation
     @State var profileIconFrame: CGRect = .zero
+    @State var contentFrame: CGRect = .zero
     
     var body: some View {
         NavigationView {
@@ -43,7 +43,7 @@ struct HomePage: View {
                                 }
                             }
                             .onTapGesture {
-                                withAnimation(.interactiveSpring()) {
+                                withAnimation(.easeOut(duration: 0.05)) {
                                     profileScreenShown.toggle()
                                 }
                             }
@@ -116,11 +116,25 @@ struct HomePage: View {
                         }
                     }
                 }
+                if profileScreenShown {
+                    Color.black.opacity(0.3)
+                        .ignoresSafeArea()
+                        .onTapGesture {
+                            profileScreenShown.toggle()
+                        }
+                }
                 GACProfile(profileScreenShown: $profileScreenShown)
-                    .frame(width: profileScreenShown ? UIScreen.main.bounds.width : 0, height: profileScreenShown ? UIScreen.main.bounds.height : 0)
-                    .offset(x: profileScreenShown ? 0 : profileIconFrame.midX, y: 0)
+                    .frame(width: profileScreenShown ? contentFrame.width : 0, height: profileScreenShown ? contentFrame.height : 0)
+                    .offset(x: profileScreenShown ? 0 : profileIconFrame.midX, y: profileScreenShown ? 0 : -profileIconFrame.midY)
             }
             .preferredColorScheme(.dark)
+        }
+        .overlay {
+            GeometryReader { proxy in
+                Color.clear.onAppear {
+                    contentFrame = proxy.frame(in: .global)
+                }
+            }
         }
     }
 }
