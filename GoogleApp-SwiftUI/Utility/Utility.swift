@@ -31,6 +31,7 @@ struct Utility {
         case settings = "gear.circle"
         case help = "questionmark.circle"
         case close = "xmark"
+        case google_logo
         
         var icon: String {
             return self.rawValue
@@ -54,6 +55,7 @@ struct Dimensions {
         static let size30: CGFloat = 30
         static let size40: CGFloat = 40
         static let size50: CGFloat = 50
+        static let size75: CGFloat = 75
         static let size100: CGFloat = 100
         static let size200: CGFloat = 200
     }

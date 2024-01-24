@@ -31,11 +31,11 @@ struct GACProfileRowView: View {
                     .renderingMode(.template)
                     .aspectRatio(contentMode: .fit)
                     .foregroundColor(.white)
-                    .frame(height: Dimensions.FrameSize.size16)
+                    .frame(height: Dimensions.FrameSize.size20)
                     .padding(.horizontal, Dimensions.Padding.padding15)
                 
                 Text(profileRow.title)
-                    .font(.system(size: Dimensions.FontSize.font12, weight: .medium))
+                    .font(.system(size: Dimensions.FontSize.font14))
                     .foregroundColor(.white)
             }
             .padding(.top, profileRow.divider == .top ? Dimensions.Padding.padding12 : Dimensions.Padding.padding5)

@@ -34,10 +34,10 @@ struct GACProfile: View {
                             ZStack {
                                 HStack {
                                     Spacer()
-                                    Image(for: .google)
+                                    Image(for: .google_logo)
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
-                                        .frame(width: Dimensions.FrameSize.size30)
+                                        .frame(width: Dimensions.FrameSize.size75)
                                     Spacer()
                                 }
                                 
