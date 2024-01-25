@@ -11,8 +11,8 @@ import SwiftUI
 struct GACHeadlineArticleActionsView: View {
     var body: some View {
         HStack(spacing: Utility.isLargeDevice ? Dimensions.Spacing.spacing25 : Dimensions.Spacing.spacing15) {
-            ForEach(["heart", "square.and.arrow.up", "ellipsis"], id: \.self) { imageName in
-                Image(systemName: imageName)
+            ForEach([.like, .share, .more] as [Utility.ImageName], id: \.self) { imageName in
+                Image(for: imageName)
                     .font(.system(size: Dimensions.FontSize.font15))
             }
         }

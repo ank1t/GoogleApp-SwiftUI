@@ -11,7 +11,7 @@ import SwiftUI
 struct GACHeadlineChannelAuthorTimeView: View {
     var body: some View {
         HStack(spacing: Dimensions.Spacing.spacing10) {
-            Image(systemName: "doc")
+            Image(for: .doc)
                 .font(.system(size: Dimensions.FontSize.font14))
             VStack(alignment: .leading) {
                 Text("Content category")

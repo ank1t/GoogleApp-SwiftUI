@@ -28,7 +28,7 @@ struct GACLocalWeatherView: View {
                 HStack(spacing: Dimensions.Spacing.spacing5) {
                     Text("18°C")
                         .font(.system(size: Dimensions.FontSize.font24, weight: .regular))
-                    Image(systemName: "sunrise")
+                    Image(for: .sunrise)
                         .font(.system(size: Dimensions.FontSize.font18))
                 }
             }

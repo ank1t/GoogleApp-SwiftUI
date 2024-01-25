@@ -16,7 +16,7 @@ struct GACStocksTileView: View {
             HStack(spacing: Dimensions.Spacing.spacing10) {
                 Text("+0.0082%")
                     .foregroundColor(.green)
-                Image(systemName: "arrow.up")
+                Image(for: .upArrow)
                     .renderingMode(.template)
                     .resizable()
                     .frame(width: Dimensions.FrameSize.size10, height: Dimensions.FrameSize.size10)
