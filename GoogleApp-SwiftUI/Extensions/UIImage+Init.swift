@@ -18,4 +18,11 @@ extension Image {
         }
         self = Image(uiImage: uiImage)
     }
+    
+    func renderAsResizable(_ contentMode: ContentMode, _ template: Bool = true) -> some View {
+        self
+            .renderingMode(template ? .template : .original)
+            .resizable()
+            .aspectRatio(contentMode: contentMode)
+    }
 }
