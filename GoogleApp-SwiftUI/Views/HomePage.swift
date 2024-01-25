@@ -79,14 +79,18 @@ struct HomePage: View {
                         
                         HStack {
                             Spacer()
-                            Image(systemName: "mic")
+                            Image(for: .mic)
                                 .renderingMode(.template)
+                                .resizable()
                                 .foregroundColor(.white)
+                                .aspectRatio(contentMode: .fit)
                                 .frame(width: Dimensions.FrameSize.size20, height: Dimensions.FrameSize.size20)
                             
-                            Image(systemName: "camera")
+                            Image(for: .camera)
                                 .renderingMode(.template)
+                                .resizable()
                                 .foregroundColor(.white)
+                                .aspectRatio(contentMode: .fit)
                                 .frame(width: Dimensions.FrameSize.size20, height: Dimensions.FrameSize.size20)
                                 .padding(.horizontal)
                                 .padding(.trailing, Dimensions.Padding.padding24)
@@ -125,7 +129,7 @@ struct HomePage: View {
                 }
                 GACProfile(profileScreenShown: $profileScreenShown)
                     .frame(width: profileScreenShown ? contentFrame.width : 0, height: profileScreenShown ? contentFrame.height : 0)
-                    .offset(x: profileScreenShown ? 0 : profileIconFrame.midX, y: profileScreenShown ? 0 : -profileIconFrame.midY)
+                    .offset(x: profileScreenShown ? 0 : contentFrame.width, y: 0)
             }
             .preferredColorScheme(.dark)
         }
