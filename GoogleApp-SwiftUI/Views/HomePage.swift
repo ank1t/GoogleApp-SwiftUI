@@ -29,9 +29,7 @@ struct HomePage: View {
                     HStack {
                         Spacer()
                         Image(for: .user)
-                            .renderingMode(.template)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
+                            .renderAsResizable(.fit)
                             .frame(width: Dimensions.FrameSize.size25)
                             .padding([.top, .trailing])
                             .foregroundColor(.accentColor)
@@ -52,7 +50,7 @@ struct HomePage: View {
                         Spacer()
                         ZStack {
                             Image(for: .google)
-                                .resizable()
+                                .renderAsResizable(.fit)
                                 .frame(width: Dimensions.FrameSize.size40, height: Dimensions.FrameSize.size40)
                             ScrollView(.horizontal, showsIndicators: false) {
                                 HStack(spacing: Dimensions.Spacing.spacing15) {
@@ -80,17 +78,13 @@ struct HomePage: View {
                         HStack {
                             Spacer()
                             Image(for: .mic)
-                                .renderingMode(.template)
-                                .resizable()
+                                .renderAsResizable(.fit)
                                 .foregroundColor(.white)
-                                .aspectRatio(contentMode: .fit)
                                 .frame(width: Dimensions.FrameSize.size20, height: Dimensions.FrameSize.size20)
                             
                             Image(for: .camera)
-                                .renderingMode(.template)
-                                .resizable()
+                                .renderAsResizable(.fit)
                                 .foregroundColor(.white)
-                                .aspectRatio(contentMode: .fit)
                                 .frame(width: Dimensions.FrameSize.size20, height: Dimensions.FrameSize.size20)
                                 .padding(.horizontal)
                                 .padding(.trailing, Dimensions.Padding.padding24)

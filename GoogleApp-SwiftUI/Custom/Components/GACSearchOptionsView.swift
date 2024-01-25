@@ -16,8 +16,7 @@ struct GACSearchOptionsView: View, Identifiable {
     var body: some View {
         HStack {
             Image(for: image)
-                .renderingMode(.template)
-                .resizable()
+                .renderAsResizable(.fit)
                 .foregroundColor(.white)
                 .frame(width: Dimensions.FrameSize.size15, height: Dimensions.FrameSize.size15)
                 .padding(Dimensions.Padding.padding8)

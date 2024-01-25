@@ -27,9 +27,7 @@ struct GACProfileRowView: View {
             
             HStack {
                 Image(for: profileRow.imageName)
-                    .resizable()
-                    .renderingMode(.template)
-                    .aspectRatio(contentMode: .fit)
+                    .renderAsResizable(.fit)
                     .foregroundColor(.white)
                     .frame(height: Dimensions.FrameSize.size20)
                     .padding(.horizontal, Dimensions.Padding.padding15)

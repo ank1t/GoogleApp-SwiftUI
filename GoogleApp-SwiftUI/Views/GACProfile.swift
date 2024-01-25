@@ -35,17 +35,14 @@ struct GACProfile: View {
                                 HStack {
                                     Spacer()
                                     Image(for: .google_logo)
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
+                                        .renderAsResizable(.fit, false)
                                         .frame(width: Dimensions.FrameSize.size75)
                                     Spacer()
                                 }
                                 
                                 HStack {
                                     Image(for: .close)
-                                        .renderingMode(.template)
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
+                                        .renderAsResizable(.fit)
                                         .frame(width: Dimensions.FrameSize.size15)
                                         .foregroundColor(.white)
                                         .padding(.leading, Dimensions.Padding.padding15)
