@@ -16,7 +16,7 @@ struct GACHeadlineChannelAuthorTimeView: View {
             VStack(alignment: .leading) {
                 Text("Content category")
                     .font(.system(size: Dimensions.FontSize.font12))
-                Text("CBC • \(Int.random(in: 1..<5))h")
+                Text("CBC \(Constants.bulletPoint) \(Int.random(in: 1..<5))h")
                     .font(.system(size: Dimensions.FontSize.font12))
             }
         }

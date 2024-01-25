@@ -18,7 +18,7 @@ struct GACTitle1Title2: View {
             Text(title1)
                 .foregroundColor(.white)
                 .font(.system(size: Dimensions.FontSize.font11))
-            Text("•")
+            Text(Constants.bulletPoint)
                 .foregroundColor(.white)
             Text(title2)
                 .foregroundColor(.white)

@@ -21,7 +21,7 @@ struct GACLocalWeatherView: View {
                 VStack(alignment: .leading, spacing: Dimensions.Spacing.spacing5) {
                     Text("Toronto")
                         .font(.system(size: Dimensions.FontSize.font16, weight: .semibold))
-                    Text("Cloudy • 70%")
+                    Text("Cloudy \(Constants.bulletPoint) 70%")
                         .font(.system(size: Dimensions.FontSize.font14, weight: .regular))
                 }
                 Spacer()

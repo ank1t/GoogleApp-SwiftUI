@@ -17,4 +17,5 @@ struct LightTheme {
 struct Constants {
     static let overlayOpacity: CGFloat = 0.3
     static let profileScreenAnimationDuration: CGFloat = 0.05
+    static let bulletPoint: String = "•"
 }
