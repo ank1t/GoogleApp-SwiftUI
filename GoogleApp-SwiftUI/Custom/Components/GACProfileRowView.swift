@@ -29,12 +29,21 @@ struct GACProfileRowView: View {
                 Image(for: profileRow.imageName)
                     .renderAsResizable(.fit)
                     .foregroundColor(.white)
-                    .frame(height: Dimensions.FrameSize.size20)
+                    .frame(height: profileRow.iconSize)
                     .padding(.horizontal, Dimensions.Padding.padding15)
                 
                 Text(profileRow.title)
                     .font(.system(size: Dimensions.FontSize.font14))
                     .foregroundColor(.white)
+                
+                Spacer()
+                
+                if profileRow.disclosureIndicator != nil {
+                    profileRow.disclosureIndicator?
+                        .renderAsResizable(.fit)
+                        .frame(width: Dimensions.FrameSize.size10)
+                }
+                
             }
             .padding(.top, profileRow.divider == .top ? Dimensions.Padding.padding12 : Dimensions.Padding.padding5)
             .padding(.bottom, profileRow.divider == .bottom ? Dimensions.Padding.padding12 : Dimensions.Padding.padding5)

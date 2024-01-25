@@ -10,7 +10,9 @@ import SwiftUI
 struct GACProfile: View {
     let options: [GACProfileRow] = [
         GACProfileRow(imageName: .user, title: "Choose an account",
-                      divider: .bottom, dividerInset: Dimensions.Padding.padding50),
+                      divider: .bottom, dividerInset: Dimensions.Padding.padding50,
+                      iconSize: Dimensions.FrameSize.size25,
+                      disclosureIndicator: Image(for: .chevronUp)),
         GACProfileRow(imageName: .addUser, title: "Add another account"),
         GACProfileRow(imageName: .userSettings, title: "Manage accounts on this device"),
         GACProfileRow(imageName: .incognito, title: "Turn on incognito",
@@ -18,6 +20,7 @@ struct GACProfile: View {
         GACProfileRow(imageName: .history, title: "History"),
         GACProfileRow(imageName: .speaker, title: "Read aloud",
                       divider: .bottom, dividerInset: Dimensions.Padding.padding50),
+        GACProfileRow(imageName: .settings, title: "Settings"),
         GACProfileRow(imageName: .help, title: "Help & Feedback",
                       divider: .bottom)
     ]
@@ -35,7 +38,7 @@ struct GACProfile: View {
                                 HStack {
                                     Spacer()
                                     Image(for: .google_logo)
-                                        .renderAsResizable(.fit, false)
+                                        .renderAsResizable(.fit)
                                         .frame(width: Dimensions.FrameSize.size75)
                                     Spacer()
                                 }
@@ -65,9 +68,6 @@ struct GACProfile: View {
                     Spacer()
                 }
             }
-        }
-        .onTapGesture {
-            profileScreenShown.toggle()
         }
     }
 }

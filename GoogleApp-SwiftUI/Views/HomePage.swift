@@ -50,7 +50,7 @@ struct HomePage: View {
                         Spacer()
                         ZStack {
                             Image(for: .google)
-                                .renderAsResizable(.fit)
+                                .renderAsResizable(.fit, false)
                                 .frame(width: Dimensions.FrameSize.size40, height: Dimensions.FrameSize.size40)
                             ScrollView(.horizontal, showsIndicators: false) {
                                 HStack(spacing: Dimensions.Spacing.spacing15) {
@@ -71,7 +71,7 @@ struct HomePage: View {
                             .padding(.horizontal, Dimensions.Padding.padding24)
                             .background(Color(LightTheme.gray400))
                             .clipShape(Capsule(style: .continuous))
-                            .font(.system(size: Dimensions.FontSize.font18))
+                            .font(.system(size: Dimensions.FontSize.font24))
                             .foregroundColor(Color(.white))
                             .padding()
                         

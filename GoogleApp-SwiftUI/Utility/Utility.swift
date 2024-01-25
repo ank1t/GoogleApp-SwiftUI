@@ -28,7 +28,7 @@ struct Utility {
         case incognito
         case history = "clock"
         case speaker = "speaker.wave.2"
-        case settings = "gear.circle"
+        case settings = "gear"
         case help = "questionmark.circle"
         case close = "xmark"
         case google_logo
@@ -38,6 +38,7 @@ struct Utility {
         case more = "ellipsis"
         case doc
         case sunrise
+        case chevronUp = "chevron.up"
         
         var icon: String {
             return self.rawValue
@@ -56,6 +57,7 @@ struct Dimensions {
         static let size10: CGFloat = 10
         static let size15: CGFloat = 15
         static let size16: CGFloat = 16
+        static let size18: CGFloat = 18
         static let size20: CGFloat = 20
         static let size25: CGFloat = 25
         static let size30: CGFloat = 30
