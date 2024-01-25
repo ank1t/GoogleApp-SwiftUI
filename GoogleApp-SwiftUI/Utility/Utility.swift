@@ -32,6 +32,12 @@ struct Utility {
         case help = "questionmark.circle"
         case close = "xmark"
         case google_logo
+        case upArrow = "arrow.up"
+        case like = "heart"
+        case share = "square.and.arrow.up"
+        case more = "ellipsis"
+        case doc
+        case sunrise
         
         var icon: String {
             return self.rawValue
