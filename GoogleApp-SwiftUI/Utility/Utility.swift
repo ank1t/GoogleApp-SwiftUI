@@ -39,6 +39,7 @@ struct Utility {
         case doc
         case sunrise
         case chevronUp = "chevron.up.circle"
+        case userProfile = "user-profile"
         
         var icon: String {
             return self.rawValue

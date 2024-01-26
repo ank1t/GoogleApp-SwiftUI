@@ -29,21 +29,29 @@ struct GACProfileRowView: View {
             
             HStack {
                 Image(for: profileRow.imageName)
-                    .renderAsResizable(.fit)
+                    .renderAsResizable(.fit, profileRow.renderImageAsTemplate)
                     .foregroundColor(.white)
                     .frame(height: profileRow.iconSize)
                     .padding(.horizontal, Dimensions.Padding.padding15)
                 
-                Text(profileRow.title)
-                    .font(.system(size: Dimensions.FontSize.font14))
-                    .foregroundColor(.white)
+                VStack(alignment: .leading) {
+                    Text(profileRow.title)
+                        .font(.system(size: profileRow.subtitle == nil ? Dimensions.FontSize.font14 : Dimensions.FontSize.font12))
+                        .foregroundColor(.white)
+                    
+                    if let subtitle = profileRow.subtitle {
+                        Text(subtitle)
+                            .font(.system(size: Dimensions.FontSize.font10))
+                            .foregroundColor(.gray)
+                    }
+                }
                 
                 Spacer()
                 
-                if profileRow.disclosureIndicator != nil {
-                    profileRow.disclosureIndicator?
+                if let disclosureIcon = profileRow.disclosureIndicator {
+                    disclosureIcon
                         .renderAsResizable(.fit)
-                        .frame(width: Dimensions.FrameSize.size15, height: Dimensions.FrameSize.size15)
+                        .frame(width: Dimensions.FrameSize.size20, height: Dimensions.FrameSize.size20)
                         .padding(.horizontal, Dimensions.Padding.padding20)
                         .rotationEffect(Angle(degrees: disclosureRotationAngle))
                         .onTapGesture {
