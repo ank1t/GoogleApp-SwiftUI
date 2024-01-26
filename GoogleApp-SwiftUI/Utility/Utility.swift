@@ -38,7 +38,7 @@ struct Utility {
         case more = "ellipsis"
         case doc
         case sunrise
-        case chevronUp = "chevron.up"
+        case chevronUp = "chevron.up.circle"
         
         var icon: String {
             return self.rawValue

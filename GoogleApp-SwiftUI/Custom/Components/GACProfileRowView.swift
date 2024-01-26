@@ -41,7 +41,8 @@ struct GACProfileRowView: View {
                 if profileRow.disclosureIndicator != nil {
                     profileRow.disclosureIndicator?
                         .renderAsResizable(.fit)
-                        .frame(width: Dimensions.FrameSize.size10)
+                        .frame(width: Dimensions.FrameSize.size15, height: Dimensions.FrameSize.size15)
+                        .padding(.horizontal, Dimensions.Padding.padding20)
                 }
                 
             }
