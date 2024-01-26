@@ -16,6 +16,8 @@ enum GACProfileDividerView {
 
 struct GACProfileRowView: View {
     let profileRow: GACProfileRow
+    @State private var disclosureRotationAngle: CGFloat = 0
+    @State private var showProfileRelatedRows: Bool = false
     
     var body: some View {
         VStack(alignment: .leading, spacing: Dimensions.Spacing.spacing0) {
@@ -43,6 +45,14 @@ struct GACProfileRowView: View {
                         .renderAsResizable(.fit)
                         .frame(width: Dimensions.FrameSize.size15, height: Dimensions.FrameSize.size15)
                         .padding(.horizontal, Dimensions.Padding.padding20)
+                        .rotationEffect(Angle(degrees: disclosureRotationAngle))
+                        .onTapGesture {
+                            showProfileRelatedRows.toggle()
+                            withAnimation(.easeIn(duration: Constants.disclosureAnimationDuration)) {
+                                disclosureRotationAngle += 180
+                            }
+                            disclosureRotationAngle = showProfileRelatedRows ? 180 : 0
+                        }
                 }
                 
             }
