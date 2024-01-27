@@ -19,4 +19,5 @@ struct Constants {
     static let profileScreenAnimationDuration: CGFloat = 0.05
     static let disclosureAnimationDuration: CGFloat = 0.1
     static let bulletPoint: String = "•"
+    static let searchTextfieldPlaceholder: String = "Search"
 }

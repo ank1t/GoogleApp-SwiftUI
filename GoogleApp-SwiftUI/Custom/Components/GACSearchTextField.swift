@@ -12,7 +12,7 @@ struct GACSearchTextField: View {
     
     var body: some View {
         ZStack {
-            TextField("", text: $searchQuery, prompt: Text("Search").foregroundColor(Color(.white)))
+            TextField("", text: $searchQuery, prompt: Text(Constants.searchTextfieldPlaceholder).foregroundColor(Color(.white)))
                 .padding(.vertical)
                 .padding(.horizontal, Dimensions.Padding.padding24)
                 .background(Color(LightTheme.gray400))
