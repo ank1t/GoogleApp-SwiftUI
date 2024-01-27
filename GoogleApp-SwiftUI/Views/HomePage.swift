@@ -65,32 +65,7 @@ struct HomePage: View {
                     }
                     .padding(.top, Dimensions.Padding.padding20)
                     
-                    ZStack {
-                        TextField("", text: $searchQuery, prompt: Text("Search").foregroundColor(Color(.white)))
-                            .padding(.vertical)
-                            .padding(.horizontal, Dimensions.Padding.padding24)
-                            .background(Color(LightTheme.gray400))
-                            .clipShape(Capsule(style: .continuous))
-                            .font(.system(size: Dimensions.FontSize.font24))
-                            .foregroundColor(Color(.white))
-                            .padding()
-                        
-                        HStack {
-                            Spacer()
-                            Image(for: .mic)
-                                .renderAsResizable(.fit)
-                                .foregroundColor(.white)
-                                .frame(width: Dimensions.FrameSize.size20, height: Dimensions.FrameSize.size20)
-                            
-                            Image(for: .camera)
-                                .renderAsResizable(.fit)
-                                .foregroundColor(.white)
-                                .frame(width: Dimensions.FrameSize.size20, height: Dimensions.FrameSize.size20)
-                                .padding(.horizontal)
-                                .padding(.trailing, Dimensions.Padding.padding24)
-                        }
-                        .opacity(searchQuery.isEmpty ? 1: 0)
-                    }
+                    GACSearchTextField()
                     
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: Dimensions.Spacing.spacing15) {
