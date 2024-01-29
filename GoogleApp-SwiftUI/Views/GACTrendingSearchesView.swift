@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TrendingSearchesView: View {
+struct GACTrendingSearchesView: View {
     private let trendingSearches = [
         "valentine dinner ikea",
         "disability benefits",
@@ -25,7 +25,7 @@ struct TrendingSearchesView: View {
         ZStack {
             LightTheme.tabBarBGColor.ignoresSafeArea()
             VStack(alignment: .leading) {
-                GACSearchTextField()
+                GACSearchTextField(appearence: .trendingPageLook)
                 Text("What's Trending")
                     .padding(.bottom, Dimensions.Padding.padding20)
                     .padding(.horizontal, Dimensions.Padding.padding15)
