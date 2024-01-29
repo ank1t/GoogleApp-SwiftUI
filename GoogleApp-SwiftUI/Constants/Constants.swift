@@ -21,4 +21,5 @@ struct Constants {
     static let bulletPoint: String = "•"
     static let searchTextfieldPlaceholder: String = "Search"
     static let searchOrURLTextfieldPlaceholder: String = "Search or type URL"
+    static let animationID: String = "SearchTextfieldAnimation"
 }

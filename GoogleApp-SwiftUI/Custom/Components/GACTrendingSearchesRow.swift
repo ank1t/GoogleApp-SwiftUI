@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct GACTrendingSearchesView: View {
+struct GACTrendingSearchesRow: View {
     var trendingSearchText: String = "Some text"
     
     var body: some View {

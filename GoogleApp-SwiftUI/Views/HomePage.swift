@@ -9,10 +9,12 @@ import SwiftUI
 
 struct HomePage: View {
     @State private var searchQuery: String = ""
-    
     @State var profileScreenShown: Bool = false
     @State var profileIconFrame: CGRect = .zero
     @State var contentFrame: CGRect = .zero
+    @State var textfieldIsActive: Bool = false
+    
+    @Namespace private var animation
     
     var body: some View {
         NavigationView {
@@ -59,7 +61,9 @@ struct HomePage: View {
                         }
                     }
                     .padding(.top, Dimensions.Padding.padding20)
-                    GACSearchTextField(appearence: .homepageLook)
+                    GACSearchTextField(appearence: .homepageLook,
+                                       textfieldIsActive: $textfieldIsActive)
+                        .matchedGeometryEffect(id: Constants.animationID, in: animation)
                     GACSearchTypesView()
                     Divider()
                         .padding(.top, Dimensions.Padding.padding10)
@@ -83,6 +87,11 @@ struct HomePage: View {
                 GACProfile(profileScreenShown: $profileScreenShown)
                     .frame(width: profileScreenShown ? contentFrame.width : 0, height: profileScreenShown ? contentFrame.height : 0)
                     .offset(x: profileScreenShown ? 0 : contentFrame.width, y: 0)
+                
+                if textfieldIsActive {
+                    GACTrendingSearchesView(textfieldIsActive: textfieldIsActive)
+                        .ignoresSafeArea()
+                }
             }
             .preferredColorScheme(.dark)
         }

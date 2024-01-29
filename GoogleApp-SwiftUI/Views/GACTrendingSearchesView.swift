@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct GACTrendingSearchesView: View {
+    @Namespace private var animation
     private let trendingSearches = [
         "valentine dinner ikea",
         "disability benefits",
@@ -20,12 +21,16 @@ struct GACTrendingSearchesView: View {
         "daily horoscope today",
         "weather forecast snow storm"
     ]
+    @State var textfieldIsActive: Bool
     
     var body: some View {
         ZStack {
             LightTheme.tabBarBGColor.ignoresSafeArea()
             VStack(alignment: .leading) {
-                GACSearchTextField(appearence: .trendingPageLook)
+                GACSearchTextField(appearence: .trendingPageLook, textfieldIsActive: $textfieldIsActive)
+                    .matchedGeometryEffect(id: Constants.animationID, in: animation)
+                    .padding(.top, Dimensions.Padding.padding10)
+                
                 Text("What's Trending")
                     .padding(.bottom, Dimensions.Padding.padding20)
                     .padding(.horizontal, Dimensions.Padding.padding15)
@@ -34,7 +39,7 @@ struct GACTrendingSearchesView: View {
                 ScrollView {
                     VStack(alignment: .leading) {
                         ForEach(trendingSearches, id: \.self) { search in
-                            GACTrendingSearchesView(trendingSearchText: search)
+                            GACTrendingSearchesRow(trendingSearchText: search)
                         }
                     }
                 }

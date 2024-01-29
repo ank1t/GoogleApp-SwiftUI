@@ -30,7 +30,8 @@ enum TextfieldAppearence {
 
 struct GACSearchTextField: View {
     @State var searchQuery: String = ""
-    let appearence: TextfieldAppearence
+    @State var appearence: TextfieldAppearence
+    @Binding var textfieldIsActive: Bool
     
     var body: some View {
         ZStack {
@@ -44,7 +45,11 @@ struct GACSearchTextField: View {
                 .font(.system(size: appearence.fontSize))
                 .foregroundColor(Color(.white))
                 .padding()
-            
+                .onTapGesture {
+                    if appearence == .homepageLook {
+                        textfieldIsActive.toggle()
+                    }
+                }
             HStack {
                 if appearence == .trendingPageLook {
                     Image(for: .backChevron)
@@ -53,7 +58,7 @@ struct GACSearchTextField: View {
                         .frame(width: Dimensions.FrameSize.size15, height: Dimensions.FrameSize.size15)
                         .padding(.leading, Dimensions.Padding.padding32)
                         .onTapGesture {
-                            
+                            textfieldIsActive.toggle()
                         }
                 }
                 
