@@ -40,6 +40,7 @@ struct Utility {
         case sunrise
         case chevronUp = "chevron.up.circle"
         case userProfile = "user-profile"
+        case trending = "chart.line.uptrend.xyaxis"
         
         var icon: String {
             return self.rawValue
