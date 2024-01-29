@@ -57,12 +57,14 @@ struct Dimensions {
     struct FrameSize {
         static let size5: CGFloat = 5
         static let size10: CGFloat = 10
+        static let size12: CGFloat = 12
         static let size15: CGFloat = 15
         static let size16: CGFloat = 16
         static let size18: CGFloat = 18
         static let size20: CGFloat = 20
         static let size25: CGFloat = 25
         static let size30: CGFloat = 30
+        static let size35: CGFloat = 35
         static let size40: CGFloat = 40
         static let size50: CGFloat = 50
         static let size75: CGFloat = 75
