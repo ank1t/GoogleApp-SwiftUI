@@ -34,7 +34,7 @@
 		84DB7FF02B5B657100830FE6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB7FEA2B5B657000830FE6 /* Constants.swift */; };
 		84DB7FF12B5B657100830FE6 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB7FEC2B5B657100830FE6 /* HomePage.swift */; };
 		84DB7FF32B5CAE0C00830FE6 /* GACProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB7FF22B5CAE0C00830FE6 /* GACProfile.swift */; };
-		84DE20932B649AD800622BBE /* TrendingSearchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE20922B649AD800622BBE /* TrendingSearchesView.swift */; };
+		84DE20932B649AD800622BBE /* GACTrendingSearchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE20922B649AD800622BBE /* GACTrendingSearchesView.swift */; };
 		84DE20952B649B1D00622BBE /* GACSearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE20942B649B1D00622BBE /* GACSearchTextField.swift */; };
 		84DE20972B65EBC900622BBE /* GACWebview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE20962B65EBC900622BBE /* GACWebview.swift */; };
 		84DE20992B65ECAE00622BBE /* GACNotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE20982B65ECAE00622BBE /* GACNotificationsView.swift */; };
@@ -88,7 +88,7 @@
 		84DB7FEA2B5B657000830FE6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		84DB7FEC2B5B657100830FE6 /* HomePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		84DB7FF22B5CAE0C00830FE6 /* GACProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACProfile.swift; sourceTree = "<group>"; };
-		84DE20922B649AD800622BBE /* TrendingSearchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingSearchesView.swift; sourceTree = "<group>"; };
+		84DE20922B649AD800622BBE /* GACTrendingSearchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACTrendingSearchesView.swift; sourceTree = "<group>"; };
 		84DE20942B649B1D00622BBE /* GACSearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACSearchTextField.swift; sourceTree = "<group>"; };
 		84DE20962B65EBC900622BBE /* GACWebview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACWebview.swift; sourceTree = "<group>"; };
 		84DE20982B65ECAE00622BBE /* GACNotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACNotificationsView.swift; sourceTree = "<group>"; };
@@ -280,7 +280,7 @@
 			children = (
 				84DB7FEC2B5B657100830FE6 /* HomePage.swift */,
 				84DB7FF22B5CAE0C00830FE6 /* GACProfile.swift */,
-				84DE20922B649AD800622BBE /* TrendingSearchesView.swift */,
+				84DE20922B649AD800622BBE /* GACTrendingSearchesView.swift */,
 				84DE20962B65EBC900622BBE /* GACWebview.swift */,
 				84DE20982B65ECAE00622BBE /* GACNotificationsView.swift */,
 			);
@@ -440,7 +440,7 @@
 				84DB7FF32B5CAE0C00830FE6 /* GACProfile.swift in Sources */,
 				84DB7FEE2B5B657100830FE6 /* UIImage+Extensions.swift in Sources */,
 				84DB7FDC2B5B655700830FE6 /* GACSearchOptionsView.swift in Sources */,
-				84DE20932B649AD800622BBE /* TrendingSearchesView.swift in Sources */,
+				84DE20932B649AD800622BBE /* GACTrendingSearchesView.swift in Sources */,
 				84DB7FDF2B5B655700830FE6 /* GACProfileOptions.swift in Sources */,
 				84DB7FF02B5B657100830FE6 /* Constants.swift in Sources */,
 			);

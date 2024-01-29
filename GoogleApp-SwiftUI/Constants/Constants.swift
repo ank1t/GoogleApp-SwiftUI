@@ -20,4 +20,5 @@ struct Constants {
     static let disclosureAnimationDuration: CGFloat = 0.1
     static let bulletPoint: String = "•"
     static let searchTextfieldPlaceholder: String = "Search"
+    static let searchOrURLTextfieldPlaceholder: String = "Search or type URL"
 }
