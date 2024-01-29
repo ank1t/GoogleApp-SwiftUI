@@ -59,7 +59,7 @@ struct HomePage: View {
                         }
                     }
                     .padding(.top, Dimensions.Padding.padding20)
-                    GACSearchTextField()
+                    GACSearchTextField(appearence: .homepageLook)
                     GACSearchTypesView()
                     Divider()
                         .padding(.top, Dimensions.Padding.padding10)

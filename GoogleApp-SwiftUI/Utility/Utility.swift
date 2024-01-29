@@ -41,6 +41,7 @@ struct Utility {
         case chevronUp = "chevron.up.circle"
         case userProfile = "user-profile"
         case trending = "chart.line.uptrend.xyaxis"
+        case backChevron = "chevron.left"
         
         var icon: String {
             return self.rawValue
@@ -91,6 +92,7 @@ struct Dimensions {
         static let padding15: CGFloat = 15
         static let padding20: CGFloat = 20
         static let padding24: CGFloat = 24
+        static let padding32: CGFloat = 32
         static let padding50: CGFloat = 50
     }
     
