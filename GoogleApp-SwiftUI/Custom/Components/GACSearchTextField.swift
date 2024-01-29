@@ -32,6 +32,7 @@ struct GACSearchTextField: View {
     @State var searchQuery: String = ""
     @State var appearence: TextfieldAppearence
     @Binding var textfieldIsActive: Bool
+    @FocusState private var isFocused: Bool
     
     var body: some View {
         ZStack {
@@ -47,9 +48,13 @@ struct GACSearchTextField: View {
                 .padding()
                 .onTapGesture {
                     if appearence == .homepageLook {
-                        textfieldIsActive.toggle()
+                        withAnimation(.easeIn(duration: 0.1)) {
+                            textfieldIsActive.toggle()
+                        }
                     }
                 }
+                .focused($isFocused)
+            
             HStack {
                 if appearence == .trendingPageLook {
                     Image(for: .backChevron)
@@ -58,7 +63,10 @@ struct GACSearchTextField: View {
                         .frame(width: Dimensions.FrameSize.size15, height: Dimensions.FrameSize.size15)
                         .padding(.leading, Dimensions.Padding.padding32)
                         .onTapGesture {
-                            textfieldIsActive.toggle()
+                            withAnimation(.easeIn(duration: 0.1)) {
+                                textfieldIsActive.toggle()
+                                isFocused.toggle()
+                            }
                         }
                 }
                 
