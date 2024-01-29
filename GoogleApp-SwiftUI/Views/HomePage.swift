@@ -9,12 +9,7 @@ import SwiftUI
 
 struct HomePage: View {
     @State private var searchQuery: String = ""
-    private let searchTypes = [
-        GACSearchOptionsView(title: "Translate text", subtitle: "with your camera", image: .translate),
-        GACSearchOptionsView(title: "Search inside photos", subtitle: "from your camera", image: .searchImage),
-        GACSearchOptionsView(title: "Identify song", subtitle: "by listening", image: .note),
-        GACSearchOptionsView(title: "Shop for products", subtitle: "in your screenshots", image: .tag),
-        GACSearchOptionsView(title: "Homework help", subtitle: "using your camera", image: .degree)]
+    
     @State var profileScreenShown: Bool = false
     @State var profileIconFrame: CGRect = .zero
     @State var contentFrame: CGRect = .zero
@@ -64,19 +59,8 @@ struct HomePage: View {
                         }
                     }
                     .padding(.top, Dimensions.Padding.padding20)
-                    
                     GACSearchTextField()
-                    
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: Dimensions.Spacing.spacing15) {
-                            HStack {}
-                                .frame(width: Dimensions.Spacing.spacing2)
-                            ForEach(searchTypes) { $0 }
-                            HStack {}
-                                .frame(width: Dimensions.FrameSize.size5)
-                        }
-                    }
-                    
+                    GACSearchTypesView()
                     Divider()
                         .padding(.top, Dimensions.Padding.padding10)
                     
