@@ -48,7 +48,7 @@ struct GACSearchTextField: View {
                 .padding()
                 .onTapGesture {
                     if appearence == .homepageLook {
-                        withAnimation(.easeIn(duration: 0.2)) {
+                        withAnimation(.easeIn(duration: 0.1)) {
                             textfieldIsActive.toggle()
                         }
                     }
@@ -63,7 +63,7 @@ struct GACSearchTextField: View {
                         .frame(width: Dimensions.FrameSize.size15, height: Dimensions.FrameSize.size15)
                         .padding(.leading, Dimensions.Padding.padding32)
                         .onTapGesture {
-                            withAnimation(.easeIn(duration: 0.2)) {
+                            withAnimation(.easeIn(duration: 0.1)) {
                                 textfieldIsActive.toggle()
                                 isFocused.toggle()
                             }
