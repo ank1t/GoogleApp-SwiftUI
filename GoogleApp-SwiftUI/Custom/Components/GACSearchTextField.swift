@@ -48,7 +48,7 @@ struct GACSearchTextField: View {
                 .padding()
                 .onTapGesture {
                     if appearence == .homepageLook {
-                        withAnimation(.easeIn(duration: 0.1)) {
+                        withAnimation(.spring()) {
                             textfieldIsActive.toggle()
                         }
                     }
@@ -62,28 +62,40 @@ struct GACSearchTextField: View {
                         .foregroundColor(.white)
                         .frame(width: Dimensions.FrameSize.size15, height: Dimensions.FrameSize.size15)
                         .padding(.leading, Dimensions.Padding.padding32)
+                        .contentShape(Rectangle())
+                        .allowsHitTesting(true)
                         .onTapGesture {
-                            withAnimation(.easeIn(duration: 0.1)) {
+                            withAnimation(.spring()) {
                                 textfieldIsActive.toggle()
                                 isFocused.toggle()
                             }
                         }
+                        .onAppear {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                                isFocused = true
+                            }
+                        }
+                        .onDisappear {
+                            isFocused = false
+                        }
                 }
                 
-                Spacer()
-                Image(for: .mic)
-                    .renderAsResizable(.fit)
-                    .foregroundColor(.white)
-                    .frame(width: Dimensions.FrameSize.size20, height: Dimensions.FrameSize.size20)
-                
-                Image(for: .camera)
-                    .renderAsResizable(.fit)
-                    .foregroundColor(.white)
-                    .frame(width: Dimensions.FrameSize.size20, height: Dimensions.FrameSize.size20)
-                    .padding(.horizontal)
-                    .padding(.trailing, Dimensions.Padding.padding24)
+                HStack {
+                    Spacer()
+                    Image(for: .mic)
+                        .renderAsResizable(.fit)
+                        .foregroundColor(.white)
+                        .frame(width: Dimensions.FrameSize.size20, height: Dimensions.FrameSize.size20)
+                    
+                    Image(for: .camera)
+                        .renderAsResizable(.fit)
+                        .foregroundColor(.white)
+                        .frame(width: Dimensions.FrameSize.size20, height: Dimensions.FrameSize.size20)
+                        .padding(.horizontal)
+                        .padding(.trailing, Dimensions.Padding.padding24)
+                }
+                .opacity(searchQuery.isEmpty ? 1: 0)
             }
-            .opacity(searchQuery.isEmpty ? 1: 0)
         }
     }
 }

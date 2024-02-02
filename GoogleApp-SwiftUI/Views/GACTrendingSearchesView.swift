@@ -21,7 +21,7 @@ struct GACTrendingSearchesView: View {
         "daily horoscope today",
         "weather forecast snow storm"
     ]
-    @State var textfieldIsActive: Bool
+    @Binding var textfieldIsActive: Bool
     
     var body: some View {
         ZStack {

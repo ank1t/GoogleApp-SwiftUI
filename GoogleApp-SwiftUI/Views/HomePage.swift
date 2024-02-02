@@ -61,9 +61,11 @@ struct HomePage: View {
                         }
                     }
                     .padding(.top, Dimensions.Padding.padding20)
+                    
                     GACSearchTextField(appearence: .homepageLook,
                                        textfieldIsActive: $textfieldIsActive)
-                        .matchedGeometryEffect(id: Constants.animationID, in: animation)
+                    .matchedGeometryEffect(id: Constants.animationID, in: animation)
+                        
                     GACSearchTypesView()
                     Divider()
                         .padding(.top, Dimensions.Padding.padding10)
@@ -89,7 +91,7 @@ struct HomePage: View {
                     .offset(x: profileScreenShown ? 0 : contentFrame.width, y: 0)
                 
                 if textfieldIsActive {
-                    GACTrendingSearchesView(textfieldIsActive: textfieldIsActive)
+                    GACTrendingSearchesView(textfieldIsActive: $textfieldIsActive)
                         .ignoresSafeArea()
                 }
             }
