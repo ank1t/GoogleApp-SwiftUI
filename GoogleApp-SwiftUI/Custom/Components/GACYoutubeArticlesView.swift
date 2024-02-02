@@ -13,13 +13,15 @@ private struct YouTubePlayerView: UIViewRepresentable {
     let videoID: String
     
     func makeUIView(context: Context) -> WKWebView {
-        return WKWebView()
+        let webView = WKWebView()
+        let urlRequest = URLRequest(url: URL(string: "https://www.youtube.com/embed/\(videoID)")!)
+        webView.scrollView.isScrollEnabled = false
+        //        view.load(URLRequest(url: url))
+        return webView
     }
     
     func updateUIView(_ view: WKWebView, context: Context) {
-        guard let url = URL(string: "https://www.youtube.com/embed/\(videoID)") else { return }
-        view.scrollView.isScrollEnabled = false
-//        view.load(URLRequest(url: url))
+        
     }
 }
 
