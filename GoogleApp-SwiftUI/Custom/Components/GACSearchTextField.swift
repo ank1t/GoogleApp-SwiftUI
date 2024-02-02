@@ -60,7 +60,7 @@ struct GACSearchTextField: View {
                     Image(for: .backChevron)
                         .renderAsResizable(.fit)
                         .foregroundColor(.white)
-                        .frame(width: Dimensions.FrameSize.size15, height: Dimensions.FrameSize.size15)
+                        .frame(width: Dimensions.FrameSize.size20, height: Dimensions.FrameSize.size20)
                         .padding(.leading, Dimensions.Padding.padding32)
                         .contentShape(Rectangle())
                         .allowsHitTesting(true)
@@ -71,9 +71,7 @@ struct GACSearchTextField: View {
                             }
                         }
                         .onAppear {
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                                isFocused = true
-                            }
+                            isFocused = true
                         }
                         .onDisappear {
                             isFocused = false
