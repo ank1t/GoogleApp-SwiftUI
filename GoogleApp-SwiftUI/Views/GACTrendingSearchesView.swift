@@ -43,7 +43,7 @@ struct GACTrendingSearchesView: View {
                         }
                     }
                 }
-                .scrollDisabled(true)
+                .scrollDisabled(textfieldIsActive ? false : true)
                 Spacer()
             }
             .ignoresSafeArea()
