@@ -27,7 +27,7 @@ struct GACTrendingSearchesView: View {
         ZStack {
             LightTheme.tabBarBGColor.ignoresSafeArea()
             VStack(alignment: .leading) {
-                GACSearchTextField(appearence: .trendingPageLook, textfieldIsActive: $textfieldIsActive)
+                GACSearchTextField(appearence: .trendingPage, textfieldIsActive: $textfieldIsActive)
                     .matchedGeometryEffect(id: Constants.animationID, in: animation)
                     .padding(.top, Dimensions.Padding.padding10)
                 

@@ -8,27 +8,27 @@
 import SwiftUI
 
 enum TextfieldAppearence {
-    case homepageLook
-    case trendingPageLook
+    case homepage
+    case trendingPage
     
     var searchFieldText: String {
-        isHomePageLook ? Constants.searchTextfieldPlaceholder : Constants.searchOrURLTextfieldPlaceholder
+        isHomePage ? Constants.searchTextfieldPlaceholder : Constants.searchOrURLTextfieldPlaceholder
     }
     
     var fontSize: CGFloat {
-        isHomePageLook ? Dimensions.FontSize.font24 : Dimensions.FontSize.font16
+        isHomePage ? Dimensions.FontSize.font24 : Dimensions.FontSize.font16
     }
     
     var placeholderColor: Color {
-        isHomePageLook ? .white : .gray
+        isHomePage ? .white : .gray
     }
     
     var hPadding: CGFloat {
-        isHomePageLook ? Dimensions.Padding.padding24 : Dimensions.Padding.padding50
+        isHomePage ? Dimensions.Padding.padding24 : Dimensions.Padding.padding50
     }
     
-    private var isHomePageLook: Bool {
-        self == .homepageLook
+    private var isHomePage: Bool {
+        self == .homepage
     }
 }
 
@@ -51,7 +51,7 @@ struct GACSearchTextField: View {
                 .foregroundColor(Color(.white))
                 .padding()
                 .onTapGesture {
-                    if appearence == .homepageLook {
+                    if appearence == .homepage {
                         withAnimation(.spring()) {
                             textfieldIsActive.toggle()
                         }
@@ -60,7 +60,7 @@ struct GACSearchTextField: View {
                 .focused($isFocused)
             
             HStack {
-                if appearence == .trendingPageLook {
+                if appearence == .trendingPage {
                     Image(for: .backChevron)
                         .renderAsResizable(.fit)
                         .foregroundColor(.white)
