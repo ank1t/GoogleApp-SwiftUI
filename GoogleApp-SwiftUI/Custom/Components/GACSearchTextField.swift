@@ -16,15 +16,19 @@ enum TextfieldAppearence {
     }
     
     var fontSize: CGFloat {
-        self == .homepageLook ? Dimensions.FontSize.font24 : Dimensions.FontSize.font16
+        isHomePageLook ? Dimensions.FontSize.font24 : Dimensions.FontSize.font16
     }
     
     var placeholderColor: Color {
-        self == .homepageLook ? .white : .gray
+        isHomePageLook ? .white : .gray
     }
     
     var hPadding: CGFloat {
-        self == .homepageLook ? Dimensions.Padding.padding24 : Dimensions.Padding.padding50
+        isHomePageLook ? Dimensions.Padding.padding24 : Dimensions.Padding.padding50
+    }
+    
+    private var isHomePageLook: Bool {
+        self == .homepageLook
     }
 }
 
