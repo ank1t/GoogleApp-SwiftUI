@@ -7,6 +7,8 @@
 
 import Foundation
 
-struct GACArticleDetailBottomBar {
-    
+struct GACArticleDetailBottomBar: View {
+    var body: some View {
+        Text("")
+    }
 }
