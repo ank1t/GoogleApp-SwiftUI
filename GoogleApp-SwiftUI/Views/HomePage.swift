@@ -75,6 +75,7 @@ struct HomePage: View {
                             GACLocalWeatherView()
                             ForEach(1..<10) { _ in
                                 GACYouTubeArticlesView()
+                                GACHeadlinesView()
                             }
                         }
                     }

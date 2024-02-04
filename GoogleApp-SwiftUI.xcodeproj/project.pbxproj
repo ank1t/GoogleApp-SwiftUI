@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		845EAC6C2B6B40D300F15D71 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EAC6B2B6B40D300F15D71 /* NetworkManager.swift */; };
+		849A21812B6F88F6006BE8F3 /* GACArticleDetailTopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A21802B6F88F6006BE8F3 /* GACArticleDetailTopBar.swift */; };
+		849A21832B6F8914006BE8F3 /* GACArticleDetailBottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A21822B6F8914006BE8F3 /* GACArticleDetailBottomBar.swift */; };
 		84BD781C2B672D09005ED9E6 /* GACSearchTypesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BD781B2B672D09005ED9E6 /* GACSearchTypesView.swift */; };
 		84BD781E2B67312C005ED9E6 /* GACTrendingSearchesRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BD781D2B67312C005ED9E6 /* GACTrendingSearchesRow.swift */; };
 		84DB7F9C2B5B652100830FE6 /* GoogleApp_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB7F9B2B5B652100830FE6 /* GoogleApp_SwiftUIApp.swift */; };
@@ -37,7 +39,7 @@
 		84DB7FF32B5CAE0C00830FE6 /* GACProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB7FF22B5CAE0C00830FE6 /* GACProfile.swift */; };
 		84DE20932B649AD800622BBE /* GACTrendingSearchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE20922B649AD800622BBE /* GACTrendingSearchesView.swift */; };
 		84DE20952B649B1D00622BBE /* GACSearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE20942B649B1D00622BBE /* GACSearchTextField.swift */; };
-		84DE20972B65EBC900622BBE /* GACWebview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE20962B65EBC900622BBE /* GACWebview.swift */; };
+		84DE20972B65EBC900622BBE /* GACArticleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE20962B65EBC900622BBE /* GACArticleDetailView.swift */; };
 		84DE20992B65ECAE00622BBE /* GACNotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE20982B65ECAE00622BBE /* GACNotificationsView.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +62,8 @@
 
 /* Begin PBXFileReference section */
 		845EAC6B2B6B40D300F15D71 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		849A21802B6F88F6006BE8F3 /* GACArticleDetailTopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACArticleDetailTopBar.swift; sourceTree = "<group>"; };
+		849A21822B6F8914006BE8F3 /* GACArticleDetailBottomBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACArticleDetailBottomBar.swift; sourceTree = "<group>"; };
 		84BD781B2B672D09005ED9E6 /* GACSearchTypesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACSearchTypesView.swift; sourceTree = "<group>"; };
 		84BD781D2B67312C005ED9E6 /* GACTrendingSearchesRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACTrendingSearchesRow.swift; sourceTree = "<group>"; };
 		84DB7F982B5B652100830FE6 /* GoogleApp-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GoogleApp-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,7 +96,7 @@
 		84DB7FF22B5CAE0C00830FE6 /* GACProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACProfile.swift; sourceTree = "<group>"; };
 		84DE20922B649AD800622BBE /* GACTrendingSearchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACTrendingSearchesView.swift; sourceTree = "<group>"; };
 		84DE20942B649B1D00622BBE /* GACSearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACSearchTextField.swift; sourceTree = "<group>"; };
-		84DE20962B65EBC900622BBE /* GACWebview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACWebview.swift; sourceTree = "<group>"; };
+		84DE20962B65EBC900622BBE /* GACArticleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACArticleDetailView.swift; sourceTree = "<group>"; };
 		84DE20982B65ECAE00622BBE /* GACNotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACNotificationsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -218,6 +222,8 @@
 				84DE20942B649B1D00622BBE /* GACSearchTextField.swift */,
 				84BD781B2B672D09005ED9E6 /* GACSearchTypesView.swift */,
 				84BD781D2B67312C005ED9E6 /* GACTrendingSearchesRow.swift */,
+				849A21802B6F88F6006BE8F3 /* GACArticleDetailTopBar.swift */,
+				849A21822B6F8914006BE8F3 /* GACArticleDetailBottomBar.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -284,7 +290,7 @@
 				84DB7FEC2B5B657100830FE6 /* HomePage.swift */,
 				84DB7FF22B5CAE0C00830FE6 /* GACProfile.swift */,
 				84DE20922B649AD800622BBE /* GACTrendingSearchesView.swift */,
-				84DE20962B65EBC900622BBE /* GACWebview.swift */,
+				84DE20962B65EBC900622BBE /* GACArticleDetailView.swift */,
 				84DE20982B65ECAE00622BBE /* GACNotificationsView.swift */,
 			);
 			path = Views;
@@ -424,15 +430,17 @@
 				84DB7FE02B5B655700830FE6 /* Popup.swift in Sources */,
 				84DE20952B649B1D00622BBE /* GACSearchTextField.swift in Sources */,
 				84DB7F9E2B5B652100830FE6 /* ContentView.swift in Sources */,
-				84DE20972B65EBC900622BBE /* GACWebview.swift in Sources */,
+				84DE20972B65EBC900622BBE /* GACArticleDetailView.swift in Sources */,
 				84BD781C2B672D09005ED9E6 /* GACSearchTypesView.swift in Sources */,
 				84DB7FDB2B5B655700830FE6 /* GACHeadlineChannelAuthorTimeView.swift in Sources */,
 				84DE20992B65ECAE00622BBE /* GACNotificationsView.swift in Sources */,
 				84DB7FDD2B5B655700830FE6 /* GACLocalWeatherView.swift in Sources */,
+				849A21832B6F8914006BE8F3 /* GACArticleDetailBottomBar.swift in Sources */,
 				84DB7FD82B5B655700830FE6 /* GACHeadlineArticleActionsView.swift in Sources */,
 				84BD781E2B67312C005ED9E6 /* GACTrendingSearchesRow.swift in Sources */,
 				84DB7FED2B5B657100830FE6 /* Utility.swift in Sources */,
 				84DB7FD62B5B655700830FE6 /* GACStocksTileView.swift in Sources */,
+				849A21812B6F88F6006BE8F3 /* GACArticleDetailTopBar.swift in Sources */,
 				84DB7FDE2B5B655700830FE6 /* GACYoutubeArticlesView.swift in Sources */,
 				84DB7FF12B5B657100830FE6 /* HomePage.swift in Sources */,
 				84DB7FEF2B5B657100830FE6 /* GACProfileRow.swift in Sources */,
