@@ -12,7 +12,7 @@ enum TextfieldAppearence {
     case trendingPageLook
     
     var searchFieldText: String {
-        self == .homepageLook ? Constants.searchTextfieldPlaceholder : Constants.searchOrURLTextfieldPlaceholder
+        isHomePageLook ? Constants.searchTextfieldPlaceholder : Constants.searchOrURLTextfieldPlaceholder
     }
     
     var fontSize: CGFloat {
