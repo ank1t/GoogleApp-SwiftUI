@@ -5,6 +5,8 @@
 //  Created by Singh, Ankit on 2024-02-04.
 //
 
+import UIKit
+
 public extension UIApplication {
     func currentUIWindow() -> UIWindow? {
         let connectedScenes = UIApplication.shared.connectedScenes

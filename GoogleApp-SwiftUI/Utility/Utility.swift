@@ -61,9 +61,9 @@ struct Utility {
         DispatchQueue.main.async {
             let activityItems = UIActivityViewController(activityItems: items,
                                                          applicationActivities: nil)
-            UIApplication.currentUIWindow()?.present(activityItems,
-                                                                            animated: true,
-                                                                            completion: nil)
+            UIApplication.shared.currentUIWindow()?.rootViewController?.present(activityItems,
+                                                     animated: true,
+                                                     completion: nil)
         }
     }
 }
