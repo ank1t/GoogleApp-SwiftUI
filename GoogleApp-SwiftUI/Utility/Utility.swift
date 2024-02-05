@@ -10,7 +10,7 @@ import UIKit
 
 struct Utility {
     enum ImageName: String {
-        case home
+        case home = "house.fill"
         case notifications = "bell.circle"
         case tabs
         case user = "person.circle"
@@ -44,6 +44,9 @@ struct Utility {
         case backChevron = "chevron.left"
         case secureLock = "lock.fill"
         case bookmark = "bookmark"
+        case backArrow = "arrow.backward"
+        case forwardArrow = "arrow.forward"
+        case info = "info.circle"
         
         var icon: String {
             return self.rawValue
