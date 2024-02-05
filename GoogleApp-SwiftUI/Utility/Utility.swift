@@ -42,6 +42,9 @@ struct Utility {
         case userProfile = "user-profile"
         case trending = "chart.line.uptrend.xyaxis"
         case backChevron = "chevron.left"
+        case secureLock = "lock.fill"
+        case bookmark = "bookmark"
+        case share = "square.and.arrow.up"
         
         var icon: String {
             return self.rawValue

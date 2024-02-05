@@ -6,3 +6,10 @@
 //
 
 import Foundation
+import SwiftUI
+
+struct GACURLView: View {
+    var body: some View {
+        Text("URL view")
+    }
+}
