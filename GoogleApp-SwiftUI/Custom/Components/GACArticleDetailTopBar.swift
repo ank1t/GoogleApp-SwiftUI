@@ -21,10 +21,18 @@ struct GACArticleDetailTopBar: View {
                     .frame(width: Dimensions.FrameSize.size15,
                            height: Dimensions.FrameSize.size15)
                     .padding(.leading, Dimensions.Padding.padding12)
+                
                 Spacer()
+                
+                Image(for: .more)
+                    .renderAsResizable(.fit)
+                    .foregroundColor(.white)
+                    .frame(width: Dimensions.FrameSize.size15,
+                           height: Dimensions.FrameSize.size15)
+                    .padding(.trailing, Dimensions.Padding.padding12)
             }
             
         }
-        .frame(height: Dimensions.FrameSize.size30)
+        .frame(height: Dimensions.FrameSize.size50)
     }
 }
