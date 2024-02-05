@@ -56,6 +56,16 @@ struct Utility {
     static var isLargeDevice: Bool {
         return UIScreen.main.bounds.height > 800
     }
+    
+    static func shareActivityItems(_ items: [Any]) {
+        DispatchQueue.main.async {
+            let activityItems = UIActivityViewController(activityItems: items,
+                                                         applicationActivities: nil)
+            UIApplication.currentUIWindow()?.present(activityItems,
+                                                                            animated: true,
+                                                                            completion: nil)
+        }
+    }
 }
 
 

@@ -10,6 +10,7 @@
 		8428A11D2B70690600EF4BDF /* GACSecureConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428A11C2B70690600EF4BDF /* GACSecureConnectionView.swift */; };
 		8428A11F2B70698100EF4BDF /* GACURLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428A11E2B70698100EF4BDF /* GACURLView.swift */; };
 		8428A1212B70773000EF4BDF /* GACBottomBarIconModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428A1202B70773000EF4BDF /* GACBottomBarIconModel.swift */; };
+		8428A1232B7080D400EF4BDF /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428A1222B7080D400EF4BDF /* UIApplication+Extensions.swift */; };
 		845EAC6C2B6B40D300F15D71 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EAC6B2B6B40D300F15D71 /* NetworkManager.swift */; };
 		849A21812B6F88F6006BE8F3 /* GACArticleDetailTopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A21802B6F88F6006BE8F3 /* GACArticleDetailTopBar.swift */; };
 		849A21832B6F8914006BE8F3 /* GACArticleDetailBottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A21822B6F8914006BE8F3 /* GACArticleDetailBottomBar.swift */; };
@@ -67,6 +68,7 @@
 		8428A11C2B70690600EF4BDF /* GACSecureConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACSecureConnectionView.swift; sourceTree = "<group>"; };
 		8428A11E2B70698100EF4BDF /* GACURLView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACURLView.swift; sourceTree = "<group>"; };
 		8428A1202B70773000EF4BDF /* GACBottomBarIconModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACBottomBarIconModel.swift; sourceTree = "<group>"; };
+		8428A1222B7080D400EF4BDF /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
 		845EAC6B2B6B40D300F15D71 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		849A21802B6F88F6006BE8F3 /* GACArticleDetailTopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACArticleDetailTopBar.swift; sourceTree = "<group>"; };
 		849A21822B6F8914006BE8F3 /* GACArticleDetailBottomBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACArticleDetailBottomBar.swift; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				84DB7FE62B5B657000830FE6 /* UIImage+Extensions.swift */,
+				8428A1222B7080D400EF4BDF /* UIApplication+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -446,6 +449,7 @@
 				84DB7FDB2B5B655700830FE6 /* GACHeadlineChannelAuthorTimeView.swift in Sources */,
 				84DE20992B65ECAE00622BBE /* GACNotificationsView.swift in Sources */,
 				84DB7FDD2B5B655700830FE6 /* GACLocalWeatherView.swift in Sources */,
+				8428A1232B7080D400EF4BDF /* UIApplication+Extensions.swift in Sources */,
 				849A21832B6F8914006BE8F3 /* GACArticleDetailBottomBar.swift in Sources */,
 				84DB7FD82B5B655700830FE6 /* GACHeadlineArticleActionsView.swift in Sources */,
 				84BD781E2B67312C005ED9E6 /* GACTrendingSearchesRow.swift in Sources */,

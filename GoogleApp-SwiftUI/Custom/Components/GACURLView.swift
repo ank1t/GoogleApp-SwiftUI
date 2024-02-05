@@ -39,7 +39,7 @@ struct GACURLView: View {
                 .allowsHitTesting(true)
                 .onTapGesture {
                     guard let urlFromLink = URL(string: url) else { return }
-                    ShareLink(item: urlFromLink)
+                    Utility.shareActivityItems([urlFromLink])
                 }
         }
         .frame(height: Dimensions.FrameSize.size40)
