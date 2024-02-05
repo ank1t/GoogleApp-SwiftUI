@@ -23,6 +23,8 @@ struct GACArticleDetailTopBar: View {
                     .padding(.leading, Dimensions.Padding.padding12)
                 
                 GACURLView()
+                    .padding(.horizontal, Dimensions.Padding.padding8)
+                    .padding(.bottom, Dimensions.Padding.padding5)
                 
                 Image(for: .more)
                     .renderAsResizable(.fit)
