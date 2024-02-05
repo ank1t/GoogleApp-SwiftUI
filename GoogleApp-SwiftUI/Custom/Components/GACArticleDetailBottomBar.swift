@@ -37,7 +37,7 @@ struct GACArticleDetailBottomBar: View {
                     Text("1")
                         .foregroundColor(.white)
                         .padding(.vertical, Dimensions.Padding.padding5)
-                        .padding(.horizontal, Dimensions.Padding.padding10)
+                        .padding(.horizontal, Dimensions.Padding.padding8)
                         .overlay(
                             RoundedRectangle(cornerRadius: Dimensions.CornerRadius.cornerRadius5)
                                 .stroke(.white, lineWidth: 1)
@@ -46,5 +46,6 @@ struct GACArticleDetailBottomBar: View {
                 }
             }
         }
+        .frame(height: Dimensions.FrameSize.size50)
     }
 }

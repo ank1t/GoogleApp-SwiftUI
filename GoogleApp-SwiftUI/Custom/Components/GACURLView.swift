@@ -35,6 +35,12 @@ struct GACURLView: View {
                 .foregroundColor(.white)
                 .frame(width: Dimensions.FrameSize.size15, height: Dimensions.FrameSize.size15)
                 .padding(.trailing, Dimensions.Padding.padding10)
+                .contentShape(Rectangle())
+                .allowsHitTesting(true)
+                .onTapGesture {
+                    guard let urlFromLink = URL(string: url) else { return }
+                    ShareLink(item: urlFromLink)
+                }
         }
         .frame(height: Dimensions.FrameSize.size40)
         .overlay(
