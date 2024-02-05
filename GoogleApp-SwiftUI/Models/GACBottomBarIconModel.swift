@@ -8,7 +8,8 @@
 import Foundation
 import SwiftUI
 
-struct GACBottomBarIconModel {
+struct GACBottomBarIconModel: Identifiable {
+    var id: UUID = UUID()
     let icon: Utility.ImageName
-    let actionHandler: () -> Void
+    let actionHandler: (() -> Void)?
 }

@@ -9,6 +9,12 @@ import Foundation
 import SwiftUI
 
 struct GACArticleDetailBottomBar: View {
+    private let iconModels: [GACBottomBarIconModel] = [
+        GACBottomBarIconModel(icon: .backArrow, actionHandler: nil),
+        GACBottomBarIconModel(icon: .forwardArrow, actionHandler: nil),
+        GACBottomBarIconModel(icon: .info, actionHandler: nil),
+        GACBottomBarIconModel(icon: .home, actionHandler: nil)
+    ]
     var body: some View {
         ZStack {
             LightTheme.tabBarBGColor
@@ -16,42 +22,27 @@ struct GACArticleDetailBottomBar: View {
             
             VStack {
                 HStack(spacing: Dimensions.Spacing.spacing5) {
-                    Image(for: .backArrow)
-                        .renderAsResizable(.fit)
-                        .foregroundColor(.white)
-                        .frame(width: Dimensions.FrameSize.size20,
-                               height: Dimensions.FrameSize.size15)
-                        .padding(.leading, Dimensions.Padding.padding12)
-                    
-                    Spacer()
-                    Image(for: .forwardArrow)
-                        .renderAsResizable(.fit)
-                        .foregroundColor(.white)
-                        .frame(width: Dimensions.FrameSize.size15,
-                               height: Dimensions.FrameSize.size15)
-                        .padding(.trailing, Dimensions.Padding.padding12)
-                    
-                    Spacer()
-                    Image(for: .info)
-                        .renderAsResizable(.fit)
-                        .foregroundColor(.white)
-                        .frame(width: Dimensions.FrameSize.size15,
-                               height: Dimensions.FrameSize.size15)
-                        .padding(.trailing, Dimensions.Padding.padding12)
-                    
-                    Spacer()
-                    Image(for: .home)
-                        .renderAsResizable(.fit)
-                        .foregroundColor(.white)
-                        .frame(width: Dimensions.FrameSize.size15,
-                               height: Dimensions.FrameSize.size15)
-                        .padding(.trailing, Dimensions.Padding.padding12)
-                    
-                    Spacer()
+                    ForEach(iconModels) { iconModel in
+                        Image(for: iconModel.icon)
+                            .renderAsResizable(.fit)
+                            .foregroundColor(.white)
+                            .frame(width: Dimensions.FrameSize.size20,
+                                   height: Dimensions.FrameSize.size20)
+                            .padding(.leading, Dimensions.Padding.padding12)
+                            .onTapGesture {
+                                iconModel.actionHandler?()
+                            }
+                        Spacer()
+                    }
                     Text("1")
                         .foregroundColor(.white)
-                    
-                    HStack { }
+                        .padding(.vertical, Dimensions.Padding.padding5)
+                        .padding(.horizontal, Dimensions.Padding.padding10)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: Dimensions.CornerRadius.cornerRadius5)
+                                .stroke(.white, lineWidth: 1)
+                        )
+                        .padding(.trailing, Dimensions.Padding.padding10)
                 }
             }
         }
