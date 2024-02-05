@@ -6,3 +6,14 @@
 //
 
 import Foundation
+import SwiftUI
+
+struct GACArticleDetailView: View {
+    var body: some View {
+        VStack {
+            GACArticleDetailTopBar()
+            Spacer()
+            GACArticleDetailBottomBar()
+        }
+    }
+}

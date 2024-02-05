@@ -6,7 +6,10 @@
 //
 
 import Foundation
+import SwiftUI
 
-struct GACArticleDetailTopBar {
-    
+struct GACArticleDetailTopBar: View {
+    var body: some View {
+        Text("Top bar")
+    }
 }

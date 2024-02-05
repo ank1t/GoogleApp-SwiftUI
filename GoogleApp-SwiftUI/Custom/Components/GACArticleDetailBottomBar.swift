@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct GACArticleDetailBottomBar: View {
     var body: some View {
-        Text("")
+        Text("Bottom bar")
     }
 }
