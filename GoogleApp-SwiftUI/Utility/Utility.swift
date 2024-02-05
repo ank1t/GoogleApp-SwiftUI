@@ -44,7 +44,6 @@ struct Utility {
         case backChevron = "chevron.left"
         case secureLock = "lock.fill"
         case bookmark = "bookmark"
-        case share = "square.and.arrow.up"
         
         var icon: String {
             return self.rawValue
@@ -96,6 +95,7 @@ struct Dimensions {
         static let padding20: CGFloat = 20
         static let padding24: CGFloat = 24
         static let padding32: CGFloat = 32
+        static let padding45: CGFloat = 45
         static let padding50: CGFloat = 50
     }
     
