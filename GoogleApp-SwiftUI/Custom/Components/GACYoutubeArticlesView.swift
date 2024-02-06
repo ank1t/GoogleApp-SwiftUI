@@ -10,11 +10,11 @@ import WebKit
 import SwiftUI
 
 private struct YouTubePlayerView: UIViewRepresentable {
-    let videoID: String
+    @YoutubeURL let videoID: String
     
     func makeUIView(context: Context) -> WKWebView {
         let webView = WKWebView()
-        let urlRequest = URLRequest(url: URL(string: "")!)
+        let urlRequest = URLRequest(url: URL(string: videoID)!)
         webView.scrollView.isScrollEnabled = false
         //        view.load(URLRequest(url: url))
         return webView
