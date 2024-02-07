@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import WebKit
 
 struct Utility {
     enum ImageName: String {
@@ -47,6 +48,7 @@ struct Utility {
         case backArrow = "arrow.backward"
         case forwardArrow = "arrow.forward"
         case info = "info.circle"
+        case play
         
         var icon: String {
             return self.rawValue
@@ -68,6 +70,10 @@ struct Utility {
                          completion: nil)
         }
     }
+    
+    lazy var webview: WKWebView = {
+       return WKWebView()
+    }()
 }
 
 
