@@ -8,10 +8,19 @@
 import Foundation
 import SwiftUI
 
-struct GACWebview: View {
-    let urlStr: String
+struct GACYoutubeThumbnail: View {
+    @YoutubeURL var videoID: String
     
     var body: some View {
-        Text("")
+        ZStack {
+            Color.gray
+            VStack {
+                HStack {
+                    Image(for: .play)
+                        .renderAsResizable(.fit)
+                        .frame(height: Dimensions.FrameSize.size30)
+                }
+            }
+        }
     }
 }
