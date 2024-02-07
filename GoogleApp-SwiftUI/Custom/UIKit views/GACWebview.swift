@@ -10,11 +10,11 @@ import WebKit
 import SwiftUI
 
 struct GACWebviewWrapper: UIViewRepresentable {
-    let url: String
+    let urlStr: String
     
     func makeUIView(context: Context) -> WKWebView {
         let webView = WKWebView()
-        guard let url = URL(string: videoID) else {
+        guard let url = URL(string: urlStr) else {
             return webView
         }
         webView.scrollView.isScrollEnabled = false
