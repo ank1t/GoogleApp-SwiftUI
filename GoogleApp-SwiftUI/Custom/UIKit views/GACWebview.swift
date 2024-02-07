@@ -10,7 +10,7 @@ import WebKit
 import SwiftUI
 
 struct GACWebviewWrapper: UIViewRepresentable {
-    @YoutubeURL var videoID: String
+    let url: String
     
     func makeUIView(context: Context) -> WKWebView {
         let webView = WKWebView()
@@ -18,7 +18,7 @@ struct GACWebviewWrapper: UIViewRepresentable {
             return webView
         }
         webView.scrollView.isScrollEnabled = false
-        //        webView.load(URLRequest(url: url))
+        webView.load(URLRequest(url: url))
         return webView
     }
     
