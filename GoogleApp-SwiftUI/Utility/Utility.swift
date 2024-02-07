@@ -142,4 +142,9 @@ struct Dimensions {
         static let cornerRadius10: CGFloat = 10
         static let cornerRadius15: CGFloat = 15
     }
+    
+    struct Offset {
+        static let offset5: CGFloat = 5
+        static let offset10: CGFloat = 10
+    }
 }

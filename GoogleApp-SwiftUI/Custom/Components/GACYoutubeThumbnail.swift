@@ -39,7 +39,7 @@ struct GACYoutubeThumbnail: View {
                     .padding(.vertical, Dimensions.Padding.padding2)
                     .background(.black)
                     .clipShape(Capsule())
-                    .offset(x: 10, y: -10)
+                    .offset(x: Dimensions.Offset.offset10, y: -Dimensions.Offset.offset10)
             }
         }
     }
