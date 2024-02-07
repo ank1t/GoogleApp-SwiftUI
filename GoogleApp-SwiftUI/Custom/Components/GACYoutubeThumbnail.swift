@@ -16,9 +16,17 @@ struct GACYoutubeThumbnail: View {
             Color.gray
             VStack {
                 HStack {
-                    Image(for: .play)
-                        .renderAsResizable(.fit)
-                        .frame(height: Dimensions.FrameSize.size30)
+                    ZStack(alignment: .center) {
+                        Color
+                            .black
+                            .frame(height: Dimensions.FrameSize.size50)
+                            .clipShape(Circle())
+                            
+                        Image(for: .play)
+                            .renderAsResizable(.fit)
+                            .frame(height: Dimensions.FrameSize.size25)
+                            .padding(.leading, Dimensions.Padding.padding5)
+                    }
                 }
             }
         }
