@@ -9,7 +9,7 @@ import Foundation
 import WebKit
 import SwiftUI
 
-struct GACWebviewWrapper: UIViewRepresentable {
+struct GACWebview: UIViewRepresentable {
     let urlStr: String
     
     func makeUIView(context: Context) -> WKWebView {
@@ -17,7 +17,6 @@ struct GACWebviewWrapper: UIViewRepresentable {
         guard let url = URL(string: urlStr) else {
             return webView
         }
-        webView.scrollView.isScrollEnabled = false
         webView.load(URLRequest(url: url))
         return webView
     }
