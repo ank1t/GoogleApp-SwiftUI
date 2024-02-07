@@ -49,6 +49,10 @@ struct Utility {
         case forwardArrow = "arrow.forward"
         case info = "info.circle"
         case play
+        case copy = "doc.on.doc"
+        case searchMenu = "magnifyingglass"
+        case read = "speaker.wave.2.circle"
+        case reload = "goforward"
         
         var icon: String {
             return self.rawValue
