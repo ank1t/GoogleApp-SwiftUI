@@ -14,9 +14,10 @@ struct GACYoutubeThumbnail: View {
     var body: some View {
         ZStack {
             Color.gray
-            VStack {
+            VStack(alignment: .leading) {
+                Spacer()
                 HStack {
-                    ZStack(alignment: .center) {
+                    ZStack {
                         Color
                             .black
                             .frame(height: Dimensions.FrameSize.size50)
@@ -28,6 +29,17 @@ struct GACYoutubeThumbnail: View {
                             .padding(.leading, Dimensions.Padding.padding5)
                     }
                 }
+                .padding(.top, Dimensions.Padding.padding10)
+                Spacer()
+                
+                Text("00:57")
+                    .font(.system(size: Dimensions.FontSize.font12))
+                    .foregroundColor(.white)
+                    .padding(.horizontal, Dimensions.Padding.padding8)
+                    .padding(.vertical, Dimensions.Padding.padding2)
+                    .background(.black)
+                    .clipShape(Capsule())
+                    .offset(x: 10, y: -10)
             }
         }
     }
