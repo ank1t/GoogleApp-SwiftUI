@@ -26,12 +26,33 @@ struct GACArticleDetailTopBar: View {
                     .padding(.horizontal, Dimensions.Padding.padding8)
                     .padding(.bottom, Dimensions.Padding.padding5)
                 
-                Image(for: .more)
-                    .renderAsResizable(.fit)
-                    .foregroundColor(.white)
-                    .frame(width: Dimensions.FrameSize.size15,
-                           height: Dimensions.FrameSize.size15)
-                    .padding(.trailing, Dimensions.Padding.padding12)
+                Menu {
+                    Button(role: nil) { } label: {
+                        Label("Copy URL", systemImage: Utility.ImageName.copy.rawValue)
+                    }
+                    
+                    Button(role: nil) { } label: {
+                        Label("Find on page", systemImage: Utility.ImageName.searchMenu.rawValue)
+                    }
+                    
+                    Button(role: nil) { } label: {
+                        Label("Read aloud", systemImage: Utility.ImageName.read.rawValue)
+                    }
+                    
+                    Button(role: nil) { } label: {
+                        Label("Refresh", systemImage: Utility.ImageName.reload.rawValue)
+                    }
+                } label: {
+                    Image(for: .more)
+                        .renderAsResizable(.fit)
+                        .foregroundColor(.white)
+                        .frame(width: Dimensions.FrameSize.size15,
+                               height: Dimensions.FrameSize.size15)
+                        .padding(.trailing, Dimensions.Padding.padding12)
+                        .contentShape(Rectangle())
+                        .allowsHitTesting(true)
+                }
+                .preferredColorScheme(.dark)
             }
             
         }
