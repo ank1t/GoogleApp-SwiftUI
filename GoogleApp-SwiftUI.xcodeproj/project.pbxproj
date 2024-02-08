@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8404D3642B746FDF00ADF190 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8404D3632B746FDF00ADF190 /* NetworkMonitor.swift */; };
 		841A10DA2B71C4FC005CEEA6 /* YoutubeURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841A10D92B71C4FC005CEEA6 /* YoutubeURL.swift */; };
 		841A10E42B71CCD3005CEEA6 /* GACYoutubeThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841A10E32B71CCD3005CEEA6 /* GACYoutubeThumbnail.swift */; };
 		8428A11D2B70690600EF4BDF /* GACSecureConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428A11C2B70690600EF4BDF /* GACSecureConnectionView.swift */; };
@@ -68,6 +69,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8404D3632B746FDF00ADF190 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		841A10D92B71C4FC005CEEA6 /* YoutubeURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeURL.swift; sourceTree = "<group>"; };
 		841A10E32B71CCD3005CEEA6 /* GACYoutubeThumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACYoutubeThumbnail.swift; sourceTree = "<group>"; };
 		8428A11C2B70690600EF4BDF /* GACSecureConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACSecureConnectionView.swift; sourceTree = "<group>"; };
@@ -274,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				84DB7FE22B5B656F00830FE6 /* Utility.swift */,
+				8404D3632B746FDF00ADF190 /* NetworkMonitor.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				845EAC6C2B6B40D300F15D71 /* NetworkManager.swift in Sources */,
+				8404D3642B746FDF00ADF190 /* NetworkMonitor.swift in Sources */,
 				84DB7FE02B5B655700830FE6 /* Popup.swift in Sources */,
 				84DE20952B649B1D00622BBE /* GACSearchTextField.swift in Sources */,
 				84DB7F9E2B5B652100830FE6 /* ContentView.swift in Sources */,
