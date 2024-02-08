@@ -32,13 +32,10 @@ struct GACYoutubeThumbnail: View {
                 .padding(.top, Dimensions.Padding.padding10)
                 Spacer()
                 
-                Text("00:57")
-                    .font(.system(size: Dimensions.FontSize.font12))
-                    .foregroundColor(.white)
-                    .padding(.horizontal, Dimensions.Padding.padding8)
-                    .padding(.vertical, Dimensions.Padding.padding2)
-                    .background(.black)
-                    .clipShape(Capsule())
+                GACTextWithBackground(text: "00:57", fontSize: Dimensions.FontSize.font12,
+                                      textColor: .white, horizontalPadding: Dimensions.Padding.padding8,
+                                      verticalPadding: Dimensions.Padding.padding4, backgroundColor: .black,
+                                      Shape: Capsule())
                     .offset(x: Dimensions.Offset.offset10, y: -Dimensions.Offset.offset10)
             }
         }

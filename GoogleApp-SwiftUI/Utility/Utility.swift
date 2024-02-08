@@ -53,6 +53,7 @@ struct Utility {
         case searchMenu = "magnifyingglass"
         case read = "speaker.wave.2.circle"
         case reload = "goforward"
+        case noNetwork = "exclamationmark.icloud"
         
         var icon: String {
             return self.rawValue
@@ -113,6 +114,7 @@ struct Dimensions {
     
     struct Padding {
         static let padding2: CGFloat = 2
+        static let padding4: CGFloat = 4
         static let padding5: CGFloat = 5
         static let padding8: CGFloat = 8
         static let padding10: CGFloat = 10
