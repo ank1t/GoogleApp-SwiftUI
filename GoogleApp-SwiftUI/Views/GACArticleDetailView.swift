@@ -9,10 +9,16 @@ import Foundation
 import SwiftUI
 
 struct GACArticleDetailView: View {
+    @StateObject var networkMonitor = Monitor()
+    
     var body: some View {
         VStack {
             GACArticleDetailTopBar()
-            Spacer()
+            if false /*networkMonitor.status == .connected*/ {
+                GACWebview(urlStr: "https://cnn.com")
+            } else {
+                GACNoNetworkConnection()
+            }
             GACArticleDetailBottomBar()
         }
     }
