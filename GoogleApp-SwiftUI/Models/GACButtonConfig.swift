@@ -10,6 +10,6 @@ import SwiftUI
 
 struct GACButtonConfig {
     let text: String
-    let textFont: Font
-    let textColor: Color
+    let btnFont: Font
+    let btnColor: Color
 }
