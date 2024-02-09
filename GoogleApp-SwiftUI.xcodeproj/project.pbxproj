@@ -11,6 +11,7 @@
 		8404D3662B7470CA00ADF190 /* GACNoNetworkConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8404D3652B7470CA00ADF190 /* GACNoNetworkConnection.swift */; };
 		8404D3682B7472D600ADF190 /* GACTextWithBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8404D3672B7472D600ADF190 /* GACTextWithBackground.swift */; };
 		841079D72B75BFE600E335B4 /* GACTitleMessageButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841079D62B75BFE600E335B4 /* GACTitleMessageButtonView.swift */; };
+		841079DA2B75C0E200E335B4 /* GACTextConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841079D92B75C0E200E335B4 /* GACTextConfig.swift */; };
 		841A10DA2B71C4FC005CEEA6 /* YoutubeURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841A10D92B71C4FC005CEEA6 /* YoutubeURL.swift */; };
 		841A10E42B71CCD3005CEEA6 /* GACYoutubeThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841A10E32B71CCD3005CEEA6 /* GACYoutubeThumbnail.swift */; };
 		8428A11D2B70690600EF4BDF /* GACSecureConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428A11C2B70690600EF4BDF /* GACSecureConnectionView.swift */; };
@@ -76,6 +77,7 @@
 		8404D3652B7470CA00ADF190 /* GACNoNetworkConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACNoNetworkConnection.swift; sourceTree = "<group>"; };
 		8404D3672B7472D600ADF190 /* GACTextWithBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACTextWithBackground.swift; sourceTree = "<group>"; };
 		841079D62B75BFE600E335B4 /* GACTitleMessageButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACTitleMessageButtonView.swift; sourceTree = "<group>"; };
+		841079D92B75C0E200E335B4 /* GACTextConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACTextConfig.swift; sourceTree = "<group>"; };
 		841A10D92B71C4FC005CEEA6 /* YoutubeURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeURL.swift; sourceTree = "<group>"; };
 		841A10E32B71CCD3005CEEA6 /* GACYoutubeThumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACYoutubeThumbnail.swift; sourceTree = "<group>"; };
 		8428A11C2B70690600EF4BDF /* GACSecureConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACSecureConnectionView.swift; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 			children = (
 				84DB7FE82B5B657000830FE6 /* GACProfileRow.swift */,
 				8428A1202B70773000EF4BDF /* GACBottomBarIconModel.swift */,
+				841079D92B75C0E200E335B4 /* GACTextConfig.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -506,6 +509,7 @@
 				84DB7FD92B5B655700830FE6 /* GACTitle1Title2.swift in Sources */,
 				84DB7FDA2B5B655700830FE6 /* GACHeadlinesView.swift in Sources */,
 				84DB7FD52B5B655700830FE6 /* GACProfileRowView.swift in Sources */,
+				841079DA2B75C0E200E335B4 /* GACTextConfig.swift in Sources */,
 				846E63B22B73029D0084CEC6 /* GACWebview.swift in Sources */,
 				84DB7F9C2B5B652100830FE6 /* GoogleApp_SwiftUIApp.swift in Sources */,
 				84DB7FD72B5B655700830FE6 /* GACReferencedInArticle.swift in Sources */,
