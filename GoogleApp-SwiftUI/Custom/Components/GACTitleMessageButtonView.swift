@@ -11,11 +11,21 @@ import SwiftUI
 struct GACTitleMessageButtonView: View {
     let titleConfig: GACTextConfig
     let messageConfig: GACTextConfig
-    let buttonConfig: GACButtonConfig
+    let buttonConfig: GACTextConfig
+    
     var body: some View {
         ZStack {
             VStack {
-                Text("You are offline")
+                Text(titleConfig.text)
+                    .applyTextStyle(titleConfig)
+                
+                Text(messageConfig.text)
+                    .applyTextStyle(messageConfig)
+                
+                Button(action: {}) {
+                    Text(buttonConfig.text)
+                        .applyTextStyle(buttonConfig)
+                }
                     
             }
         }
