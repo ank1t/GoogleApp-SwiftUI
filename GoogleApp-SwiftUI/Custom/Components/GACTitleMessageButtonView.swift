@@ -15,6 +15,8 @@ struct GACTitleMessageButtonView: View {
     
     var body: some View {
         ZStack {
+            Color.black.opacity(Constants.overlayOpacity)
+            
             VStack {
                 Text(titleConfig.text)
                     .applyTextStyle(titleConfig)
@@ -26,8 +28,8 @@ struct GACTitleMessageButtonView: View {
                     Text(buttonConfig.text)
                         .applyTextStyle(buttonConfig)
                 }
-                    
             }
+            .background(LightTheme.gray400)
         }
     }
 }
