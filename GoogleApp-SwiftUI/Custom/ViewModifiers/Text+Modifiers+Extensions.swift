@@ -19,7 +19,7 @@ struct TextStyle: ViewModifier {
 }
 
 extension Text {
-    func applyTextStyle(_ config: GACTextConfig) {
+    func applyTextStyle(_ config: GACTextConfig) -> some View {
         modifier(TextStyle(config: config))
     }
 }
