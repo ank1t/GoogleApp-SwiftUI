@@ -14,7 +14,6 @@
 		841079DA2B75C0E200E335B4 /* GACTextConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841079D92B75C0E200E335B4 /* GACTextConfig.swift */; };
 		841079DC2B75C1B700E335B4 /* GACButtonConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841079DB2B75C1B700E335B4 /* GACButtonConfig.swift */; };
 		841079DE2B75C3A000E335B4 /* Text+Modifiers+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841079DD2B75C3A000E335B4 /* Text+Modifiers+Extensions.swift */; };
-		841079E02B75C49E00E335B4 /* Button+Modifiers+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841079DF2B75C49E00E335B4 /* Button+Modifiers+Extensions.swift */; };
 		841A10DA2B71C4FC005CEEA6 /* YoutubeURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841A10D92B71C4FC005CEEA6 /* YoutubeURL.swift */; };
 		841A10E42B71CCD3005CEEA6 /* GACYoutubeThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841A10E32B71CCD3005CEEA6 /* GACYoutubeThumbnail.swift */; };
 		8428A11D2B70690600EF4BDF /* GACSecureConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428A11C2B70690600EF4BDF /* GACSecureConnectionView.swift */; };
@@ -83,7 +82,6 @@
 		841079D92B75C0E200E335B4 /* GACTextConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACTextConfig.swift; sourceTree = "<group>"; };
 		841079DB2B75C1B700E335B4 /* GACButtonConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACButtonConfig.swift; sourceTree = "<group>"; };
 		841079DD2B75C3A000E335B4 /* Text+Modifiers+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Modifiers+Extensions.swift"; sourceTree = "<group>"; };
-		841079DF2B75C49E00E335B4 /* Button+Modifiers+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Modifiers+Extensions.swift"; sourceTree = "<group>"; };
 		841A10D92B71C4FC005CEEA6 /* YoutubeURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeURL.swift; sourceTree = "<group>"; };
 		841A10E32B71CCD3005CEEA6 /* GACYoutubeThumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACYoutubeThumbnail.swift; sourceTree = "<group>"; };
 		8428A11C2B70690600EF4BDF /* GACSecureConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACSecureConnectionView.swift; sourceTree = "<group>"; };
@@ -286,7 +284,6 @@
 			children = (
 				84DB7FD42B5B655600830FE6 /* Popup.swift */,
 				841079DD2B75C3A000E335B4 /* Text+Modifiers+Extensions.swift */,
-				841079DF2B75C49E00E335B4 /* Button+Modifiers+Extensions.swift */,
 			);
 			path = ViewModifiers;
 			sourceTree = "<group>";
@@ -495,7 +492,6 @@
 				84DE20972B65EBC900622BBE /* GACArticleDetailView.swift in Sources */,
 				8404D3682B7472D600ADF190 /* GACTextWithBackground.swift in Sources */,
 				8428A1212B70773000EF4BDF /* GACBottomBarIconModel.swift in Sources */,
-				841079E02B75C49E00E335B4 /* Button+Modifiers+Extensions.swift in Sources */,
 				84BD781C2B672D09005ED9E6 /* GACSearchTypesView.swift in Sources */,
 				8428A11F2B70698100EF4BDF /* GACURLView.swift in Sources */,
 				8404D3662B7470CA00ADF190 /* GACNoNetworkConnection.swift in Sources */,
