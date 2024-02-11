@@ -12,7 +12,7 @@ import Foundation
     
     var wrappedValue: String {
         didSet {
-            wrappedValue = youtubeURLPrefix + wrappedValue
+            wrappedValue = youtubeURLPrefix + oldValue
         }
     }
     
