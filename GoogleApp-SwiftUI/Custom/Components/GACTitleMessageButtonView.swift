@@ -17,7 +17,7 @@ struct GACTitleMessageButtonView: View {
         ZStack {
             Color.black.opacity(Constants.overlayOpacity)
             
-            VStack {
+            VStack(spacing: Dimensions.Spacing.spacing15) {
                 Text(titleConfig.text)
                     .applyTextStyle(titleConfig)
                 
@@ -30,6 +30,7 @@ struct GACTitleMessageButtonView: View {
                 }
             }
             .background(LightTheme.gray400)
+            .cornerRadius(Dimensions.CornerRadius.cornerRadius10)
         }
     }
 }
