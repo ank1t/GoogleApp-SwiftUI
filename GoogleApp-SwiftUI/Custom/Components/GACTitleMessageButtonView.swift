@@ -12,13 +12,14 @@ struct GACTitleMessageButtonView: View {
     let titleConfig: GACTextConfig
     let messageConfig: GACTextConfig
     let buttonConfig: GACTextConfig
+    @Binding var dialogVisibility: Bool
     
     var body: some View {
         GeometryReader { proxy in
             ZStack {
                 Color
                     .black
-                    .opacity(Constants.overlayOpacity)
+                    .opacity(Constants.noNetworkConnectionOverlayOpacity)
                     .ignoresSafeArea()
                 
                 VStack {
@@ -35,7 +36,11 @@ struct GACTitleMessageButtonView: View {
                         .padding(.bottom, Dimensions.Padding.padding12)
                     
                     HStack {
-                        Button(action: {}) {
+                        Button(action: {
+                            withAnimation {
+                                dialogVisibility.toggle()
+                            }
+                        }) {
                             Text(buttonConfig.text)
                                 .applyTextStyle(buttonConfig)
                         }
