@@ -14,23 +14,44 @@ struct GACTitleMessageButtonView: View {
     let buttonConfig: GACTextConfig
     
     var body: some View {
-        ZStack {
-            Color.black.opacity(Constants.overlayOpacity)
-            
-            VStack(spacing: Dimensions.Spacing.spacing15) {
-                Text(titleConfig.text)
-                    .applyTextStyle(titleConfig)
+        GeometryReader { proxy in
+            ZStack {
+                Color
+                    .black
+                    .opacity(Constants.overlayOpacity)
+                    .ignoresSafeArea()
                 
-                Text(messageConfig.text)
-                    .applyTextStyle(messageConfig)
-                
-                Button(action: {}) {
-                    Text(buttonConfig.text)
-                        .applyTextStyle(buttonConfig)
+                VStack {
+                    Text(titleConfig.text)
+                        .applyTextStyle(titleConfig)
+                        .padding(.top, Dimensions.Padding.padding20)
+                        .padding(.bottom, Dimensions.Padding.padding15)
+                        .padding(.horizontal, Dimensions.Padding.padding20)
+                    
+                    Text(messageConfig.text)
+                        .applyTextStyle(messageConfig)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, Dimensions.Padding.padding20)
+                        .padding(.bottom, Dimensions.Padding.padding12)
+                    
+                    HStack {
+                        Button(action: {}) {
+                            Text(buttonConfig.text)
+                                .applyTextStyle(buttonConfig)
+                        }
+                        .frame(width: proxy.frame(in: .global).width * 0.75)
+                        .padding(.vertical, Dimensions.Padding.padding10)
+                        .background(.cyan)
+                        .clipShape(Capsule())
+                    }
+                    .padding(.bottom, Dimensions.Padding.padding20)
+                    .padding(.horizontal, Dimensions.Padding.padding15)
+                    
                 }
+                .background(LightTheme.tabBarBGColor)
+                .cornerRadius(Dimensions.CornerRadius.cornerRadius10)
+                .frame(width: proxy.frame(in: .global).width * 0.9)
             }
-            .background(LightTheme.gray400)
-            .cornerRadius(Dimensions.CornerRadius.cornerRadius10)
         }
     }
 }
