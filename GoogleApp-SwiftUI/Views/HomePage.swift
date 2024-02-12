@@ -13,8 +13,10 @@ struct HomePage: View {
     @State var profileIconFrame: CGRect = .zero
     @State var contentFrame: CGRect = .zero
     @State var textfieldIsActive: Bool = false
+    @State var shouldShowNetworkDialog: Bool = false
     
     @Namespace private var animation
+    @StateObject var networkMonitor = Monitor()
     
     var body: some View {
         NavigationView {
@@ -95,6 +97,10 @@ struct HomePage: View {
                     GACTrendingSearchesView(textfieldIsActive: $textfieldIsActive)
                         .ignoresSafeArea()
                 }
+                
+                if !shouldShowNetworkDialog && networkMonitor.status != .connected  {
+                    getNoNetworkConnectionConfig()
+                }
             }
             .preferredColorScheme(.dark)
         }
@@ -105,5 +111,24 @@ struct HomePage: View {
                 }
             }
         }
+    }
+    
+    private func getNoNetworkConnectionConfig() -> GACTitleMessageButtonView {
+        let titleConfig = GACTextConfig(text: "You are offline",
+                                        textColor: .white,
+                                        textFont: .system(size: Dimensions.FontSize.font24))
+        
+        let messageConfig = GACTextConfig(text: "Go to Settings and check your internet connection",
+                                          textColor: .gray,
+                                          textFont: .system(size: Dimensions.FontSize.font15))
+        
+        let CTAButtonConfig = GACTextConfig(text: "OK",
+                                            textColor: .black,
+                                            textFont: .system(size: Dimensions.FontSize.font15))
+        
+        return GACTitleMessageButtonView(titleConfig: titleConfig,
+                                         messageConfig: messageConfig,
+                                         buttonConfig: CTAButtonConfig,
+                                         dialogVisibility: $shouldShowNetworkDialog)
     }
 }
