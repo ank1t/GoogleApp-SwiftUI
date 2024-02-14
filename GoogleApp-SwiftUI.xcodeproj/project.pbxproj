@@ -20,6 +20,8 @@
 		8428A1212B70773000EF4BDF /* GACBottomBarIconModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428A1202B70773000EF4BDF /* GACBottomBarIconModel.swift */; };
 		8428A1232B7080D400EF4BDF /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428A1222B7080D400EF4BDF /* UIApplication+Extensions.swift */; };
 		845EAC6C2B6B40D300F15D71 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EAC6B2B6B40D300F15D71 /* NetworkManager.swift */; };
+		846CAA5D2B7C46FE001F16DE /* TabsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846CAA5C2B7C46FE001F16DE /* TabsPage.swift */; };
+		846CAA5F2B7C473B001F16DE /* NotificationsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846CAA5E2B7C473B001F16DE /* NotificationsPage.swift */; };
 		846E63B22B73029D0084CEC6 /* GACWebview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E63B12B73029D0084CEC6 /* GACWebview.swift */; };
 		849A21812B6F88F6006BE8F3 /* GACArticleDetailTopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A21802B6F88F6006BE8F3 /* GACArticleDetailTopBar.swift */; };
 		849A21832B6F8914006BE8F3 /* GACArticleDetailBottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A21822B6F8914006BE8F3 /* GACArticleDetailBottomBar.swift */; };
@@ -87,6 +89,8 @@
 		8428A1202B70773000EF4BDF /* GACBottomBarIconModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACBottomBarIconModel.swift; sourceTree = "<group>"; };
 		8428A1222B7080D400EF4BDF /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
 		845EAC6B2B6B40D300F15D71 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		846CAA5C2B7C46FE001F16DE /* TabsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsPage.swift; sourceTree = "<group>"; };
+		846CAA5E2B7C473B001F16DE /* NotificationsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsPage.swift; sourceTree = "<group>"; };
 		846E63B12B73029D0084CEC6 /* GACWebview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACWebview.swift; sourceTree = "<group>"; };
 		849A21802B6F88F6006BE8F3 /* GACArticleDetailTopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACArticleDetailTopBar.swift; sourceTree = "<group>"; };
 		849A21822B6F8914006BE8F3 /* GACArticleDetailBottomBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACArticleDetailBottomBar.swift; sourceTree = "<group>"; };
@@ -151,6 +155,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		840ABFEE2B7B032400BB5996 /* TabViews */ = {
+			isa = PBXGroup;
+			children = (
+				84DB7FEC2B5B657100830FE6 /* HomePage.swift */,
+				846CAA5C2B7C46FE001F16DE /* TabsPage.swift */,
+				846CAA5E2B7C473B001F16DE /* NotificationsPage.swift */,
+			);
+			path = TabViews;
+			sourceTree = "<group>";
+		};
 		841A10D82B71C4C9005CEEA6 /* PropertyWrappers */ = {
 			isa = PBXGroup;
 			children = (
@@ -341,7 +355,7 @@
 		84DB7FEB2B5B657000830FE6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				84DB7FEC2B5B657100830FE6 /* HomePage.swift */,
+				840ABFEE2B7B032400BB5996 /* TabViews */,
 				84DB7FF22B5CAE0C00830FE6 /* GACProfile.swift */,
 				84DE20922B649AD800622BBE /* GACTrendingSearchesView.swift */,
 				84DE20962B65EBC900622BBE /* GACArticleDetailView.swift */,
@@ -494,6 +508,7 @@
 				8404D3662B7470CA00ADF190 /* GACNoNetworkConnection.swift in Sources */,
 				84DB7FDB2B5B655700830FE6 /* GACHeadlineChannelAuthorTimeView.swift in Sources */,
 				841A10DA2B71C4FC005CEEA6 /* YoutubeURL.swift in Sources */,
+				846CAA5F2B7C473B001F16DE /* NotificationsPage.swift in Sources */,
 				84DE20992B65ECAE00622BBE /* GACNotificationsView.swift in Sources */,
 				84DB7FDD2B5B655700830FE6 /* GACLocalWeatherView.swift in Sources */,
 				8428A1232B7080D400EF4BDF /* UIApplication+Extensions.swift in Sources */,
@@ -506,6 +521,7 @@
 				849A21812B6F88F6006BE8F3 /* GACArticleDetailTopBar.swift in Sources */,
 				8428A11D2B70690600EF4BDF /* GACSecureConnectionView.swift in Sources */,
 				84DB7FDE2B5B655700830FE6 /* GACYoutubeArticlesView.swift in Sources */,
+				846CAA5D2B7C46FE001F16DE /* TabsPage.swift in Sources */,
 				84DB7FF12B5B657100830FE6 /* HomePage.swift in Sources */,
 				84DB7FEF2B5B657100830FE6 /* GACProfileRow.swift in Sources */,
 				841079D72B75BFE600E335B4 /* GACTitleMessageButtonView.swift in Sources */,
