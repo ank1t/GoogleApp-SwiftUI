@@ -173,6 +173,48 @@
 			path = PropertyWrappers;
 			sourceTree = "<group>";
 		};
+		846CAA602B7C4966001F16DE /* HomePage_Components */ = {
+			isa = PBXGroup;
+			children = (
+				84DB7FC82B5B655600830FE6 /* GACProfileRowView.swift */,
+				84DB7FC92B5B655600830FE6 /* GACStocksTileView.swift */,
+				84DB7FCA2B5B655600830FE6 /* GACReferencedInArticle.swift */,
+				84DB7FCB2B5B655600830FE6 /* GACHeadlineArticleActionsView.swift */,
+				84DB7FCC2B5B655600830FE6 /* GACTitle1Title2.swift */,
+				84DB7FCD2B5B655600830FE6 /* GACHeadlinesView.swift */,
+				84DB7FCE2B5B655600830FE6 /* GACHeadlineChannelAuthorTimeView.swift */,
+				84DB7FCF2B5B655600830FE6 /* GACSearchOptionsView.swift */,
+				84DB7FD02B5B655600830FE6 /* GACLocalWeatherView.swift */,
+				84DB7FD12B5B655600830FE6 /* GACYoutubeArticlesView.swift */,
+				84DB7FD22B5B655600830FE6 /* GACProfileOptions.swift */,
+				84DE20942B649B1D00622BBE /* GACSearchTextField.swift */,
+				84BD781B2B672D09005ED9E6 /* GACSearchTypesView.swift */,
+				84BD781D2B67312C005ED9E6 /* GACTrendingSearchesRow.swift */,
+				849A21802B6F88F6006BE8F3 /* GACArticleDetailTopBar.swift */,
+				849A21822B6F8914006BE8F3 /* GACArticleDetailBottomBar.swift */,
+				8428A11E2B70698100EF4BDF /* GACURLView.swift */,
+				841A10E32B71CCD3005CEEA6 /* GACYoutubeThumbnail.swift */,
+				8404D3652B7470CA00ADF190 /* GACNoNetworkConnection.swift */,
+				8404D3672B7472D600ADF190 /* GACTextWithBackground.swift */,
+				841079D62B75BFE600E335B4 /* GACTitleMessageButtonView.swift */,
+			);
+			path = HomePage_Components;
+			sourceTree = "<group>";
+		};
+		846CAA612B7C498F001F16DE /* TabsPage_Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TabsPage_Components;
+			sourceTree = "<group>";
+		};
+		846CAA622B7C499E001F16DE /* Notifications_Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Notifications_Components;
+			sourceTree = "<group>";
+		};
 		846E63B02B73027E0084CEC6 /* UIKit views */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,27 +308,9 @@
 		84DB7FC72B5B655600830FE6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				84DB7FC82B5B655600830FE6 /* GACProfileRowView.swift */,
-				84DB7FC92B5B655600830FE6 /* GACStocksTileView.swift */,
-				84DB7FCA2B5B655600830FE6 /* GACReferencedInArticle.swift */,
-				84DB7FCB2B5B655600830FE6 /* GACHeadlineArticleActionsView.swift */,
-				84DB7FCC2B5B655600830FE6 /* GACTitle1Title2.swift */,
-				84DB7FCD2B5B655600830FE6 /* GACHeadlinesView.swift */,
-				84DB7FCE2B5B655600830FE6 /* GACHeadlineChannelAuthorTimeView.swift */,
-				84DB7FCF2B5B655600830FE6 /* GACSearchOptionsView.swift */,
-				84DB7FD02B5B655600830FE6 /* GACLocalWeatherView.swift */,
-				84DB7FD12B5B655600830FE6 /* GACYoutubeArticlesView.swift */,
-				84DB7FD22B5B655600830FE6 /* GACProfileOptions.swift */,
-				84DE20942B649B1D00622BBE /* GACSearchTextField.swift */,
-				84BD781B2B672D09005ED9E6 /* GACSearchTypesView.swift */,
-				84BD781D2B67312C005ED9E6 /* GACTrendingSearchesRow.swift */,
-				849A21802B6F88F6006BE8F3 /* GACArticleDetailTopBar.swift */,
-				849A21822B6F8914006BE8F3 /* GACArticleDetailBottomBar.swift */,
-				8428A11E2B70698100EF4BDF /* GACURLView.swift */,
-				841A10E32B71CCD3005CEEA6 /* GACYoutubeThumbnail.swift */,
-				8404D3652B7470CA00ADF190 /* GACNoNetworkConnection.swift */,
-				8404D3672B7472D600ADF190 /* GACTextWithBackground.swift */,
-				841079D62B75BFE600E335B4 /* GACTitleMessageButtonView.swift */,
+				846CAA622B7C499E001F16DE /* Notifications_Components */,
+				846CAA612B7C498F001F16DE /* TabsPage_Components */,
+				846CAA602B7C4966001F16DE /* HomePage_Components */,
 			);
 			path = Components;
 			sourceTree = "<group>";
