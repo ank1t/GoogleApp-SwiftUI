@@ -10,6 +10,9 @@ import SwiftUI
 
 struct GACTabPageSearchResult: View {
     var body: some View {
-        Text("Hello")
+        HStack(spacing: Dimensions.Spacing.spacing10) {
+            Image(for: .noNetwork)
+                .
+        }
     }
 }
