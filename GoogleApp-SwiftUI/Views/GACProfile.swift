@@ -8,26 +8,8 @@
 import SwiftUI
 
 struct GACProfile: View {
-    let options: [GACProfileRow] = [
-        GACProfileRow(imageName: .user, title: "Choose an account",
-                      divider: .bottom, dividerInset: Dimensions.Padding.padding50,
-                      iconSize: Dimensions.FrameSize.size25,
-                      disclosureIndicator: Image(for: .chevronUp)),
-        GACProfileRow(imageName: .userProfile, renderImageAsTemplate: false,
-                      title: "Ankit Singh",
-                      subtitle: "email@gmail.com", iconSize: Dimensions.FrameSize.size25),
-        GACProfileRow(imageName: .addUser, title: "Add another account"),
-        GACProfileRow(imageName: .userSettings, title: "Manage accounts on this device"),
-        GACProfileRow(imageName: .incognito, title: "Turn on incognito",
-                      divider: .top),
-        GACProfileRow(imageName: .history, title: "History"),
-        GACProfileRow(imageName: .speaker, title: "Read aloud",
-                      divider: .bottom, dividerInset: Dimensions.Padding.padding50),
-        GACProfileRow(imageName: .settings, title: "Settings"),
-        GACProfileRow(imageName: .help, title: "Help & Feedback",
-                      divider: .bottom)
-    ]
     @Binding var profileScreenShown: Bool
+    @State private var showProfileRelatedRows: Bool = false
     
     var body: some View {
         ZStack {
@@ -59,9 +41,39 @@ struct GACProfile: View {
                                 }
                             }
                             .padding(.vertical, Dimensions.Padding.padding15)
-                            ForEach(options, id: \.self) { option in
-                                GACProfileRowView(profileRow: option)
+                            GACProfileRowView(profileRow: GACProfileRow(imageName: .user,
+                                                                        title: "Choose an account",
+                                                                        divider: .bottom,
+                                                                        dividerInset: Dimensions.Padding.padding50,
+                                                                        iconSize: Dimensions.FrameSize.size25,
+                                                                        disclosureIndicator: Image(for: .chevronUp)))
+                            Group {
+                                GACProfileRowView(profileRow: GACProfileRow(imageName: .userProfile,
+                                                                            renderImageAsTemplate: false,
+                                                                            title: "Ankit Singh",
+                                                                            subtitle: "email@gmail.com",
+                                                                            iconSize: Dimensions.FrameSize.size25))
+                                GACProfileRowView(profileRow: GACProfileRow(imageName: .addUser,
+                                                                            title: "Add another account"))
+                                GACProfileRowView(profileRow: GACProfileRow(imageName: .userSettings,
+                                                                            title: "Manage accounts on this device"))
                             }
+                            .scaleEffect(showProfileRelatedRows ? 1 : .zero)
+                            
+                            GACProfileRowView(profileRow: GACProfileRow(imageName: .incognito,
+                                                                        title: "Turn on incognito",
+                                                                        divider: .top))
+                            GACProfileRowView(profileRow: GACProfileRow(imageName: .history,
+                                                                        title: "History"))
+                            GACProfileRowView(profileRow: GACProfileRow(imageName: .speaker,
+                                                                        title: "Read aloud",
+                                                                        divider: .bottom,
+                                                                        dividerInset: Dimensions.Padding.padding50))
+                            GACProfileRowView(profileRow: GACProfileRow(imageName: .settings,
+                                                                        title: "Settings"))
+                            GACProfileRowView(profileRow: GACProfileRow(imageName: .help,
+                                                                        title: "Help & Feedback",
+                                                                        divider: .bottom))
                             GACTitle1Title2(title1: "Privacy", title2: "Terms of Service")
                         }
                         .background(LightTheme.tabBarBGColor)
