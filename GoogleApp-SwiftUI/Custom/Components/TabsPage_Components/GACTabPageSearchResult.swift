@@ -20,7 +20,7 @@ struct GACTabPageSearchResult: View {
         HStack(spacing: Dimensions.Spacing.spacing10) {
             Image(for: .noNetwork)
             
-            VStack(spacing: Dimensions.Spacing.spacing5, alignment: .leading) {
+            VStack(alignment: .leading, spacing: Dimensions.Spacing.spacing5) {
                 Text("The Mysterious prehistoric undercaves")
                     .font(.system(size: Dimensions.FontSize.font14))
                     .foregroundColor(.white)
