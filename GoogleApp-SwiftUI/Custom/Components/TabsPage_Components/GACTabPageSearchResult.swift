@@ -19,6 +19,7 @@ struct GACTabPageSearchResult: View {
     var body: some View {
         HStack(spacing: Dimensions.Spacing.spacing10) {
             Image(for: .noNetwork)
+                .clipShape(Circle())
             
             VStack(alignment: .leading, spacing: Dimensions.Spacing.spacing5) {
                 Text("The Mysterious prehistoric undercaves")
@@ -30,5 +31,6 @@ struct GACTabPageSearchResult: View {
                     .foregroundColor(.gray)
             }
         }
+        .clipShape(RoundedRectangle(cornerRadius: Dimensions.CornerRadius.cornerRadius8))
     }
 }
