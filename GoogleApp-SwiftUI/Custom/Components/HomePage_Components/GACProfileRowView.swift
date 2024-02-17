@@ -16,9 +16,16 @@ enum GACProfileDividerView {
 
 struct GACProfileRowView: View {
     let profileRow: GACProfileRow
-    @State private var disclosureRotationAngle: CGFloat = 0
-    @State private var showProfileRelatedRows: Bool = false
+    @State private var disclosureRotationAngle: CGFloat
+    @Bindin private var showProfileRelatedRows: Bool
     
+    init(profileRow: GACProfileRow,
+         disclosureRotationAngle: CGFloat = 0,
+         showProfileRelatedRows: Bool = false) {
+        self.profileRow = profileRow
+        self.disclosureRotationAngle = disclosureRotationAngle
+        self.showProfileRelatedRows = showProfileRelatedRows
+    }
     var body: some View {
         VStack(alignment: .leading, spacing: Dimensions.Spacing.spacing0) {
             if profileRow.divider == .top {
