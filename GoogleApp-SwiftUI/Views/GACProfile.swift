@@ -59,7 +59,7 @@ struct GACProfile: View {
                                 GACProfileRowView(profileRow: GACProfileRow(imageName: .userSettings,
                                                                             title: "Manage accounts on this device"))
                             }
-                            .scaleEffect(showProfileRelatedRows ? 1 : .zero)
+                            .frame(height: showProfileRelatedRows ? 1 : .zero)
                             
                             GACProfileRowView(profileRow: GACProfileRow(imageName: .incognito,
                                                                         title: "Turn on incognito",
