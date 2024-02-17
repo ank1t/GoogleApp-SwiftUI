@@ -59,7 +59,7 @@ struct GACProfileRowView: View {
                             withAnimation(.easeIn(duration: Constants.disclosureAnimationDuration)) {
                                 disclosureRotationAngle += 180
                             }
-                            disclosureRotationAngle = showProfileRelatedRows ? 180 : 0
+                            disclosureRotationAngle = disclosureRotationAngle.truncatingRemainder(dividingBy: 360)
                         }
                 }
                 
