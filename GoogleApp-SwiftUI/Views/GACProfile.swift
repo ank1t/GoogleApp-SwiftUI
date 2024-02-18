@@ -48,7 +48,7 @@ struct GACProfile: View {
                                                                         iconSize: Dimensions.FrameSize.size25,
                                                                         disclosureIndicator: Image(for: .chevronUp)),
                             showProfileRelatedRows: $showProfileRelatedRows)
-                            Group {
+                            if showProfileRelatedRows {
                                 GACProfileRowView(profileRow: GACProfileRow(imageName: .userProfile,
                                                                             renderImageAsTemplate: false,
                                                                             title: "Ankit Singh",
@@ -57,13 +57,12 @@ struct GACProfile: View {
                                 GACProfileRowView(profileRow: GACProfileRow(imageName: .addUser,
                                                                             title: "Add another account"))
                                 GACProfileRowView(profileRow: GACProfileRow(imageName: .userSettings,
-                                                                            title: "Manage accounts on this device"))
+                                                                            title: "Manage accounts on this device",
+                                                                            divider: .bottom))
                             }
-                            .frame(height: showProfileRelatedRows ? 1 : .zero)
                             
                             GACProfileRowView(profileRow: GACProfileRow(imageName: .incognito,
-                                                                        title: "Turn on incognito",
-                                                                        divider: .top))
+                                                                        title: "Turn on incognito"))
                             GACProfileRowView(profileRow: GACProfileRow(imageName: .history,
                                                                         title: "History"))
                             GACProfileRowView(profileRow: GACProfileRow(imageName: .speaker,
