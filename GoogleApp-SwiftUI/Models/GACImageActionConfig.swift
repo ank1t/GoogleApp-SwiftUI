@@ -9,7 +9,8 @@
 import Foundation
 import SwiftUI
 
-struct GACImageActionConfig {
+struct GACImageActionConfig: Identifiable {
+    let id = UUID().uuidString
     let image: Utility.ImageName
     let action: (() -> Void)
 }
