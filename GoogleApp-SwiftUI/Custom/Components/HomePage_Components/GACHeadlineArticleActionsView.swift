@@ -10,18 +10,15 @@ import SwiftUI
 
 struct GACHeadlineArticleActionsView: View {
     let url: String
-    private lazy var imageActionsConfig: [GACImageActionConfig] = [
-        GACImageActionConfig(image: .like, action: {}),
-        GACImageActionConfig(image: .share, action: {
-            guard let urlFromLink = URL(string: url) else { return }
-            Utility.shareActivityItems([urlFromLink])
-        }),
-        GACImageActionConfig(image: .more, action: {})
-    ]
     
     var body: some View {
         HStack(spacing: Utility.isLargeDevice ? Dimensions.Spacing.spacing25 : Dimensions.Spacing.spacing15) {
-            ForEach(imageActionsConfig) { config in
+            ForEach([GACImageActionConfig(image: .like, action: {}),
+                     GACImageActionConfig(image: .share, action: {
+                        guard let urlFromLink = URL(string: url) else { return }
+                        Utility.shareActivityItems([urlFromLink])
+                    }),
+                     GACImageActionConfig(image: .more, action: {})]) { config in
                 Image(for: config.image)
                     .font(.system(size: Dimensions.FontSize.font15))
                     .onTapGesture {
