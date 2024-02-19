@@ -7,3 +7,9 @@
         
 
 import Foundation
+import SwiftUI
+
+struct GACImageActionConfig {
+    let image: Utility.ImageName
+    let action: (() -> Void)
+}
