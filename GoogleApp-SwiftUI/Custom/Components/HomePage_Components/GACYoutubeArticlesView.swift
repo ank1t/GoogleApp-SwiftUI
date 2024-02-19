@@ -9,15 +9,16 @@ import Foundation
 import SwiftUI
 
 struct GACYouTubeArticlesView: View {
+    let videoID: String
     var body: some View {
         VStack(spacing: Dimensions.Spacing.spacing15) {
-            GACYoutubeThumbnail(videoID: "FelYPK4p3Bo")
+            GACYoutubeThumbnail(videoID: videoID)
                 .frame(height: Dimensions.FrameSize.size200)
                 .clipShape(RoundedRectangle(cornerRadius:  Dimensions.CornerRadius.cornerRadius15))
             HStack {
                 GACHeadlineChannelAuthorTimeView()
                 Spacer()
-                GACHeadlineArticleActionsView()
+                GACHeadlineArticleActionsView(url: Utility.generateYTURL(from: videoID))
             }
         }
         .padding(.horizontal, Dimensions.Padding.padding20)

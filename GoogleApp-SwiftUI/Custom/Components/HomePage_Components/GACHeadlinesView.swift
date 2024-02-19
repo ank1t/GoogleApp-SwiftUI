@@ -14,6 +14,7 @@ struct GACHeadlinesView: View {
 //    let newsOutletLogo: String
 //    let newsOutletName: String
 //    let headlineTimeStamp: String
+    let url: String
     
     var body: some View {
         VStack(spacing: Dimensions.Spacing.spacing5) {
@@ -36,7 +37,7 @@ struct GACHeadlinesView: View {
             HStack {
                 GACHeadlineChannelAuthorTimeView()
                 Spacer()
-                GACHeadlineArticleActionsView()
+                GACHeadlineArticleActionsView(url: url)
             }
             .padding(.top, Dimensions.Padding.padding10)
         }
