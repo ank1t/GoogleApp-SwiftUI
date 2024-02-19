@@ -130,7 +130,7 @@
 		84DB7FE62B5B657000830FE6 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		84DB7FE82B5B657000830FE6 /* GACProfileRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GACProfileRow.swift; sourceTree = "<group>"; };
 		84DB7FEA2B5B657000830FE6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		84DB7FEC2B5B657100830FE6 /* HomePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		84DB7FEC2B5B657100830FE6 /* HomePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomePage.swift; path = "GoogleApp-SwiftUI/Views/TabViews/HomePage.swift"; sourceTree = SOURCE_ROOT; };
 		84DB7FF22B5CAE0C00830FE6 /* GACProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACProfile.swift; sourceTree = "<group>"; };
 		84DE20922B649AD800622BBE /* GACTrendingSearchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACTrendingSearchesView.swift; sourceTree = "<group>"; };
 		84DE20942B649B1D00622BBE /* GACSearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACSearchTextField.swift; sourceTree = "<group>"; };
@@ -166,10 +166,9 @@
 		840ABFEE2B7B032400BB5996 /* TabViews */ = {
 			isa = PBXGroup;
 			children = (
-				84DB7FEC2B5B657100830FE6 /* HomePage.swift */,
+				84DA16BB2B8F27E60066336D /* HomePage */,
 				846CAA5C2B7C46FE001F16DE /* TabsPage.swift */,
 				846CAA5E2B7C473B001F16DE /* NotificationsPage.swift */,
-				84DA16B92B8F27680066336D /* HomePageViewModel.swift */,
 			);
 			path = TabViews;
 			sourceTree = "<group>";
@@ -239,6 +238,15 @@
 				846E63B12B73029D0084CEC6 /* GACWebview.swift */,
 			);
 			path = "UIKit views";
+			sourceTree = "<group>";
+		};
+		84DA16BB2B8F27E60066336D /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				84DB7FEC2B5B657100830FE6 /* HomePage.swift */,
+				84DA16B92B8F27680066336D /* HomePageViewModel.swift */,
+			);
+			path = HomePage;
 			sourceTree = "<group>";
 		};
 		84DB7F8F2B5B652100830FE6 = {
