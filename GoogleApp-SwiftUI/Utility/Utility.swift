@@ -77,7 +77,7 @@ struct Utility {
     }
     
     static func generateYTURL(from id: String) -> String {
-        "https://www.youtube.com/embed/\(id)"
+        Constants.youtubeBaseURL + id
     }
     
     lazy var webview: WKWebView = {
