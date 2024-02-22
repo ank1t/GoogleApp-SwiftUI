@@ -12,6 +12,7 @@ struct HomePage: View {
     @State var profileScreenShown: Bool = false
     @State var profileIconFrame: CGRect = .zero
     @State var contentFrame: CGRect = .zero
+    @State var searchFieldFrame: CGRect = .zero
     @State var textfieldIsActive: Bool = false
     @State var shouldShowNetworkDialog: Bool = false
     
@@ -64,10 +65,25 @@ struct HomePage: View {
                     }
                     .padding(.top, Dimensions.Padding.padding20)
                     
+//                    ZStack {
+//                        Color.red
+//                            .frame(height: searchFieldFrame.height)
+//
+//
+//
+//                    }
+                    
                     GACSearchTextField(appearence: .homepage,
                                        textfieldIsActive: $textfieldIsActive)
                     .matchedGeometryEffect(id: Constants.animationID, in: animation)
-                        
+                    .overlay {
+                        GeometryReader { proxy in
+                            Color.clear.onAppear {
+                                searchFieldFrame = proxy.frame(in: .global)
+                            }
+                        }
+                    }
+                    
                     GACSearchTypesView()
                     Divider()
                         .padding(.top, Dimensions.Padding.padding10)
