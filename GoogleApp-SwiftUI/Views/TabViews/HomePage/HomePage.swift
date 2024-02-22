@@ -66,7 +66,7 @@ struct HomePage: View {
                     .padding(.top, Dimensions.Padding.padding20)
                     
                     ZStack {
-                        Color.red
+                        Color.clear
                             .frame(height: searchFieldFrame.height)
                         
                         GACSearchTextField(appearence: .homepage,
