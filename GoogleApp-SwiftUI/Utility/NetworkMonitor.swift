@@ -25,8 +25,7 @@ class Monitor: ObservableObject {
             guard let self = self else { return }
             DispatchQueue.main.async {
                 if path.status == .satisfied {
-                    self.status = .connected
-                    
+                    self.status = .connected  
                 } else {
                     self.status = .disconnected
                 }
