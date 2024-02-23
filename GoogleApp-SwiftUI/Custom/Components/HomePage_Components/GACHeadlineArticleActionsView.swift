@@ -13,16 +13,16 @@ struct GACHeadlineArticleActionsView: View {
     
     var body: some View {
         HStack(spacing: Utility.isLargeDevice ? Dimensions.Spacing.spacing25 : Dimensions.Spacing.spacing15) {
-            ForEach([GACImageActionConfig(image: .like, action: {}),
-                     GACImageActionConfig(image: .share, action: {
+            ForEach([GACBottomBarIconModel(icon: .like, actionHandler: {}),
+                     GACBottomBarIconModel(icon: .share, actionHandler: {
                         guard let urlFromLink = URL(string: url) else { return }
                         Utility.shareActivityItems([urlFromLink])
                     }),
-                     GACImageActionConfig(image: .more, action: {})]) { config in
-                Image(for: config.image)
+                     GACBottomBarIconModel(icon: .more, actionHandler: {})]) { config in
+                Image(for: config.icon)
                     .font(.system(size: Dimensions.FontSize.font15))
                     .onTapGesture {
-                        config.action()
+                        config.actionHandler?()
                     }
             }
         }
