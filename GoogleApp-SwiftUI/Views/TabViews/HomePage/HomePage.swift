@@ -16,6 +16,8 @@ struct HomePage: View {
     @State var textfieldIsActive: Bool = false
     @State var shouldShowNetworkDialog: Bool = false
     
+    private let searchBarZIndex: Int = 11
+    
     @Namespace private var animation
     @StateObject var networkMonitor = Monitor()
     
@@ -79,8 +81,8 @@ struct HomePage: View {
                                 }
                             }
                         }
-                        
                     }
+                    .zIndex(searchBarZIndex)
                         
                     GACSearchTypesView()
                     Divider()
