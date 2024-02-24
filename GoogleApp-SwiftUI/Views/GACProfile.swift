@@ -36,6 +36,7 @@ struct GACProfile: View {
                                         .padding(.leading, Dimensions.Padding.padding15)
                                         .onTapGesture {
                                             profileScreenShown.toggle()
+                                            showProfileRelatedRows = false
                                         }
                                     Spacer()
                                 }
