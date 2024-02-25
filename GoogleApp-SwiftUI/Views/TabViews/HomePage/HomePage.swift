@@ -15,6 +15,7 @@ struct HomePage: View {
     @State var searchFieldFrame: CGRect = .zero
     @State var textfieldIsActive: Bool = false
     @State var shouldShowNetworkDialog: Bool = false
+    @State var scrollViewOffset: CGPoint = .zero
     
     private let searchBarZIndex: Double = 11
     
@@ -27,7 +28,8 @@ struct HomePage: View {
                 LightTheme.tabBarBGColor
                     .ignoresSafeArea()
                 
-                ScrollView(.vertical, showsIndicators: false) {
+                OffsetObservingScrollView(showsIndicators: false,
+                                          offset: $scrollViewOffset) {
                     VStack(spacing: Dimensions.Spacing.spacing2) {
                         HStack {
                             Spacer()
@@ -126,6 +128,9 @@ struct HomePage: View {
                     contentFrame = proxy.frame(in: .global)
                 }
             }
+        }
+        .onChange(of: scrollViewOffset) { newValue in
+            print(newValue)
         }
     }
     
