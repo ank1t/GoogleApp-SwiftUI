@@ -16,7 +16,7 @@ struct HomePage: View {
     @State var textfieldIsActive: Bool = false
     @State var shouldShowNetworkDialog: Bool = false
     
-    private let searchBarZIndex: Int = 11
+    private let searchBarZIndex: Double = 11
     
     @Namespace private var animation
     @StateObject var networkMonitor = Monitor()
@@ -27,68 +27,68 @@ struct HomePage: View {
                 LightTheme.tabBarBGColor
                     .ignoresSafeArea()
                 
-                VStack(spacing: Dimensions.Spacing.spacing2) {
-                    HStack {
-                        Spacer()
-                        Image(for: .user)
-                            .renderAsResizable(.fit)
-                            .frame(width: Dimensions.FrameSize.size25)
-                            .padding([.top, .trailing])
-                            .foregroundColor(.accentColor)
-                            .overlay {
-                                GeometryReader { proxy in
-                                    Color.clear.onAppear {
-                                        profileIconFrame = proxy.frame(in: .global)
+                ScrollView(.vertical, showsIndicators: false) {
+                    VStack(spacing: Dimensions.Spacing.spacing2) {
+                        HStack {
+                            Spacer()
+                            Image(for: .user)
+                                .renderAsResizable(.fit)
+                                .frame(width: Dimensions.FrameSize.size25)
+                                .padding([.top, .trailing])
+                                .foregroundColor(.accentColor)
+                                .overlay {
+                                    GeometryReader { proxy in
+                                        Color.clear.onAppear {
+                                            profileIconFrame = proxy.frame(in: .global)
+                                        }
+                                    }
+                                }
+                                .onTapGesture {
+                                    withAnimation(.easeOut(duration: Constants.profileScreenAnimationDuration)) {
+                                        profileScreenShown.toggle()
+                                    }
+                                }
+                        }
+                        HStack {
+                            Spacer()
+                            ZStack {
+                                Image(for: .google)
+                                    .renderAsResizable(.fit, false)
+                                    .frame(width: Dimensions.FrameSize.size40, height: Dimensions.FrameSize.size40)
+                                ScrollView(.horizontal, showsIndicators: false) {
+                                    HStack(spacing: Dimensions.Spacing.spacing15) {
+                                        Spacer(minLength: Dimensions.Spacing.spacing250)
+                                        GACStocksTileView()
+                                        GACStocksTileView()
+                                        GACStocksTileView()
+                                        HStack {}
                                     }
                                 }
                             }
-                            .onTapGesture {
-                                withAnimation(.easeOut(duration: Constants.profileScreenAnimationDuration)) {
-                                    profileScreenShown.toggle()
-                                }
-                            }
-                    }
-                    HStack {
-                        Spacer()
+                        }
+                        .padding(.top, Dimensions.Padding.padding20)
+                        
                         ZStack {
-                            Image(for: .google)
-                                .renderAsResizable(.fit, false)
-                                .frame(width: Dimensions.FrameSize.size40, height: Dimensions.FrameSize.size40)
-                            ScrollView(.horizontal, showsIndicators: false) {
-                                HStack(spacing: Dimensions.Spacing.spacing15) {
-                                    Spacer(minLength: Dimensions.Spacing.spacing250)
-                                    GACStocksTileView()
-                                    GACStocksTileView()
-                                    GACStocksTileView()
-                                    HStack {}
+                            Color.clear
+                                .frame(height: searchFieldFrame.height)
+                            
+                            GACSearchTextField(appearence: .homepage,
+                                               textfieldIsActive: $textfieldIsActive)
+                            .matchedGeometryEffect(id: Constants.animationID, in: animation)
+                            .overlay {
+                                GeometryReader { proxy in
+                                    Color.clear.onAppear {
+                                        searchFieldFrame = proxy.frame(in: .global)
+                                    }
                                 }
                             }
                         }
-                    }
-                    .padding(.top, Dimensions.Padding.padding20)
-                    
-                    ZStack {
-                        Color.clear
-                            .frame(height: searchFieldFrame.height)
+                        .zIndex(searchBarZIndex)
                         
-                        GACSearchTextField(appearence: .homepage,
-                                           textfieldIsActive: $textfieldIsActive)
-                        .matchedGeometryEffect(id: Constants.animationID, in: animation)
-                        .overlay {
-                            GeometryReader { proxy in
-                                Color.clear.onAppear {
-                                    searchFieldFrame = proxy.frame(in: .global)
-                                }
-                            }
-                        }
-                    }
-                    .zIndex(searchBarZIndex)
+                        GACSearchTypesView()
+                        Divider()
+                            .padding(.top, Dimensions.Padding.padding10)
                         
-                    GACSearchTypesView()
-                    Divider()
-                        .padding(.top, Dimensions.Padding.padding10)
-                    
-                    ScrollView(.vertical, showsIndicators: false) {
                         LazyVStack {
                             GACLocalWeatherView()
                             ForEach(1..<10) { _ in
