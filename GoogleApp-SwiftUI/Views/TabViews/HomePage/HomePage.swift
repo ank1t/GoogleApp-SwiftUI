@@ -71,7 +71,7 @@ struct HomePage: View {
                         .padding(.top, Dimensions.Padding.padding20)
                         
                         ZStack {
-                            Color.clear
+                            Color.green
                                 .frame(height: searchFieldFrame.height)
                             
                             GACSearchTextField(appearence: .homepage,
@@ -131,6 +131,7 @@ struct HomePage: View {
         }
         .onChange(of: scrollViewOffset) { newValue in
             print(newValue)
+            print("Search field frame is \(searchFieldFrame)")
         }
     }
     
