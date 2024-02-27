@@ -17,8 +17,6 @@ struct HomePage: View {
     @State var shouldShowNetworkDialog: Bool = false
     @State var scrollViewOffset: CGPoint = .zero
     
-    private let searchBarZIndex: Double = 11
-    
     @Namespace private var animation
     @StateObject var networkMonitor = Monitor()
     
@@ -85,7 +83,6 @@ struct HomePage: View {
                                 }
                             }
                         }
-                        .zIndex(searchBarZIndex)
                         
                         GACSearchTypesView()
                         Divider()
