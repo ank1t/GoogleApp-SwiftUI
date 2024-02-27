@@ -14,7 +14,7 @@ struct HomePage: View {
     @State var contentFrame: CGRect = .zero
     @State var searchFieldFrame: CGRect = .zero
     @State var textfieldIsActive: Bool = false
-    @State var shouldShowNetworkDialog: Bool = false
+    @State var networkDialogVisible: Bool = false
     @State var scrollViewOffset: CGPoint = .zero
     
     @Namespace private var animation
@@ -113,7 +113,7 @@ struct HomePage: View {
                         .ignoresSafeArea()
                 }
                 
-                if !shouldShowNetworkDialog && networkMonitor.status != .connected  {
+                if !networkDialogVisible && networkMonitor.status != .connected  {
                     presentNoNetworkConnectionDialog()
                 }
             }
@@ -148,6 +148,6 @@ struct HomePage: View {
         return GACTitleMessageButtonView(titleConfig: titleConfig,
                                          messageConfig: messageConfig,
                                          buttonConfig: CTAButtonConfig,
-                                         dialogVisibility: $shouldShowNetworkDialog)
+                                         dialogVisibility: $networkDialogVisible)
     }
 }
