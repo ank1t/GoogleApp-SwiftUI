@@ -114,7 +114,7 @@ struct HomePage: View {
                 }
                 
                 if !shouldShowNetworkDialog && networkMonitor.status != .connected  {
-                    getNoNetworkConnectionConfig()
+                    presentNoNetworkConnectionDialog()
                 }
             }
             .preferredColorScheme(.dark)
@@ -132,7 +132,7 @@ struct HomePage: View {
         }
     }
     
-    private func getNoNetworkConnectionConfig() -> GACTitleMessageButtonView {
+    private func presentNoNetworkConnectionDialog() -> GACTitleMessageButtonView {
         let titleConfig = GACTextConfig(text: "You are offline",
                                         textColor: .white,
                                         textFont: .system(size: Dimensions.FontSize.font24))
