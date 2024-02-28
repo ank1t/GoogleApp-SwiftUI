@@ -166,6 +166,7 @@
 		840ABFEE2B7B032400BB5996 /* TabViews */ = {
 			isa = PBXGroup;
 			children = (
+				84DA16BC2B8F28550066336D /* TabsPage */,
 				84DA16BB2B8F27E60066336D /* HomePage */,
 				846CAA5C2B7C46FE001F16DE /* TabsPage.swift */,
 				846CAA5E2B7C473B001F16DE /* NotificationsPage.swift */,
@@ -247,6 +248,13 @@
 				84DA16B92B8F27680066336D /* HomePageViewModel.swift */,
 			);
 			path = HomePage;
+			sourceTree = "<group>";
+		};
+		84DA16BC2B8F28550066336D /* TabsPage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TabsPage;
 			sourceTree = "<group>";
 		};
 		84DB7F8F2B5B652100830FE6 = {
