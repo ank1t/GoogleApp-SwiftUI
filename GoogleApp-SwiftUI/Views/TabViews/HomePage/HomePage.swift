@@ -69,7 +69,6 @@ struct HomePage: View {
                         .padding(.top, Dimensions.Padding.padding20)
                         GACSearchTextField(appearence: .homepage,
                                            textfieldIsActive: $textfieldIsActive)
-                        .matchedGeometryEffect(id: Constants.animationID, in: animation)
                         
                         GACSearchTypesView()
                         Divider()

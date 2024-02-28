@@ -28,7 +28,6 @@ struct GACTrendingSearchesView: View {
             LightTheme.tabBarBGColor.ignoresSafeArea()
             VStack(alignment: .leading) {
                 GACSearchTextField(appearence: .trendingPage, textfieldIsActive: $textfieldIsActive)
-                    .matchedGeometryEffect(id: Constants.animationID, in: animation)
                     .padding(.top, Dimensions.Padding.padding10)
                 
                 Text("What's Trending")
