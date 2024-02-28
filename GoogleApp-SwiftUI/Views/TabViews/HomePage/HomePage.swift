@@ -16,6 +16,7 @@ struct HomePage: View {
     @State var textfieldIsActive: Bool = false
     @State var networkDialogVisible: Bool = false
     @State var scrollViewOffset: CGPoint = .zero
+    @State var shouldShowStaticSearchbar: Bool = false
     
     @Namespace private var animation
     @StateObject var networkMonitor = Monitor()
@@ -98,6 +99,9 @@ struct HomePage: View {
                     GACTrendingSearchesView(textfieldIsActive: $textfieldIsActive)
                         .ignoresSafeArea()
                 }
+                
+                GACSearchTextField(appearence: .homepage,
+                                   textfieldIsActive: $textfieldIsActive)
                 
                 if !networkDialogVisible && networkMonitor.status != .connected  {
                     presentNoNetworkConnectionDialog()
