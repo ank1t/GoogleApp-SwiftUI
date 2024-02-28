@@ -67,19 +67,13 @@ struct HomePage: View {
                             }
                         }
                         .padding(.top, Dimensions.Padding.padding20)
-                        
-                        ZStack {
-                            Color.green
-                                .frame(height: searchFieldFrame.height)
-                            
-                            GACSearchTextField(appearence: .homepage,
-                                               textfieldIsActive: $textfieldIsActive)
-                            .matchedGeometryEffect(id: Constants.animationID, in: animation)
-                            .overlay {
-                                GeometryReader { proxy in
-                                    Color.clear.onAppear {
-                                        searchFieldFrame = proxy.frame(in: .global)
-                                    }
+                        GACSearchTextField(appearence: .homepage,
+                                           textfieldIsActive: $textfieldIsActive)
+                        .matchedGeometryEffect(id: Constants.animationID, in: animation)
+                        .overlay {
+                            GeometryReader { proxy in
+                                Color.clear.onAppear {
+                                    searchFieldFrame = proxy.frame(in: .global)
                                 }
                             }
                         }
