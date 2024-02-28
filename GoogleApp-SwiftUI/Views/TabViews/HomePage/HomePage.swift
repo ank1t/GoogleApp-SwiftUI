@@ -70,13 +70,6 @@ struct HomePage: View {
                         GACSearchTextField(appearence: .homepage,
                                            textfieldIsActive: $textfieldIsActive)
                         .matchedGeometryEffect(id: Constants.animationID, in: animation)
-                        .overlay {
-                            GeometryReader { proxy in
-                                Color.clear.onAppear {
-                                    searchFieldFrame = proxy.frame(in: .global)
-                                }
-                            }
-                        }
                         
                         GACSearchTypesView()
                         Divider()
