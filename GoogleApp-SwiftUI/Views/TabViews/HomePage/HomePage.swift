@@ -12,7 +12,7 @@ struct HomePage: View {
     @State var profileScreenShown: Bool = false
     @State var profileIconFrame: CGRect = .zero
     @State var contentFrame: CGRect = .zero
-    @State var searchFieldFrame: CGRect = .zero
+    @State var staticSearchFieldFrame: CGRect = .zero
     @State var textfieldIsActive: Bool = false
     @State var networkDialogVisible: Bool = false
     @State var scrollViewOffset: CGPoint = .zero
@@ -102,8 +102,18 @@ struct HomePage: View {
                 
                 ZStack {
                     LightTheme.tabBarBGColor
+                        .ignoresSafeArea(edges: .top)
+                        .frame(height: staticSearchFieldFrame.height)
+                    
                     GACSearchTextField(appearence: .homepage,
                                        textfieldIsActive: $textfieldIsActive)
+                    .overlay {
+                        GeometryReader { proxy in
+                            Color.clear.onAppear {
+                                staticSearchFieldFrame = proxy.frame(in: .global)
+                            }
+                        }
+                    }
                 }
                 
                 if !networkDialogVisible && networkMonitor.status != .connected  {
@@ -121,7 +131,7 @@ struct HomePage: View {
         }
         .onChange(of: scrollViewOffset) { newValue in
             print(newValue)
-            print("Search field frame is \(searchFieldFrame)")
+            print("Search field frame is \(staticSearchFieldFrame)")
         }
     }
     
