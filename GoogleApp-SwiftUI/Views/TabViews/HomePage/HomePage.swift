@@ -100,8 +100,11 @@ struct HomePage: View {
                         .ignoresSafeArea()
                 }
                 
-                GACSearchTextField(appearence: .homepage,
-                                   textfieldIsActive: $textfieldIsActive)
+                ZStack {
+                    LightTheme.tabBarBGColor
+                    GACSearchTextField(appearence: .homepage,
+                                       textfieldIsActive: $textfieldIsActive)
+                }
                 
                 if !networkDialogVisible && networkMonitor.status != .connected  {
                     presentNoNetworkConnectionDialog()
