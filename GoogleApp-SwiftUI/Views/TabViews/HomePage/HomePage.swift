@@ -95,11 +95,6 @@ struct HomePage: View {
                     .frame(width: profileScreenShown ? contentFrame.width : 0, height: profileScreenShown ? contentFrame.height : 0)
                     .offset(x: profileScreenShown ? 0 : contentFrame.width, y: 0)
                 
-                if textfieldIsActive {
-                    GACTrendingSearchesView(textfieldIsActive: $textfieldIsActive)
-                        .ignoresSafeArea()
-                }
-                
                 ZStack {
                     VStack(spacing: 0) {
                         LightTheme.tabBarBGColor
@@ -116,6 +111,11 @@ struct HomePage: View {
                             }
                         }
                     }
+                }
+                
+                if textfieldIsActive {
+                    GACTrendingSearchesView(textfieldIsActive: $textfieldIsActive)
+                        .ignoresSafeArea()
                 }
                 
                 if !networkDialogVisible && networkMonitor.status != .connected  {
