@@ -101,10 +101,12 @@ struct HomePage: View {
                 }
                 
                 ZStack {
-                    LightTheme.tabBarBGColor
-                        .ignoresSafeArea(edges: .top)
-                        .frame(height: staticSearchFieldFrame.height)
-                    
+                    VStack(spacing: 0) {
+                        LightTheme.tabBarBGColor
+                            .ignoresSafeArea(edges: .top)
+                            .frame(height: staticSearchFieldFrame.height)
+                        Divider()
+                    }
                     GACSearchTextField(appearence: .homepage,
                                        textfieldIsActive: $textfieldIsActive)
                     .overlay {
