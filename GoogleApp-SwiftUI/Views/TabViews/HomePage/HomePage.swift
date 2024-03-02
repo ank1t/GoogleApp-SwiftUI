@@ -96,7 +96,7 @@ struct HomePage: View {
                     .offset(x: profileScreenShown ? 0 : contentFrame.width, y: 0)
                 
                 ZStack {
-                    VStack(spacing: 0) {
+                    VStack(spacing: Dimensions.Spacing.spacing0) {
                         LightTheme.tabBarBGColor
                             .ignoresSafeArea(edges: .top)
                             .frame(height: staticSearchFieldFrame.height)
