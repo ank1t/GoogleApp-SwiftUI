@@ -37,13 +37,6 @@ struct HomePage: View {
                                 .frame(width: Dimensions.FrameSize.size25)
                                 .padding([.top, .trailing])
                                 .foregroundColor(.accentColor)
-                                .overlay {
-                                    GeometryReader { proxy in
-                                        Color.clear.onAppear {
-                                            profileIconFrame = proxy.frame(in: .global)
-                                        }
-                                    }
-                                }
                                 .onTapGesture {
                                     withAnimation(.easeOut(duration: Constants.profileScreenAnimationDuration)) {
                                         profileScreenShown.toggle()
