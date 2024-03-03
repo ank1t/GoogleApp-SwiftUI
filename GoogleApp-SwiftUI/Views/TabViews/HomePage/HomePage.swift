@@ -97,13 +97,6 @@ struct HomePage: View {
                     }
                     GACSearchTextField(appearence: .homepage,
                                        textfieldIsActive: $textfieldIsActive)
-                    .overlay {
-                        GeometryReader { proxy in
-                            Color.clear.onAppear {
-                                staticSearchFieldFrame = proxy.frame(in: .global)
-                            }
-                        }
-                    }
                 }
                 
                 if textfieldIsActive {
