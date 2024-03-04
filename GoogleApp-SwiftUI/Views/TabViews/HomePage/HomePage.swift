@@ -19,6 +19,7 @@ struct HomePage: View {
     @State var scrollViewOffset: CGPoint = .zero
     @State var shouldShowStaticSearchbar: Bool = false
     @State var tileOpacity: Double = 1
+    @State var searchTypeOpacity: Double = 1
     
     @Namespace private var animation
     @StateObject var networkMonitor = Monitor()
@@ -51,6 +52,7 @@ struct HomePage: View {
                                 Image(for: .google)
                                     .renderAsResizable(.fit, false)
                                     .frame(width: Dimensions.FrameSize.size40, height: Dimensions.FrameSize.size40)
+                                    .opacity(tileOpacity)
                                 ScrollView(.horizontal, showsIndicators: false) {
                                     HStack(spacing: Dimensions.Spacing.spacing15) {
                                         Spacer(minLength: Dimensions.Spacing.spacing250)
@@ -77,6 +79,7 @@ struct HomePage: View {
                         .opacity(!shouldShowStaticSearchbar ? 1 : 0)
                         
                         GACSearchTypesView()
+                            .opacity(searchTypeOpacity)
                         Divider()
                             .padding(.top, Dimensions.Padding.padding10)
                         
@@ -141,7 +144,11 @@ struct HomePage: View {
         }
         .onChange(of: scrollViewOffset) { newValue in
             shouldShowStaticSearchbar = scrollViewOffset.y >= 151.5
+            /*
+             scrollViewOffset.y begins at 0 and increases as the user scrolls vertically.
+             */
             tileOpacity = scrollViewOffset.y > 0 ? 1 - (scrollViewOffset.y / 151.5) : 1
+            searchTypeOpacity = scrollViewOffset.y > 0 ? 1 - (scrollViewOffset.y / 250) : 1
         }
     }
 }
