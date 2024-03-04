@@ -20,6 +20,7 @@ struct HomePage: View {
     @State var shouldShowStaticSearchbar: Bool = false
     @State var tileOpacity: Double = 1
     @State var searchTypeOpacity: Double = 1
+    @State var dividerOpacity: Double = 0
     
     @Namespace private var animation
     @StateObject var networkMonitor = Monitor()
@@ -111,6 +112,7 @@ struct HomePage: View {
                                 .ignoresSafeArea(edges: .top)
                                 .frame(height: staticSearchFieldFrame.height)
                             Divider()
+                                .opacity(dividerOpacity)
                         }
                         GACSearchTextField(appearence: .homepage,
                                            textfieldIsActive: $textfieldIsActive)
@@ -149,6 +151,7 @@ struct HomePage: View {
              */
             tileOpacity = scrollViewOffset.y > 0 ? 1 - (scrollViewOffset.y / 151.5) : 1
             searchTypeOpacity = scrollViewOffset.y > 0 ? 1 - (scrollViewOffset.y / 250) : 1
+            dividerOpacity = scrollViewOffset.y > 220 ? 1 : 0
         }
     }
 }
