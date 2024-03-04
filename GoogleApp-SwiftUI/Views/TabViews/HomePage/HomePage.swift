@@ -83,7 +83,13 @@ struct HomePage: View {
                             .opacity(searchTypeOpacity)
                         Divider()
                             .padding(.top, Dimensions.Padding.padding10)
-                        
+                            .overlay {
+                                GeometryReader { proxy in
+                                    Color.clear.onAppear {
+                                        searchFieldFrame = proxy.frame(in: .global)
+                                    }
+                                }
+                            }
                         LazyVStack {
                             GACLocalWeatherView()
                             ForEach(1..<10) { _ in
