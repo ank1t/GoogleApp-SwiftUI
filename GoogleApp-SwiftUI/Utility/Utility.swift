@@ -28,6 +28,7 @@ struct Utility {
         case userSettings = "user-settings"
         case incognito
         case history = "clock"
+        case saveHistory = "globe.badge.chevron.backward"
         case speaker = "speaker.wave.2"
         case settings = "gear"
         case help = "questionmark.circle"
