@@ -18,6 +18,7 @@ struct HomePage: View {
     @State var networkDialogVisible: Bool = false
     @State var scrollViewOffset: CGPoint = .zero
     @State var shouldShowStaticSearchbar: Bool = false
+    @State var tileOpacity: Double = 1
     
     @Namespace private var animation
     @StateObject var networkMonitor = Monitor()
@@ -59,6 +60,7 @@ struct HomePage: View {
                                         HStack {}
                                     }
                                 }
+                                .opacity(tileOpacity)
                             }
                         }
                         .padding(.top, Dimensions.Padding.padding20)
@@ -139,6 +141,12 @@ struct HomePage: View {
         }
         .onChange(of: scrollViewOffset) { newValue in
             shouldShowStaticSearchbar = scrollViewOffset.y >= 151.5
+            if scrollViewOffset.y > 0 {
+                let ratio = scrollViewOffset.y / 151.5
+                tileOpacity = ratio >= 1 ? 0 : 1 - ratio
+            } else {
+                tileOpacity = 1
+            }
         }
     }
 }
