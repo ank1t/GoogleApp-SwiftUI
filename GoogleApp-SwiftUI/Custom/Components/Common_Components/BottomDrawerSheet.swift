@@ -6,9 +6,24 @@
 //
         
 import Foundation
+import SwiftUI
 
 struct BottomDrawerSheet: View {
+    let config: BottomSheetDrawerConfig
+    
     var body: some View {
-        Text("Hello")
+        VStack(spacing: Dimensions.Spacing.spacing0) {
+            Color.clear
+            ZStack {
+                LightTheme.tabBarBGColor
+                    .cornerRadius(15, corners: [.topLeft, .topRight])
+                VStack(spacing: Dimensions.Spacing.spacing0) {
+                    Image(for: config.image)
+                        .renderAsResizable(.fit)
+                        .frame(width: 40, height: 40)
+                        .background(.white)
+                }
+            }
+        }
     }
 }

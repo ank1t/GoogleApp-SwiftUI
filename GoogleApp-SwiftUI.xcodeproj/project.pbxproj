@@ -30,6 +30,9 @@
 		847FC7482B901A7F0034E537 /* HomePageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847FC7472B901A7F0034E537 /* HomePageResponse.swift */; };
 		848F62032B95487F00CDF743 /* NoNetworkDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F62022B95487F00CDF743 /* NoNetworkDialogView.swift */; };
 		848F62052B95630400CDF743 /* BottomDrawerSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F62042B95630400CDF743 /* BottomDrawerSheet.swift */; };
+		848F62072B95678000CDF743 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F62062B95678000CDF743 /* UIView+Extensions.swift */; };
+		848F62092B9567F200CDF743 /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F62082B9567F200CDF743 /* RoundedCorners.swift */; };
+		848F620B2B956A3100CDF743 /* BottomSheetDrawerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F620A2B956A3100CDF743 /* BottomSheetDrawerConfig.swift */; };
 		849A21812B6F88F6006BE8F3 /* GACArticleDetailTopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A21802B6F88F6006BE8F3 /* GACArticleDetailTopBar.swift */; };
 		849A21832B6F8914006BE8F3 /* GACArticleDetailBottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A21822B6F8914006BE8F3 /* GACArticleDetailBottomBar.swift */; };
 		84BD781C2B672D09005ED9E6 /* GACSearchTypesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BD781B2B672D09005ED9E6 /* GACSearchTypesView.swift */; };
@@ -109,6 +112,9 @@
 		847FC7472B901A7F0034E537 /* HomePageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageResponse.swift; sourceTree = "<group>"; };
 		848F62022B95487F00CDF743 /* NoNetworkDialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoNetworkDialogView.swift; sourceTree = "<group>"; };
 		848F62042B95630400CDF743 /* BottomDrawerSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomDrawerSheet.swift; sourceTree = "<group>"; };
+		848F62062B95678000CDF743 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		848F62082B9567F200CDF743 /* RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorners.swift; sourceTree = "<group>"; };
+		848F620A2B956A3100CDF743 /* BottomSheetDrawerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetDrawerConfig.swift; sourceTree = "<group>"; };
 		849A21802B6F88F6006BE8F3 /* GACArticleDetailTopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACArticleDetailTopBar.swift; sourceTree = "<group>"; };
 		849A21822B6F8914006BE8F3 /* GACArticleDetailBottomBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACArticleDetailBottomBar.swift; sourceTree = "<group>"; };
 		84BD781B2B672D09005ED9E6 /* GACSearchTypesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACSearchTypesView.swift; sourceTree = "<group>"; };
@@ -251,6 +257,7 @@
 				846146472B917259006D3B11 /* OffsetObservingScrollView.swift */,
 				848F62022B95487F00CDF743 /* NoNetworkDialogView.swift */,
 				848F62042B95630400CDF743 /* BottomDrawerSheet.swift */,
+				848F62082B9567F200CDF743 /* RoundedCorners.swift */,
 			);
 			path = Common_Components;
 			sourceTree = "<group>";
@@ -424,6 +431,7 @@
 			children = (
 				84DB7FE62B5B657000830FE6 /* UIImage+Extensions.swift */,
 				8428A1222B7080D400EF4BDF /* UIApplication+Extensions.swift */,
+				848F62062B95678000CDF743 /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -434,6 +442,7 @@
 				84DB7FE82B5B657000830FE6 /* GACProfileRow.swift */,
 				8428A1202B70773000EF4BDF /* GACBottomBarIconModel.swift */,
 				841079D92B75C0E200E335B4 /* GACTextConfig.swift */,
+				848F620A2B956A3100CDF743 /* BottomSheetDrawerConfig.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -609,6 +618,7 @@
 				84DE20992B65ECAE00622BBE /* GACNotificationsView.swift in Sources */,
 				84DB7FDD2B5B655700830FE6 /* GACLocalWeatherView.swift in Sources */,
 				8428A1232B7080D400EF4BDF /* UIApplication+Extensions.swift in Sources */,
+				848F62092B9567F200CDF743 /* RoundedCorners.swift in Sources */,
 				849A21832B6F8914006BE8F3 /* GACArticleDetailBottomBar.swift in Sources */,
 				84DA16BA2B8F27680066336D /* HomePageViewModel.swift in Sources */,
 				84DB7FD82B5B655700830FE6 /* GACHeadlineArticleActionsView.swift in Sources */,
@@ -621,6 +631,7 @@
 				847FC7482B901A7F0034E537 /* HomePageResponse.swift in Sources */,
 				8428A11D2B70690600EF4BDF /* GACSecureConnectionView.swift in Sources */,
 				848F62032B95487F00CDF743 /* NoNetworkDialogView.swift in Sources */,
+				848F62072B95678000CDF743 /* UIView+Extensions.swift in Sources */,
 				84DB7FDE2B5B655700830FE6 /* GACYoutubeArticlesView.swift in Sources */,
 				846CAA5D2B7C46FE001F16DE /* TabsPage.swift in Sources */,
 				84DB7FEF2B5B657100830FE6 /* GACProfileRow.swift in Sources */,
@@ -639,6 +650,7 @@
 				84DB7FD72B5B655700830FE6 /* GACReferencedInArticle.swift in Sources */,
 				84DB7FF32B5CAE0C00830FE6 /* GACProfile.swift in Sources */,
 				84DB7FEE2B5B657100830FE6 /* UIImage+Extensions.swift in Sources */,
+				848F620B2B956A3100CDF743 /* BottomSheetDrawerConfig.swift in Sources */,
 				84DB7FDC2B5B655700830FE6 /* GACSearchOptionsView.swift in Sources */,
 				84DE20932B649AD800622BBE /* GACTrendingSearchesView.swift in Sources */,
 				84DB7FDF2B5B655700830FE6 /* GACProfileOptions.swift in Sources */,
