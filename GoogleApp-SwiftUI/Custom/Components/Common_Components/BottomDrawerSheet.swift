@@ -35,6 +35,9 @@ struct BottomDrawerSheet: View {
                         .foregroundColor(.gray)
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, Dimensions.Padding.padding20)
+                    
+                    ButtonPair(pairColors: config.colorPairs)
+                        .padding([.top, .leading, .trailing], Dimensions.Padding.padding15)
                 }
             }
         }
