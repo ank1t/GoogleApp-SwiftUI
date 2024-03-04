@@ -85,7 +85,7 @@ struct HomePage: View {
                         }
                 }
                 GACProfile(profileScreenShown: $profileScreenShown)
-                    .frame(width: profileScreenShown ? contentFrame.width : 0, height: profileScreenShown ? contentFrame.height : 0)
+                    .frame(width: profileScreenShown ? contentFrame.width : nil, height: profileScreenShown ? contentFrame.height : nil)
                     .offset(x: profileScreenShown ? 0 : contentFrame.width, y: 0)
                 
                 ZStack {
