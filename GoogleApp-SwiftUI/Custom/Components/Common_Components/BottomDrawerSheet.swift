@@ -20,8 +20,21 @@ struct BottomDrawerSheet: View {
                 VStack(spacing: Dimensions.Spacing.spacing0) {
                     Image(for: config.image)
                         .renderAsResizable(.fit)
-                        .frame(width: 40, height: 40)
-                        .background(.white)
+                        .foregroundColor(.white)
+                        .frame(width: Dimensions.FrameSize.size40,
+                               height: Dimensions.FrameSize.size40)
+                    
+                    Text(config.title)
+                        .font(.system(.title3))
+                        .foregroundColor(.white)
+                        .multilineTextAlignment(.center)
+                        .padding(Dimensions.Padding.padding20)
+                    
+                    Text(config.subtitle)
+                        .font(.system(.subheadline))
+                        .foregroundColor(.gray)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, Dimensions.Padding.padding20)
                 }
             }
         }
