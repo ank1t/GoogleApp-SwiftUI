@@ -9,6 +9,8 @@ import Foundation
 import SwiftUI
 
 struct NoNetworkDialogView: View {
+    @Binding var dialogIsVisible: Bool
+    
     let titleConfig = GACTextConfig(text: "You are offline",
                                     textColor: .white,
                                     textFont: .system(size: Dimensions.FontSize.font24))
@@ -25,6 +27,6 @@ struct NoNetworkDialogView: View {
         GACTitleMessageButtonView(titleConfig: titleConfig,
                                   messageConfig: messageConfig,
                                   buttonConfig: CTAButtonConfig,
-                                  dialogVisibility: $networkDialogVisible)
+                                  dialogVisibility: $dialogIsVisible)
     }
 }

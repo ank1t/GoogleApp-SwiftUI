@@ -12,6 +12,7 @@ struct HomePage: View {
     @State var profileScreenShown: Bool = false
     @State var profileIconFrame: CGRect = .zero
     @State var contentFrame: CGRect = .zero
+    @State var searchFieldFrame: CGRect = .zero
     @State var staticSearchFieldFrame: CGRect = .zero
     @State var textfieldIsActive: Bool = false
     @State var networkDialogVisible: Bool = false
@@ -61,8 +62,17 @@ struct HomePage: View {
                             }
                         }
                         .padding(.top, Dimensions.Padding.padding20)
+                        
                         GACSearchTextField(appearence: .homepage,
                                            textfieldIsActive: $textfieldIsActive)
+                        .overlay {
+                            GeometryReader { proxy in
+                                Color.clear.onAppear {
+                                    searchFieldFrame = proxy.frame(in: .global)
+                                }
+                            }
+                        }
+                        .opacity(!shouldShowStaticSearchbar ? 1 : 0)
                         
                         GACSearchTypesView()
                         Divider()
@@ -77,6 +87,7 @@ struct HomePage: View {
                         }
                     }
                 }
+                
                 if profileScreenShown {
                     Color.black.opacity(Constants.overlayOpacity)
                         .ignoresSafeArea()
@@ -88,15 +99,24 @@ struct HomePage: View {
                     .frame(width: profileScreenShown ? contentFrame.width : nil, height: profileScreenShown ? contentFrame.height : nil)
                     .offset(x: profileScreenShown ? 0 : contentFrame.width, y: 0)
                 
-                ZStack {
-                    VStack(spacing: Dimensions.Spacing.spacing0) {
-                        LightTheme.tabBarBGColor
-                            .ignoresSafeArea(edges: .top)
-                            .frame(height: staticSearchFieldFrame.height)
-                        Divider()
+                if shouldShowStaticSearchbar {
+                    ZStack {
+                        VStack(spacing: Dimensions.Spacing.spacing0) {
+                            LightTheme.tabBarBGColor
+                                .ignoresSafeArea(edges: .top)
+                                .frame(height: staticSearchFieldFrame.height)
+                            Divider()
+                        }
+                        GACSearchTextField(appearence: .homepage,
+                                           textfieldIsActive: $textfieldIsActive)
+                        .overlay {
+                            GeometryReader { proxy in
+                                Color.clear.onAppear {
+                                    staticSearchFieldFrame = proxy.frame(in: .global)
+                                }
+                            }
+                        }
                     }
-//                    GACSearchTextField(appearence: .homepage,
-//                                       textfieldIsActive: $textfieldIsActive)
                 }
                 
                 if textfieldIsActive {
@@ -105,7 +125,7 @@ struct HomePage: View {
                 }
                 
                 if !networkDialogVisible && networkMonitor.status != .connected  {
-                    NoNetworkDialogView()
+                    NoNetworkDialogView(dialogIsVisible: $networkDialogVisible)
                 }
             }
             .preferredColorScheme(.dark)
@@ -118,8 +138,7 @@ struct HomePage: View {
             }
         }
         .onChange(of: scrollViewOffset) { newValue in
-            print(newValue)
-            print("Search field frame is \(staticSearchFieldFrame)")
+            shouldShowStaticSearchbar = scrollViewOffset.y >= 151.5
         }
     }
 }
