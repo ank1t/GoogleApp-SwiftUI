@@ -53,9 +53,9 @@ struct HomePage: View {
                                 ScrollView(.horizontal, showsIndicators: false) {
                                     HStack(spacing: Dimensions.Spacing.spacing15) {
                                         Spacer(minLength: Dimensions.Spacing.spacing250)
-                                        GACStocksTileView()
-                                        GACStocksTileView()
-                                        GACStocksTileView()
+                                        ForEach(1...3, id: \.self) { _ in
+                                            GACStocksTileView()
+                                        }
                                         HStack {}
                                     }
                                 }
