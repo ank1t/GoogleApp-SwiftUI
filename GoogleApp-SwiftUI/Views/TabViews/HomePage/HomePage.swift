@@ -95,8 +95,8 @@ struct HomePage: View {
                             .frame(height: staticSearchFieldFrame.height)
                         Divider()
                     }
-                    GACSearchTextField(appearence: .homepage,
-                                       textfieldIsActive: $textfieldIsActive)
+//                    GACSearchTextField(appearence: .homepage,
+//                                       textfieldIsActive: $textfieldIsActive)
                 }
                 
                 if textfieldIsActive {
@@ -105,7 +105,7 @@ struct HomePage: View {
                 }
                 
                 if !networkDialogVisible && networkMonitor.status != .connected  {
-                    presentNoNetworkConnectionDialog()
+                    NoNetworkDialogView()
                 }
             }
             .preferredColorScheme(.dark)
@@ -121,24 +121,5 @@ struct HomePage: View {
             print(newValue)
             print("Search field frame is \(staticSearchFieldFrame)")
         }
-    }
-    
-    private func presentNoNetworkConnectionDialog() -> GACTitleMessageButtonView {
-        let titleConfig = GACTextConfig(text: "You are offline",
-                                        textColor: .white,
-                                        textFont: .system(size: Dimensions.FontSize.font24))
-        
-        let messageConfig = GACTextConfig(text: "Go to Settings and check your internet connection",
-                                          textColor: .gray,
-                                          textFont: .system(size: Dimensions.FontSize.font15))
-        
-        let CTAButtonConfig = GACTextConfig(text: "OK",
-                                            textColor: .black,
-                                            textFont: .system(size: Dimensions.FontSize.font15))
-        
-        return GACTitleMessageButtonView(titleConfig: titleConfig,
-                                         messageConfig: messageConfig,
-                                         buttonConfig: CTAButtonConfig,
-                                         dialogVisibility: $networkDialogVisible)
     }
 }
