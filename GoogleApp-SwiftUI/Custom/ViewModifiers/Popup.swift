@@ -10,12 +10,12 @@ import UIKit
 
 struct Popup<T: View>: ViewModifier {
     let isPresented: Bool
-    let alignment: Alignment
+    let alignement: Alignment
     let popup: T
     
     init(isPresented: Bool, alignment: Alignment, @ViewBuilder content: () -> T) {
         self.isPresented = isPresented
-        self.alignment = alignment
+        self.alignement = alignment
         popup = content()
     }
     
