@@ -13,4 +13,5 @@ struct BottomSheetDrawerConfig {
     let title: String = "Your history isn't being saved to your account"
     let subtitle: String = "Your Discover feed isn't based on your history because your Web & App Activity setting is off"
     let colorPairs: (Color, Color) = (LightTheme.tabBarBGColor, .blue)
+    @Binding var isPresented: Bool
 }

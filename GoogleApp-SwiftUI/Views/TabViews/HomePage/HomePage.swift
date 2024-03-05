@@ -21,6 +21,7 @@ struct HomePage: View {
     @State var tileOpacity: Double = 1
     @State var searchTypeOpacity: Double = 1
     @State var dividerOpacity: Double = 0
+    @State var isHistoryModalPresented: Bool = true
     
     @Namespace private var animation
     @StateObject var networkMonitor = Monitor()
@@ -137,8 +138,8 @@ struct HomePage: View {
                         .ignoresSafeArea()
                 }
                 
-                if true {
-                    BottomDrawerSheet(config: BottomSheetDrawerConfig())
+                if isHistoryModalPresented {
+                    BottomDrawerSheet(config: BottomSheetDrawerConfig(isPresented: $isHistoryModalPresented))
                 }
                 
                 if !networkDialogVisible && networkMonitor.status != .connected  {
