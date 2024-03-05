@@ -10,9 +10,13 @@ import SwiftUI
 
 struct ButtonPair: View {
     let colorPairs: (Color, Color)
+    @Binding var isPresented: Bool
+    
     var body: some View {
         HStack(spacing: Dimensions.Spacing.spacing15) {
-            Button("Got it", action: {})
+            Button("Got it", action: {
+                isPresented.toggle()
+            })
                 .padding(.horizontal, Dimensions.Padding.padding45)
                 .padding(.vertical, Dimensions.Padding.padding10)
                 .background(colorPairs.1)
@@ -20,7 +24,9 @@ struct ButtonPair: View {
                 .border(colorPairs.0)
                 .cornerRadius(Dimensions.CornerRadius.cornerRadius8)
             
-            Button("Manage", action: {})
+            Button("Manage", action: {
+                isPresented.toggle()
+            })
                 .padding(.horizontal, Dimensions.Padding.padding45)
                 .padding(.vertical, Dimensions.Padding.padding10)
                 .background(colorPairs.0)
