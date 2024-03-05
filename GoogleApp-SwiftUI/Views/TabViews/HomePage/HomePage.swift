@@ -137,6 +137,10 @@ struct HomePage: View {
                         .ignoresSafeArea()
                 }
                 
+                if true {
+                    BottomDrawerSheet(config: BottomSheetDrawerConfig())
+                }
+                
                 if !networkDialogVisible && networkMonitor.status != .connected  {
                     NoNetworkDialogView(dialogIsVisible: $networkDialogVisible)
                 }
