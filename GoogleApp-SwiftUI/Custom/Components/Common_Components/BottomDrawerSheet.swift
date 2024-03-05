@@ -13,7 +13,8 @@ struct BottomDrawerSheet: View {
     
     var body: some View {
         VStack(spacing: Dimensions.Spacing.spacing0) {
-            Color.clear
+            Color.black.opacity(Constants.overlayOpacity)
+            
             ZStack {
                 LightTheme.tabBarBGColor
                     .cornerRadius(15, corners: [.topLeft, .topRight])
@@ -36,10 +37,12 @@ struct BottomDrawerSheet: View {
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, Dimensions.Padding.padding20)
                     
-                    ButtonPair(colorPairs: config.colorPairs)
+                    ButtonPair(colorPairs: config.colorPairs,
+                               isPresented: config.$isPresented)
                         .padding([.top, .leading, .trailing], Dimensions.Padding.padding15)
                 }
             }
         }
+        .ignoresSafeArea(edges: .top)
     }
 }
