@@ -11,9 +11,24 @@ import SwiftUI
 struct ButtonPair: View {
     let colorPairs: (Color, Color)
     var body: some View {
-        HStack {
-            Text("1")
-            Text("2")
+        HStack(spacing: Dimensions.Spacing.spacing15) {
+            Button("Got it", action: {})
+                .padding(.horizontal, Dimensions.Padding.padding45)
+                .padding(.vertical, Dimensions.Padding.padding10)
+                .background(colorPairs.1)
+                .foregroundColor(colorPairs.0)
+                .border(colorPairs.0)
+                .cornerRadius(Dimensions.CornerRadius.cornerRadius8)
+            
+            Button("Manage", action: {})
+                .padding(.horizontal, Dimensions.Padding.padding45)
+                .padding(.vertical, Dimensions.Padding.padding10)
+                .background(colorPairs.0)
+                .foregroundColor(colorPairs.1)
+                .overlay(
+                    RoundedRectangle(cornerRadius: Dimensions.CornerRadius.cornerRadius8)
+                        .stroke(colorPairs.1, lineWidth: 1)
+                )
         }
     }
 }
