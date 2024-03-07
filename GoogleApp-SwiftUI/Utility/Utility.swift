@@ -140,6 +140,7 @@ struct Dimensions {
         static let spacing10: CGFloat = 10
         static let spacing15: CGFloat = 15
         static let spacing25: CGFloat = 25
+        static let spacing40: CGFloat = 40
         static let spacing250: CGFloat = 250
     }
     
