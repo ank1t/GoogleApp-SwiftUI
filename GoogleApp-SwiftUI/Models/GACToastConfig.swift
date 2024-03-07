@@ -16,25 +16,29 @@ enum ToastStyle {
     
     var highlightColor: Color {
         switch self {
-            case .error: .red
-            case .warning: .yellow
-            case .success: .green
-            case .info: .clear
+            case .error: return .red
+            case .warning: return .yellow
+            case .success: return .green
+            case .info: return .clear
         }
     }
     
-    var icon: String {
+    var icon: String? {
         switch self {
-            case .error: "info.circle.fill"
-            case .warning: "exclamationmark.triangle.fill"
-            case .success: "checkmark.circle.fill"
-            case .info: "xmark.circle.fill"
+            case .error: return "info.circle.fill"
+            case .warning: return "exclamationmark.triangle.fill"
+            case .success: return "checkmark.circle.fill"
+            /*
+             info case would have the favico of the last visited website
+             */
+            case .info: return nil
         }
     }
 }
 
-struct GACToastConfig: View {
+struct GACToastConfig {
     var style: ToastStyle
     var message: String
     var duration: Double = 0.3
+    var lastVisitedPageFavIcon: String?
 }

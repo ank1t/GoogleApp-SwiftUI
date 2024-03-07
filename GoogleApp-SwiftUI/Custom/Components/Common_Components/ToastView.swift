@@ -20,7 +20,7 @@ struct ToastView: View {
                            height: Dimensions.FrameSize.size20)
             }
             Text(config.message)
-                .applyTextStyle(GACTextConfig(text: <#T##String#>, textColor: <#T##Color#>, textFont: <#T##Font#>))
+                .applyTextStyle(.gray, .title3)
         }
     }
 }

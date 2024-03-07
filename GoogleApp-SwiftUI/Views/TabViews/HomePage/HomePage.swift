@@ -21,7 +21,7 @@ struct HomePage: View {
     @State var tileOpacity: Double = 1
     @State var searchTypeOpacity: Double = 1
     @State var dividerOpacity: Double = 0
-    @State var isHistoryModalPresented: Bool = true
+    @State var isHistoryModalPresented: Bool = false
     
     @Namespace private var animation
     @StateObject var networkMonitor = Monitor()
