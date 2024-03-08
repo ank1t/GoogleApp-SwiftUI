@@ -29,11 +29,7 @@ struct ToastModifier: ViewModifier {
     @ViewBuilder func mainToastView() -> some View {
         if let toast = toast {
             VStack {
-                ToastView(
-                    style: toast.style,
-                    message: toast.message,
-                    width: toast.width
-                ) {
+                ToastView(config: toast) {
                     dismissToast()
                 }
                 Spacer()
