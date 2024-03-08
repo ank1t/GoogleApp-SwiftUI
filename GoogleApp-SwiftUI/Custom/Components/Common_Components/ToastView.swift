@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ToastView: View {
     let config: GACToastConfig
+    let dismissAction: (() -> Void)
     
     var body: some View {
         HStack(spacing: Dimensions.Spacing.spacing15) {
@@ -21,6 +22,7 @@ struct ToastView: View {
             }
             Text(config.message)
                 .applyTextStyle(.gray, .title3)
+            
         }
     }
 }
