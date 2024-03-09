@@ -57,6 +57,7 @@ struct Utility {
         case read = "speaker.wave.2.circle"
         case reload = "goforward"
         case noNetwork = "exclamationmark.icloud"
+        case cbc = "cbc"
         
         var icon: String {
             return self.rawValue
