@@ -63,6 +63,12 @@ struct Utility {
         case cnn = "cnn"
         case gn = "gn"
         
+        case bear = "bear"
+        case cheetah = "cheetah"
+        case lion = "lion"
+        case eagle = "eagle"
+        case tiger = "tiger"
+        
         var icon: String {
             return self.rawValue
         }
@@ -70,6 +76,10 @@ struct Utility {
     
     static var isLargeDevice: Bool {
         return UIScreen.main.bounds.height > 800
+    }
+    
+    static var screenWidth: CGFloat {
+        UIScreen.main.bounds.width
     }
     
     static func shareActivityItems(_ items: [Any]) {

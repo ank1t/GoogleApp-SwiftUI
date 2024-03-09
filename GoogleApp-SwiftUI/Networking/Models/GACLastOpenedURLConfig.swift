@@ -8,7 +8,7 @@
 import Foundation
 
 struct GACLastOpenedURLConfig {
-    let iconURL: Utility.ImageName
+    var icon: Utility.ImageName
     let title: String
     let subtitle: String
 }

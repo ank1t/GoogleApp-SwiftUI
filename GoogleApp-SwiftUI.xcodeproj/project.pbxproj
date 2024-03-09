@@ -41,6 +41,8 @@
 		8493B3842B9CC5780000C256 /* GACLastOpenedIconTitleSubtitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493B3832B9CC5780000C256 /* GACLastOpenedIconTitleSubtitle.swift */; };
 		8493B3862B9CC6270000C256 /* GACLastOpenedURLConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493B3852B9CC6270000C256 /* GACLastOpenedURLConfig.swift */; };
 		8493B3882B9CF95D0000C256 /* GACOpenedSavedTabConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493B3872B9CF95D0000C256 /* GACOpenedSavedTabConfig.swift */; };
+		8493B38A2B9D07ED0000C256 /* GACSavedArticles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493B3892B9D07ED0000C256 /* GACSavedArticles.swift */; };
+		8493B38C2B9D0A530000C256 /* GACSavedArticlesConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493B38B2B9D0A530000C256 /* GACSavedArticlesConfig.swift */; };
 		849A21812B6F88F6006BE8F3 /* GACArticleDetailTopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A21802B6F88F6006BE8F3 /* GACArticleDetailTopBar.swift */; };
 		849A21832B6F8914006BE8F3 /* GACArticleDetailBottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A21822B6F8914006BE8F3 /* GACArticleDetailBottomBar.swift */; };
 		84BB04A92B9954BB00D460B8 /* Toast+Modifiers+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BB04A82B9954BB00D460B8 /* Toast+Modifiers+Extensions.swift */; };
@@ -132,6 +134,8 @@
 		8493B3832B9CC5780000C256 /* GACLastOpenedIconTitleSubtitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACLastOpenedIconTitleSubtitle.swift; sourceTree = "<group>"; };
 		8493B3852B9CC6270000C256 /* GACLastOpenedURLConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACLastOpenedURLConfig.swift; sourceTree = "<group>"; };
 		8493B3872B9CF95D0000C256 /* GACOpenedSavedTabConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACOpenedSavedTabConfig.swift; sourceTree = "<group>"; };
+		8493B3892B9D07ED0000C256 /* GACSavedArticles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACSavedArticles.swift; sourceTree = "<group>"; };
+		8493B38B2B9D0A530000C256 /* GACSavedArticlesConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACSavedArticlesConfig.swift; sourceTree = "<group>"; };
 		849A21802B6F88F6006BE8F3 /* GACArticleDetailTopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACArticleDetailTopBar.swift; sourceTree = "<group>"; };
 		849A21822B6F8914006BE8F3 /* GACArticleDetailBottomBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACArticleDetailBottomBar.swift; sourceTree = "<group>"; };
 		84BB04A82B9954BB00D460B8 /* Toast+Modifiers+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Toast+Modifiers+Extensions.swift"; sourceTree = "<group>"; };
@@ -260,6 +264,7 @@
 				8493B37F2B9CA2700000C256 /* GACTabsSearchBar.swift */,
 				8493B3812B9CC4820000C256 /* GACRecentActivity.swift */,
 				8493B3832B9CC5780000C256 /* GACLastOpenedIconTitleSubtitle.swift */,
+				8493B3892B9D07ED0000C256 /* GACSavedArticles.swift */,
 			);
 			path = TabsPage_Components;
 			sourceTree = "<group>";
@@ -470,6 +475,7 @@
 				841079D92B75C0E200E335B4 /* GACTextConfig.swift */,
 				848F620A2B956A3100CDF743 /* BottomSheetDrawerConfig.swift */,
 				840EF0C02B98068400A3F2B4 /* GACToastConfig.swift */,
+				8493B38B2B9D0A530000C256 /* GACSavedArticlesConfig.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -659,6 +665,7 @@
 				84DB7FD62B5B655700830FE6 /* GACStocksTileView.swift in Sources */,
 				849A21812B6F88F6006BE8F3 /* GACArticleDetailTopBar.swift in Sources */,
 				847FC7482B901A7F0034E537 /* HomePageResponse.swift in Sources */,
+				8493B38C2B9D0A530000C256 /* GACSavedArticlesConfig.swift in Sources */,
 				84861F772B96AE6C00E02BDA /* ToastView.swift in Sources */,
 				8428A11D2B70690600EF4BDF /* GACSecureConnectionView.swift in Sources */,
 				848F62032B95487F00CDF743 /* NoNetworkDialogView.swift in Sources */,
@@ -669,6 +676,7 @@
 				848F62052B95630400CDF743 /* BottomDrawerSheet.swift in Sources */,
 				841079D72B75BFE600E335B4 /* GACTitleMessageButtonView.swift in Sources */,
 				846CAA662B7C4A42001F16DE /* GACTabPageSearchResult.swift in Sources */,
+				8493B38A2B9D07ED0000C256 /* GACSavedArticles.swift in Sources */,
 				84DB7FD92B5B655700830FE6 /* GACTitle1Title2.swift in Sources */,
 				84DA16C32B8F29760066336D /* HomePage.swift in Sources */,
 				84DB7FDA2B5B655700830FE6 /* GACHeadlinesView.swift in Sources */,

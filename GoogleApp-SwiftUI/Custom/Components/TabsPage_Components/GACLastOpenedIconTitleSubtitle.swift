@@ -14,7 +14,7 @@ struct GACLastOpenedIconTitleSubtitle: View {
     var body: some View {
         HStack(alignment: .top,
                spacing: Dimensions.Spacing.spacing10) {
-            Image(for: .cbc)
+            Image(for: config.icon)
                 .renderAsResizable(.fit, false)
                 .frame(width: Dimensions.FrameSize.size40,
                        height: Dimensions.FrameSize.size40)
@@ -32,7 +32,7 @@ struct GACLastOpenedIconTitleSubtitle: View {
         .padding(.vertical, Dimensions.Padding.padding10)
         .overlay(
             RoundedRectangle(cornerRadius: Dimensions.CornerRadius.cornerRadius8)
-                .stroke(.blue, lineWidth: 1)
+                .stroke(.gray, lineWidth: 1)
         )
     }
 }

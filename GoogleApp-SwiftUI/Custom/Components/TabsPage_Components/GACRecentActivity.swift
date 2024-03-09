@@ -26,17 +26,26 @@ struct GACRecentActivity: View {
             }
             .padding(.horizontal, Dimensions.Padding.padding20)
         } else {
-            VStack(alignment: .leading,
-                   spacing: Dimensions.Spacing.spacing10) {
-                Text("Last opened tabs")
-                    .foregroundColor(.white)
-                
-                ForEach(0..<1) { _ in
-                    GACLastOpenedIconTitleSubtitle(config: $config)
+            let articles = NetworkingManager.shared.getSavedArticles()
+            let cols = [
+                GridItem(.flexible()),
+                GridItem(.flexible())
+            ]
+            
+            ScrollView {
+                VStack(alignment: .leading, spacing: Dimensions.Spacing.spacing10) {
+                    Text("\(articles.count) saved")
+                        .applyTextStyle(.white, .title3)
+                        .padding(.leading, Dimensions.Padding.padding15)
+                    LazyVGrid(columns: cols, spacing: 20) {
+                        ForEach(articles) { config in
+                            GACSavedArticles(config: config)
+                        }
+                    }
+                    VStack { }
                 }
-                Spacer()
+                .padding(.horizontal, Dimensions.Padding.padding15)
             }
-            .padding(.horizontal, Dimensions.Padding.padding20)
         }
     }
 }
