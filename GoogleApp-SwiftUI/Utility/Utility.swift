@@ -23,6 +23,7 @@ struct Utility {
         case note = "music.note"
         case degree
         case searchImage = "search-image"
+        case searchRecent = "doc.text.magnifyingglass"
         case tree
         case addUser = "add-user"
         case userSettings = "user-settings"

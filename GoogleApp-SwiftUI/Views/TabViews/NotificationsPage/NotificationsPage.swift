@@ -8,4 +8,8 @@
 import Foundation
 import SwiftUI
 
-struct NotificationsPage: View { }
+struct NotificationsPage: View {
+    var body: some View {
+        VStack { }
+    }
+}
