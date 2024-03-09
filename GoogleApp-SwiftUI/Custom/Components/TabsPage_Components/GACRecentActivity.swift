@@ -26,7 +26,17 @@ struct GACRecentActivity: View {
             }
             .padding(.horizontal, Dimensions.Padding.padding20)
         } else {
-            Spacer()
+            VStack(alignment: .leading,
+                   spacing: Dimensions.Spacing.spacing10) {
+                Text("Last opened tabs")
+                    .foregroundColor(.white)
+                
+                ForEach(0..<1) { _ in
+                    GACLastOpenedIconTitleSubtitle(config: $config)
+                }
+                Spacer()
+            }
+            .padding(.horizontal, Dimensions.Padding.padding20)
         }
     }
 }

@@ -10,8 +10,8 @@ import SwiftUI
 
 struct GACHeadlineChannelAuthorTimeView: View {
     var body: some View {
-        HStack(spacing: Dimensions.Spacing.spacing0) {
-            Image(for: .cbc)
+        HStack(spacing: Dimensions.Spacing.spacing5) {
+            Image(for: Utility.getNewsOutletImage())
                 .renderAsResizable(.fit, false)
                 .frame(width: Dimensions.FrameSize.size35,
                        height: Dimensions.FrameSize.size35)

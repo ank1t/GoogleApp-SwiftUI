@@ -58,6 +58,10 @@ struct Utility {
         case reload = "goforward"
         case noNetwork = "exclamationmark.icloud"
         case cbc = "cbc"
+        case gm = "gm"
+        case np = "np"
+        case cnn = "cnn"
+        case gn = "gn"
         
         var icon: String {
             return self.rawValue
@@ -82,6 +86,13 @@ struct Utility {
     
     static func generateYTURL(from id: String) -> String {
         Constants.youtubeBaseURL + id
+    }
+    
+    static func getNewsOutletImage() -> Self.ImageName {
+        return [Utility.ImageName.np,
+                Utility.ImageName.gm,
+                Utility.ImageName.gn,
+                Utility.ImageName.cnn].randomElement()!
     }
     
     lazy var webview: WKWebView = {
