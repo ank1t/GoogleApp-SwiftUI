@@ -444,6 +444,7 @@
 			isa = PBXGroup;
 			children = (
 				847FC7472B901A7F0034E537 /* HomePageResponse.swift */,
+				8493B3852B9CC6270000C256 /* GACLastOpenedURLConfig.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -466,7 +467,6 @@
 				841079D92B75C0E200E335B4 /* GACTextConfig.swift */,
 				848F620A2B956A3100CDF743 /* BottomSheetDrawerConfig.swift */,
 				840EF0C02B98068400A3F2B4 /* GACToastConfig.swift */,
-				8493B3852B9CC6270000C256 /* GACLastOpenedURLConfig.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";

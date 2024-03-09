@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct NetworkingManager {
+    static let shared = NetworkingManager()
+    
+    private init() { }
+}
