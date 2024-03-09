@@ -24,6 +24,8 @@ struct Utility {
         case degree
         case searchImage = "search-image"
         case searchRecent = "doc.text.magnifyingglass"
+        case searchMenu = "magnifyingglass"
+        case searchPrevious = "clock.arrow.circlepath"
         case tree
         case addUser = "add-user"
         case userSettings = "user-settings"
@@ -52,7 +54,6 @@ struct Utility {
         case info = "info.circle"
         case play
         case copy = "doc.on.doc"
-        case searchMenu = "magnifyingglass"
         case read = "speaker.wave.2.circle"
         case reload = "goforward"
         case noNetwork = "exclamationmark.icloud"
@@ -140,6 +141,7 @@ struct Dimensions {
         static let spacing5: CGFloat = 5
         static let spacing10: CGFloat = 10
         static let spacing15: CGFloat = 15
+        static let spacing20: CGFloat = 20
         static let spacing25: CGFloat = 25
         static let spacing40: CGFloat = 40
         static let spacing250: CGFloat = 250
