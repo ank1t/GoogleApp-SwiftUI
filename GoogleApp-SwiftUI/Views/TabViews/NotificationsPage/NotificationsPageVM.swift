@@ -8,4 +8,4 @@
 import Foundation
 import SwiftUI
 
-struct NotificationsPageVM: View { }
+struct NotificationsPageVM { }
