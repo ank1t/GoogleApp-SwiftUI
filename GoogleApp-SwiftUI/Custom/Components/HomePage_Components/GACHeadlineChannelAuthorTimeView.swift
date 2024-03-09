@@ -10,9 +10,12 @@ import SwiftUI
 
 struct GACHeadlineChannelAuthorTimeView: View {
     var body: some View {
-        HStack(spacing: Dimensions.Spacing.spacing10) {
-            Image(for: .doc)
-                .font(.system(size: Dimensions.FontSize.font14))
+        HStack(spacing: Dimensions.Spacing.spacing0) {
+            Image(for: .cbc)
+                .renderAsResizable(.fit, false)
+                .frame(width: Dimensions.FrameSize.size35,
+                       height: Dimensions.FrameSize.size35)
+            
             VStack(alignment: .leading) {
                 Text("Content category")
                     .font(.system(size: Dimensions.FontSize.font12))
