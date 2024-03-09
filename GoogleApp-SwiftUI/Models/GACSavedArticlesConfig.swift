@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct GACSavedArticlesConfig: Identifiable {
-    let color: Color
+    let image: Utility.ImageName
     let title: String
     let icon: Utility.ImageName
     let url: String

@@ -16,7 +16,8 @@ struct GACSavedArticles: View {
     var body: some View {
         VStack(alignment: .leading,
                spacing: Dimensions.Spacing.spacing10) {
-            config.color
+            Image(for: config.image)
+                .resizable()
                 .clipShape(RoundedCorners(radius: Dimensions.CornerRadius.cornerRadius15,
                                           corners: [.topLeft, .topRight]))
             VStack(alignment: .leading,

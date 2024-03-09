@@ -25,6 +25,7 @@ struct GACTabsSearchBarAndResults: View {
                             .onTapGesture {
                                 withAnimation(.default) {
                                     searchFieldIsFocused = false
+                                    searchStr = ""
                                 }
                             }
                     }
