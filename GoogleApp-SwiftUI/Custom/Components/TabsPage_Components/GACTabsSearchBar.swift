@@ -57,6 +57,7 @@ struct GACTabsSearchBarAndResults: View {
                 .padding(.trailing, Dimensions.Padding.padding15)
                 .padding(.leading, Dimensions.Padding.padding20)
                 
+                GACRecentActivity(searchTerm: $searchStr)
             }
         }
     }

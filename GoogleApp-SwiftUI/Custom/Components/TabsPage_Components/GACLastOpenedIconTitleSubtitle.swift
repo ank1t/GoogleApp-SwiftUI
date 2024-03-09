@@ -9,22 +9,31 @@ import Foundation
 import SwiftUI
 
 struct GACLastOpenedIconTitleSubtitle: View {
-    @Binding var config: GACLastOpenedURLConfig?
+    @Binding var config: GACLastOpenedURLConfig
     
     var body: some View {
-        HStack(spacing: Dimensions.Spacing.spacing10) {
-            AsyncImage(url: URL(string: config?.iconURL))
-            VStack(spacing: Dimensions.Spacing.spacing5) {
-                Text(config?.title)
-                    .applyTextStyle(.white, .title3)
-                Text(config?.title)
+        HStack(alignment: .top,
+               spacing: Dimensions.Spacing.spacing10) {
+            Image(for: .cbc)
+                .renderAsResizable(.fit, false)
+                .frame(width: Dimensions.FrameSize.size40,
+                       height: Dimensions.FrameSize.size40)
+            VStack(alignment: .leading,
+                   spacing: Dimensions.Spacing.spacing5) {
+                Text(config.title)
+                    .applyTextStyle(.white, .subheadline)
+                    .lineLimit(1)
+                Text(config.subtitle)
                     .applyTextStyle(.gray, .caption)
+                    .lineLimit(1)
             }
         }
         .padding(.horizontal, Dimensions.Padding.padding15)
-        .padding(.top, Dimensions.Padding.padding5)
-        .border(RoundedRectangle(cornerSize: Dimensions.CornerRadius.cornerRadius8),
-                width: 1)
+        .padding(.vertical, Dimensions.Padding.padding10)
+        .overlay(
+            RoundedRectangle(cornerRadius: Dimensions.CornerRadius.cornerRadius8)
+                .stroke(.blue, lineWidth: 1)
+        )
     }
 }
 

@@ -8,15 +8,25 @@
 import Foundation
 import SwiftUI
 
-struct GACRecentAcitivity: View {
+struct GACRecentActivity: View {
     @Binding var searchTerm: String
+    @State private var config = NetworkingManager.shared.getLastOpenedConfig()
     
     var body: some View {
         if searchTerm.isEmpty {
-            VStack(spacing: Dimensions.Spacing.spacing5) {
+            VStack(alignment: .leading,
+                spacing: Dimensions.Spacing.spacing10) {
                 Text("Last opened tabs")
+                    .foregroundColor(.white)
                 
+                ForEach(0..<1) { _ in
+                    GACLastOpenedIconTitleSubtitle(config: $config)
+                }
+                Spacer()
             }
+            .padding(.horizontal, Dimensions.Padding.padding20)
+        } else {
+            Spacer()
         }
     }
 }

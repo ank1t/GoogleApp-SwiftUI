@@ -7,8 +7,8 @@
         
 import Foundation
 
-struct GACLastOpenedURLConfig: Codable {
-    let iconURL: String
+struct GACLastOpenedURLConfig {
+    let iconURL: Utility.ImageName
     let title: String
     let subtitle: String
 }
