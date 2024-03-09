@@ -56,7 +56,7 @@ struct GACTabsSearchBarAndResults: View {
                 .padding(.vertical, Dimensions.Padding.padding10)
                 .padding(.trailing, Dimensions.Padding.padding15)
                 .padding(.leading, Dimensions.Padding.padding20)
-                Spacer()
+                
             }
         }
     }
