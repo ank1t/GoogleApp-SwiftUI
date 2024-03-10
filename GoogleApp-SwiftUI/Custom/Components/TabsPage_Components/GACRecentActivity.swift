@@ -10,7 +10,7 @@ import SwiftUI
 
 struct GACRecentActivity: View {
     @Binding var searchTerm: String
-    @State private var config = NetworkingManager.shared.getLastOpenedConfig()
+    @State private var config = DataManager.shared.getLastOpenedConfig()
     
     var body: some View {
         if searchTerm.isEmpty {
@@ -26,13 +26,32 @@ struct GACRecentActivity: View {
             }
             .padding(.horizontal, Dimensions.Padding.padding20)
         } else {
-            let articles = NetworkingManager.shared.getSavedArticles()
+            let openTabs = DataManager.shared.getOpenTabs()
+            let articles = DataManager.shared.getSavedArticles()
             let cols = [GridItem(.flexible()), GridItem(.flexible())]
-            
-            let recommendations = NetworkingManager.shared.getSearchRecommendations()
+            let recommendations = DataManager.shared.getSearchRecommendations()
             
             ScrollView {
+                if openTabs.count > 0 {
+                    VStack(alignment: .leading, spacing: Dimensions.Spacing.spacing10) {
+                        Text("\(openTabs.count) open tab")
+                            .applyTextStyle(.white, .title3)
+                            .padding(.leading, Dimensions.Padding.padding15)
+                        LazyVGrid(columns: cols, spacing: 20) {
+                            ForEach(openTabs, id: \.self) { _ in
+                                GACOpenTab()
+                            }
+                        }
+                        Color.clear.frame(height: Dimensions.FrameSize.size15)
+                    }
+                    .padding(.horizontal, Dimensions.Padding.padding15)
+                }
+                
                 if articles.count > 0 {
+                    if openTabs.count > 0 {
+                        LightTheme.searchBarPlaceholderColor
+                            .frame(height: Dimensions.FrameSize.size5)
+                    }
                     VStack(alignment: .leading, spacing: Dimensions.Spacing.spacing10) {
                         Text("\(articles.count) saved")
                             .applyTextStyle(.white, .title3)

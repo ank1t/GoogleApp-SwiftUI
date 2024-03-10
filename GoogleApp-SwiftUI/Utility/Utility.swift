@@ -105,7 +105,7 @@ struct Utility {
                 Utility.ImageName.cnn].randomElement()!
     }
     
-    lazy var webview: WKWebView = {
+    static var webview: WKWebView = {
        return WKWebView()
     }()
 }

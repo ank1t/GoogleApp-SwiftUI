@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct NetworkingManager {
-    static let shared = NetworkingManager()
+struct DataManager {
+    static let shared = DataManager()
     
     private init() { }
     
@@ -33,5 +33,9 @@ struct NetworkingManager {
     
     func getSearchRecommendations() -> [String] {
         ["aerie", "aeroplan", "aerie canada", "aed to cad", "aew", "aer lingus", "aesthetic", "aera restaurant", "aeroplan store", "aeroplan points"]
+    }
+    
+    func getOpenTabs() -> [String] {
+        ["google.ca"]
     }
 }
