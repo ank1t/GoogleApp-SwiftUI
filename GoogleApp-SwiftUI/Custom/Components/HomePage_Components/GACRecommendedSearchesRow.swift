@@ -7,8 +7,9 @@
 
 import SwiftUI
 
-struct GACTrendingSearchesRow: View {
-    var trendingSearchText: String = "Some text"
+struct GACRecommendedSearchesRow: View {
+    var text: String = "Some text"
+    var icon: Utility.ImageName = .trending
     
     var body: some View {
         HStack {
@@ -16,7 +17,7 @@ struct GACTrendingSearchesRow: View {
                 Circle()
                     .fill(Color(LightTheme.gray400))
                     
-                Image(for: .trending)
+                Image(for: icon)
                     .renderAsResizable(.fit, true)
                     .frame(width: Dimensions.FrameSize.size12)
                     .foregroundColor(.white)
@@ -26,7 +27,7 @@ struct GACTrendingSearchesRow: View {
             .padding(.leading, Dimensions.Padding.padding15)
             .padding(.trailing, Dimensions.Padding.padding10)
             
-            Text(trendingSearchText)
+            Text(text)
                 .foregroundColor(.white)
                 .font(.system(size: Dimensions.FontSize.font18))
         }

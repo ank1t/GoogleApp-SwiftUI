@@ -38,7 +38,7 @@ struct GACTrendingSearchesView: View {
                 ScrollView {
                     VStack(alignment: .leading) {
                         ForEach(trendingSearches, id: \.self) { search in
-                            GACTrendingSearchesRow(trendingSearchText: search)
+                            GACRecommendedSearchesRow(text: search)
                         }
                     }
                 }

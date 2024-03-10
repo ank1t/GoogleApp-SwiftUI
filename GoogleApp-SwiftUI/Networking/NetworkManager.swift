@@ -30,4 +30,8 @@ struct NetworkingManager {
         GACSavedArticlesConfig(image: .bear, title: "Bears are carnivoran mammals of the family Ursidae",
                                icon: .cnn, url: "wikipedia.com")]
     }
+    
+    func getSearchRecommendations() -> [String] {
+        ["aerie", "aeroplan", "aerie canada", "aed to cad", "aew", "aer lingus", "aesthetic", "aera restaurant", "aeroplan store", "aeroplan points"]
+    }
 }
