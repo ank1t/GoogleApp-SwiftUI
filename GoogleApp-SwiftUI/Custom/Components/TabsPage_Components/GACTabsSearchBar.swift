@@ -40,6 +40,9 @@ struct GACTabsSearchBarAndResults: View {
                             .onChange(of: searchFieldIsFocused) { newValue in
                                 withAnimation(.default) {
                                     showingRecentActivity.toggle()
+                                    if !newValue {
+                                        searchStr = ""
+                                    }
                                 }
                             }
                     }
@@ -58,7 +61,11 @@ struct GACTabsSearchBarAndResults: View {
                 .padding(.trailing, Dimensions.Padding.padding15)
                 .padding(.leading, Dimensions.Padding.padding20)
                 
-                GACRecentActivity(searchTerm: $searchStr)
+                if showingRecentActivity {
+                    GACRecentActivity(searchTerm: $searchStr)
+                } else {
+                    Spacer()
+                }
             }
         }
     }

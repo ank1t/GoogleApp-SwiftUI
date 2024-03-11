@@ -47,6 +47,5 @@ struct GACTrendingSearchesView: View {
             }
             .ignoresSafeArea()
         }
-        
     }
 }
