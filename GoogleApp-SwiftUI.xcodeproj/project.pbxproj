@@ -49,6 +49,7 @@
 		84BB04A92B9954BB00D460B8 /* Toast+Modifiers+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BB04A82B9954BB00D460B8 /* Toast+Modifiers+Extensions.swift */; };
 		84BD781C2B672D09005ED9E6 /* GACSearchTypesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BD781B2B672D09005ED9E6 /* GACSearchTypesView.swift */; };
 		84BD781E2B67312C005ED9E6 /* GACRecommendedSearchesRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BD781D2B67312C005ED9E6 /* GACRecommendedSearchesRow.swift */; };
+		84D0EF4C2B9FD91300F8D1A0 /* AnimatedTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0EF4B2B9FD91300F8D1A0 /* AnimatedTabs.swift */; };
 		84DA16BA2B8F27680066336D /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DA16B92B8F27680066336D /* HomePageViewModel.swift */; };
 		84DA16BE2B8F28850066336D /* TabsPageVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DA16BD2B8F28850066336D /* TabsPageVM.swift */; };
 		84DA16C12B8F28EA0066336D /* NotificationsPageVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DA16C02B8F28EA0066336D /* NotificationsPageVM.swift */; };
@@ -143,6 +144,7 @@
 		84BB04A82B9954BB00D460B8 /* Toast+Modifiers+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Toast+Modifiers+Extensions.swift"; sourceTree = "<group>"; };
 		84BD781B2B672D09005ED9E6 /* GACSearchTypesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACSearchTypesView.swift; sourceTree = "<group>"; };
 		84BD781D2B67312C005ED9E6 /* GACRecommendedSearchesRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACRecommendedSearchesRow.swift; sourceTree = "<group>"; };
+		84D0EF4B2B9FD91300F8D1A0 /* AnimatedTabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedTabs.swift; sourceTree = "<group>"; };
 		84DA16B92B8F27680066336D /* HomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
 		84DA16BD2B8F28850066336D /* TabsPageVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsPageVM.swift; sourceTree = "<group>"; };
 		84DA16C02B8F28EA0066336D /* NotificationsPageVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsPageVM.swift; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 				848F62082B9567F200CDF743 /* RoundedCorners.swift */,
 				848F620C2B956F8F00CDF743 /* ButtonPair.swift */,
 				84861F762B96AE6C00E02BDA /* ToastView.swift */,
+				84D0EF4B2B9FD91300F8D1A0 /* AnimatedTabs.swift */,
 			);
 			path = Common_Components;
 			sourceTree = "<group>";
@@ -658,6 +661,7 @@
 				84DB7FDD2B5B655700830FE6 /* GACLocalWeatherView.swift in Sources */,
 				8428A1232B7080D400EF4BDF /* UIApplication+Extensions.swift in Sources */,
 				848F62092B9567F200CDF743 /* RoundedCorners.swift in Sources */,
+				84D0EF4C2B9FD91300F8D1A0 /* AnimatedTabs.swift in Sources */,
 				849A21832B6F8914006BE8F3 /* GACArticleDetailBottomBar.swift in Sources */,
 				84DA16BA2B8F27680066336D /* HomePageViewModel.swift in Sources */,
 				84DB7FD82B5B655700830FE6 /* GACHeadlineArticleActionsView.swift in Sources */,
