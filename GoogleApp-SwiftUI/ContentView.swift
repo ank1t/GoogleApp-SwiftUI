@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        HomePage()
+        AnimatedTabs(tabs: ["Tabs", "Saved", "Liked"])
     }
 }
 
