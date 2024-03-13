@@ -14,19 +14,15 @@ struct AnimatedTabs: View {
     
     var body: some View {
         GeometryReader { proxy in
-            ZStack {
-                Color.black
-                HStack(spacing: 0) {
-                    ForEach(Array(tabs.enumerated()), id: \.element) { index, text in
-                        Text(text)
-                            .foregroundColor(.white)
-                            .padding(.vertical, 8)
-                            .background(index == selectedIndex ? .green : .clear)
-                    }
-                    .frame(width: proxy.frame(in: .global).width/CGFloat(tabs.count))
+            HStack(spacing: 0) {
+                ForEach(Array(tabs.enumerated()), id: \.element) { index, text in
+                    Text(text)
+                        .foregroundColor(.white)
+                        .frame(width: proxy.frame(in: .global).width/CGFloat(tabs.count))
+                        .padding(.vertical, 8)
+                        .background(index == selectedIndex ? .green : .black)
                 }
             }
-            .frame(height: Dimensions.FrameSize.size25)
         }
         
         Spacer()
