@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct AnimatedTabs: View {
-    let tabs: [String]
+    @State var viewModel: AnimatedTabsVM
     @State private var selectedIndex: Int = 0
     
     var body: some View {
