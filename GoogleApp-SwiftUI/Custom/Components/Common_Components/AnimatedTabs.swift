@@ -9,22 +9,22 @@ import Foundation
 import SwiftUI
 
 struct AnimatedTabs: View {
-    @State var viewModel: AnimatedTabsVM
+    let viewModel: AnimatedTabsVM
     @State private var selectedIndex: Int = 0
+    @State private var frameWidth: CGFloat = .zero
     
     var body: some View {
         GeometryReader { proxy in
             HStack(spacing: Dimensions.Spacing.spacing0) {
-                ForEach(Array(tabs.enumerated()), id: \.element) { index, text in
+                ForEach(Array(viewModel.tabs.enumerated()), id: \.element) { index, text in
                     Text(text)
                         .foregroundColor(.white)
-                        .frame(width: proxy.frame(in: .global).width/CGFloat(tabs.count))
+                        .frame(width: proxy.size.width/CGFloat(viewModel.tabs.count))
                         .padding(.vertical, Dimensions.Padding.padding8)
                         .background(index == selectedIndex ? .green : .black)
                 }
             }
         }
-        
         Spacer()
     }
 }
