@@ -23,7 +23,7 @@ struct GACTabsSearchBarAndResults: View {
                         Image(for: .backChevron)
                             .foregroundColor(.gray)
                             .onTapGesture {
-                                withAnimation(.default) {
+                                withAnimation(.easeInOut(duration: 0.1)) {
                                     searchFieldIsFocused = false
                                     searchStr = ""
                                 }
@@ -38,7 +38,7 @@ struct GACTabsSearchBarAndResults: View {
                             .foregroundColor(.white)
                             .focused($searchFieldIsFocused)
                             .onChange(of: searchFieldIsFocused) { newValue in
-                                withAnimation(.default) {
+                                withAnimation(.easeInOut(duration: 0.1)) {
                                     showingRecentActivity.toggle()
                                     if !newValue {
                                         searchStr = ""
