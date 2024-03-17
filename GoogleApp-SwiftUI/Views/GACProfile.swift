@@ -48,7 +48,7 @@ struct GACProfile: View {
                                                                         dividerInset: Dimensions.Padding.padding50,
                                                                         iconSize: Dimensions.FrameSize.size25,
                                                                         disclosureIndicator: Image(for: .chevronUp)),
-                                              showProfileRelatedRows: $showProfileRelatedRows.animation(.easeInOut(duration: Constants.disclosureAnimationDuration)))
+                                              showProfileRelatedRows: $showProfileRelatedRows.animation(.easeInOut(duration: Constants.defaultAnimationDuration)))
                             if showProfileRelatedRows {
                                 GACProfileRowView(profileRow: GACProfileRow(imageName: .userProfile,
                                                                             renderImageAsTemplate: false,

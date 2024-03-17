@@ -43,7 +43,7 @@ struct HomePage: View {
                                 .padding([.top, .trailing])
                                 .foregroundColor(.accentColor)
                                 .onTapGesture {
-                                    withAnimation(.easeOut(duration: Constants.profileScreenAnimationDuration)) {
+                                    withAnimation(.easeOut(duration: Constants.shortAnimationDuration)) {
                                         profileScreenShown.toggle()
                                     }
                                 }
