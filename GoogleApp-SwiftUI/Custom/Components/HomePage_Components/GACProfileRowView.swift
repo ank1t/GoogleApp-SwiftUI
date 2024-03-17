@@ -64,7 +64,7 @@ struct GACProfileRowView: View {
                         .rotationEffect(Angle(degrees: disclosureRotationAngle))
                         .onTapGesture {
                             showProfileRelatedRows.toggle()
-                            withAnimation(.easeIn(duration: Constants.disclosureAnimationDuration)) {
+                            withAnimation(.easeIn(duration: Constants.defaultAnimationDuration)) {
                                 disclosureRotationAngle += 180
                             }
                             disclosureRotationAngle = disclosureRotationAngle.truncatingRemainder(dividingBy: 360)
