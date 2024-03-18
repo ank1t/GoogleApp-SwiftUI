@@ -20,7 +20,7 @@ struct AnimatedTabs: View {
                     Text(text)
                         .foregroundColor(.white)
                         .frame(width: proxy.size.width/CGFloat(viewModel.tabs.count))
-                        .padding(.vertical, Dimensions.Padding.padding8)
+                        .padding(.vertical, Dimensions.Padding.padding10)
                         .background(index == selectedIndex ? .green : .black)
                 }
             }
