@@ -64,7 +64,7 @@ struct GACTabsSearchBarAndResults: View {
                 if showingRecentActivity {
                     GACRecentActivity(searchTerm: $searchStr)
                 } else {
-                    Spacer()
+                    AnimatedTabs(viewModel: AnimatedTabsVM(tabs: ["Tabs", "Saved", "Liked"]))
                 }
             }
         }
