@@ -65,7 +65,7 @@ struct GACTabsSearchBarAndResults: View {
                     GACRecentActivity(searchTerm: $searchStr)
                 } else {
                     ScrollView(showsIndicators: false) {
-                        AnimatedTabs(viewModel: AnimatedTabsVM(tabs: ["Tabs", "Saved", "Liked"]))
+                        AnimatedTabs()
                     }
                 }
             }

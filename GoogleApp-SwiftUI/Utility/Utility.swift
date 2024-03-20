@@ -113,6 +113,7 @@ struct Utility {
 
 struct Dimensions {
     struct FrameSize {
+        static let size2: CGFloat = 2
         static let size5: CGFloat = 5
         static let size10: CGFloat = 10
         static let size12: CGFloat = 12
