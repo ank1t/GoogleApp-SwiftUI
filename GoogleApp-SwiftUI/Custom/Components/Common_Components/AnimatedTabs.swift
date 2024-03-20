@@ -26,8 +26,7 @@ struct AnimatedTabs: View {
                         
                         Divider()
                             .frame(width: proxy.size.width/CGFloat(viewModel.tabs.count))
-                            .offset(x: proxy.size.width/CGFloat(viewModel.tabs.count) * CGFloat(selectedIndex))
-                            .background(selectedIndex == index ? .gray : .clear)
+                            .background(selectedIndex == index ? .white : .clear)
                     }
                     .onTapGesture {
                         selectedIndex = index
