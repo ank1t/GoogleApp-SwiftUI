@@ -8,5 +8,5 @@
 import Foundation
 
 struct AnimatedTabsVM {
-    let tabs: [String]
+    let tabs: [String] = ["Tabs", "Saved", "Liked"]
 }

@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        AnimatedTabs(viewModel: AnimatedTabsVM(tabs: ["Tabs", "Saved", "Liked"]))
+        GACTabsSearchBarAndResults()
+//        
     }
 }
 
