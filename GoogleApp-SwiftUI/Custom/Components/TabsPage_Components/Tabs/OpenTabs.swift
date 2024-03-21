@@ -11,7 +11,6 @@ import SwiftUI
 struct OpenTabs: View {
     var body: some View {
         Color.red
-            .opacity(0.2)
             .ignoresSafeArea()
     }
 }

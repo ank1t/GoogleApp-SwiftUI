@@ -11,7 +11,16 @@ import SwiftUI
 struct AnimatedTabs: View {
     let viewModel = AnimatedTabsVM()
     @State private var selectedIndex: Int = 0
-    @State private var frameWidth: CGFloat = .zero
+    
+    var body: some View {
+        TabView(selection: $selectedIndex) {
+            OpenTabs().tag(0)
+            SavedTabs().tag(1)
+        }
+        .tabViewStyle(.page(indexDisplayMode: .never))
+        .ignoresSafeArea()
+    }
+    /*@State private var frameWidth: CGFloat = .zero
     
     var body: some View {
         GeometryReader { proxy in
@@ -36,6 +45,5 @@ struct AnimatedTabs: View {
             }
         }
         Spacer()
-    }
-    
+    }*/
 }

@@ -64,9 +64,7 @@ struct GACTabsSearchBarAndResults: View {
                 if showingRecentActivity {
                     GACRecentActivity(searchTerm: $searchStr)
                 } else {
-                    ScrollView(showsIndicators: false) {
-                        AnimatedTabs()
-                    }
+                    AnimatedTabs()
                 }
             }
         }

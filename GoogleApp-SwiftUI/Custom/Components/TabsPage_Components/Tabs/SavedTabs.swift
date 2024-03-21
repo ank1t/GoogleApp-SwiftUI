@@ -11,7 +11,6 @@ import SwiftUI
 struct SavedTabs: View {
     var body: some View {
         Color.orange
-            .opacity(0.2)
             .ignoresSafeArea()
     }
 }
