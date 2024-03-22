@@ -13,11 +13,15 @@ struct AnimatedTabs: View {
     @State private var selectedIndex: Int = 0
     
     var body: some View {
-        TabView(selection: $selectedIndex) {
-            OpenTabs().tag(0)
-            SavedTabs().tag(1)
+        ZStack(alignment: .top) {
+            TabView(selection: $selectedIndex) {
+                OpenTabs().tag(0)
+                SavedTabs().tag(1)
+            }
+            .tabViewStyle(.page(indexDisplayMode: .never))
+            .ignoresSafeArea()
+            
+            AnimatedTabBarView(selectedIndex: $selectedIndex)
         }
-        .tabViewStyle(.page(indexDisplayMode: .never))
-        .ignoresSafeArea()
     }
 }

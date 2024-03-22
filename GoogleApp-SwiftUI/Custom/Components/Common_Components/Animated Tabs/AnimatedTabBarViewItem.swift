@@ -19,8 +19,8 @@ struct AnimatedTabBarViewItem: View {
             selectedIndex = itemIndex
         } label: {
             VStack(spacing: Dimensions.Spacing.spacing0) {
-                Spacer()
                 Text(itemName)
+                    .applyTextStyle(.white, .title3)
             }
         }
     }

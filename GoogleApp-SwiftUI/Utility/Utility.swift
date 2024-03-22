@@ -126,6 +126,8 @@ struct Dimensions {
         static let size35: CGFloat = 35
         static let size40: CGFloat = 40
         static let size50: CGFloat = 50
+        static let size60: CGFloat = 60
+        static let size70: CGFloat = 70
         static let size75: CGFloat = 75
         static let size100: CGFloat = 100
         static let size200: CGFloat = 200
