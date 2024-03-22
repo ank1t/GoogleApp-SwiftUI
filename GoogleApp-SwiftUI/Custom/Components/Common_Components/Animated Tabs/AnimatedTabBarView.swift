@@ -16,7 +16,7 @@ struct AnimatedTabBarView: View {
     var body: some View {
         GeometryReader { proxy in
             ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: Dimensions.Spacing.spacing20) {
+                HStack(spacing: Dimensions.Spacing.spacing0) {
                     ForEach(Array(zip(tabNames.indices, tabNames)), id: \.0) { index, name in
                         AnimatedTabBarViewItem(selectedIndex: $selectedIndex,
                                                itemName: name, itemIndex: index,
