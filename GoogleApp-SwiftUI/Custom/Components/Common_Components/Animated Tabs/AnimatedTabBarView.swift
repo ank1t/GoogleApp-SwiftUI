@@ -20,10 +20,10 @@ struct AnimatedTabBarView: View {
                         AnimatedTabBarViewItem(selectedIndex: $selectedIndex,
                                                itemName: name, itemIndex: index)
                         .frame(width: proxy.frame(in: .global).width/CGFloat(tabNames.count))
-                        .padding(.top, Dimensions.Padding.padding20)
                     }
                 }
             }
+            .scrollDisabled(true)
         }
         .background(.black)
         .frame(height: Dimensions.FrameSize.size60)

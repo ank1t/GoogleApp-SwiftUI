@@ -18,9 +18,18 @@ struct AnimatedTabBarViewItem: View {
         Button {
             selectedIndex = itemIndex
         } label: {
-            VStack(spacing: Dimensions.Spacing.spacing0) {
+            VStack(spacing: Dimensions.Spacing.spacing10) {
+                Spacer()
                 Text(itemName)
                     .applyTextStyle(.white, .title3)
+                
+                if selectedIndex == itemIndex {
+                    Color.gray
+                        .frame(height: Dimensions.FrameSize.size2)
+                } else {
+                    Color.clear
+                        .frame(height: Dimensions.FrameSize.size2)
+                }
             }
         }
     }
