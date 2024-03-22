@@ -13,6 +13,7 @@ struct AnimatedTabBarViewItem: View {
     
     var itemName: String
     var itemIndex: Int
+    let nameSpace: Namespace.ID
     
     var body: some View {
         Button {
@@ -26,11 +27,15 @@ struct AnimatedTabBarViewItem: View {
                 if selectedIndex == itemIndex {
                     Color.gray
                         .frame(height: Dimensions.FrameSize.size2)
+                        .matchedGeometryEffect(id: "keyline",
+                                               in: nameSpace,
+                                               properties: .frame)
                 } else {
                     Color.clear
                         .frame(height: Dimensions.FrameSize.size2)
                 }
             }
+            .animation(.spring(), value: selectedIndex)
         }
     }
 }

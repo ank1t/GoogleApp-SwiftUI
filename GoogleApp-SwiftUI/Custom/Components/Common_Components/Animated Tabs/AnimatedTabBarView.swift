@@ -11,6 +11,7 @@ import SwiftUI
 struct AnimatedTabBarView: View {
     private let tabNames: [String] = AnimatedTabsVM.tabs
     @Binding var selectedIndex: Int
+    @Namespace var nameSpace
     
     var body: some View {
         GeometryReader { proxy in
@@ -18,7 +19,8 @@ struct AnimatedTabBarView: View {
                 HStack(spacing: Dimensions.Spacing.spacing20) {
                     ForEach(Array(zip(tabNames.indices, tabNames)), id: \.0) { index, name in
                         AnimatedTabBarViewItem(selectedIndex: $selectedIndex,
-                                               itemName: name, itemIndex: index)
+                                               itemName: name, itemIndex: index,
+                                               nameSpace: nameSpace.self)
                         .frame(width: proxy.frame(in: .global).width/CGFloat(tabNames.count))
                     }
                 }
