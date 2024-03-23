@@ -36,6 +36,6 @@ struct DataManager {
     }
     
     func getOpenTabs() -> [String] {
-        ["google.ca"]
+        ["https://www.cbc.ca/news/canada/toronto/bald-eagle-nest-toronto-1.7135876"]
     }
 }

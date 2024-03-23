@@ -38,8 +38,8 @@ struct GACRecentActivity: View {
                             .applyTextStyle(.white, .title3)
                             .padding(.leading, Dimensions.Padding.padding15)
                         LazyVGrid(columns: cols, spacing: 20) {
-                            ForEach(openTabs, id: \.self) { _ in
-                                GACOpenTab()
+                            ForEach(openTabs, id: \.self) { url in
+                                GACOpenTab(url: url)
                             }
                         }
                         Color.clear.frame(height: Dimensions.FrameSize.size15)
