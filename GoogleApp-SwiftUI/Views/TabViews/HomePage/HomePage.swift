@@ -22,6 +22,7 @@ struct HomePage: View {
     @State var searchTypeOpacity: Double = 1
     @State var dividerOpacity: Double = 0
     @State var isHistoryModalPresented: Bool = false
+    @State private var showProfileRelatedRows: Bool = false
     
     @Namespace private var animation
     @StateObject var networkMonitor = Monitor()
@@ -106,9 +107,11 @@ struct HomePage: View {
                         .ignoresSafeArea()
                         .onTapGesture {
                             profileScreenShown.toggle()
+                            showProfileRelatedRows = false
                         }
                 }
-                GACProfile(profileScreenShown: $profileScreenShown)
+                GACProfile(profileScreenShown: $profileScreenShown,
+                           showProfileRelatedRows: $showProfileRelatedRows)
                     .frame(width: profileScreenShown ? contentFrame.width : nil, height: profileScreenShown ? contentFrame.height : nil)
                     .offset(x: profileScreenShown ? 0 : contentFrame.width, y: 0)
                 

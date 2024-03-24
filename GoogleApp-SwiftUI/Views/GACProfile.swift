@@ -9,7 +9,7 @@ import SwiftUI
 
 struct GACProfile: View {
     @Binding var profileScreenShown: Bool
-    @State private var showProfileRelatedRows: Bool = false
+    @Binding var showProfileRelatedRows: Bool
     
     var body: some View {
         ZStack {
