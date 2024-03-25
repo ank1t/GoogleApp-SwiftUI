@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 struct GACCarouselArticleView: View {
+    @State
     var body: some View {
         
     }
