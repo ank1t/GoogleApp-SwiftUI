@@ -235,6 +235,15 @@
 			path = PropertyWrappers;
 			sourceTree = "<group>";
 		};
+		841EF2DD2BB7338100D758AE /* Articles */ = {
+			isa = PBXGroup;
+			children = (
+				84DB7FCD2B5B655600830FE6 /* GACHeadlinesView.swift */,
+				84DB7FCE2B5B655600830FE6 /* GACHeadlineChannelAuthorTimeView.swift */,
+			);
+			path = Articles;
+			sourceTree = "<group>";
+		};
 		846146442B91720E006D3B11 /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,13 +254,12 @@
 		846CAA602B7C4966001F16DE /* HomePage_Components */ = {
 			isa = PBXGroup;
 			children = (
+				841EF2DD2BB7338100D758AE /* Articles */,
 				84DB7FC82B5B655600830FE6 /* GACProfileRowView.swift */,
 				84DB7FC92B5B655600830FE6 /* GACStocksTileView.swift */,
 				84DB7FCA2B5B655600830FE6 /* GACReferencedInArticle.swift */,
 				84DB7FCB2B5B655600830FE6 /* GACHeadlineArticleActionsView.swift */,
 				84DB7FCC2B5B655600830FE6 /* GACTitle1Title2.swift */,
-				84DB7FCD2B5B655600830FE6 /* GACHeadlinesView.swift */,
-				84DB7FCE2B5B655600830FE6 /* GACHeadlineChannelAuthorTimeView.swift */,
 				84DB7FCF2B5B655600830FE6 /* GACSearchOptionsView.swift */,
 				84DB7FD02B5B655600830FE6 /* GACLocalWeatherView.swift */,
 				84DB7FD12B5B655600830FE6 /* GACYoutubeArticlesView.swift */,
