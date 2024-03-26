@@ -68,6 +68,8 @@ struct Utility {
         case lion = "lion"
         case eagle = "eagle"
         case tiger = "tiger"
+        case polarBear1 = "polar-bear1"
+        case polarBear2 = "polar-bear2"
         
         var icon: String {
             return self.rawValue
