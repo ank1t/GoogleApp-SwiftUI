@@ -10,19 +10,34 @@ import SwiftUI
 
 struct GACCarouselArticleView: View {
     let viewModel = GACCarouselArticleVM()
+    @State private var scrollViewFrame: CGRect = .zero
     
     var body: some View {
         VStack(alignment: .leading, spacing: Dimensions.Spacing.spacing0) {
             Text(viewModel.title.uppercased())
                 .applyTextStyle(.white, .headline)
                 .padding(Dimensions.Padding.padding15)
+            
             ScrollView(.horizontal) {
-                HStack(spacing: Dimensions.Spacing.spacing0) {
-                    GeometryReader { proxy in
-                        
+                HStack(spacing: Dimensions.Spacing.spacing2) {
+                    ForEach(viewModel.images, id: \.self) { image in
+                        Image(for: image)
+                            .resizable()
+                            .frame(width: scrollViewFrame.width/2,
+                                   height: Dimensions.FrameSize.size200)
+                            .aspectRatio(contentMode: .fit)
                     }
                 }
             }
+            .overlay{
+                GeometryReader { proxy in
+                    Color.clear.onAppear {
+                        scrollViewFrame = proxy.frame(in: .global)
+                    }
+                }
+            }
+            .padding(.bottom, Dimensions.Padding.padding15)
+            
             HStack(spacing: Dimensions.Spacing.spacing15) {
                 Color.gray
                     .frame(width: Dimensions.FrameSize.size2)
