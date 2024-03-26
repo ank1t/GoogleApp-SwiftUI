@@ -9,9 +9,11 @@ import Foundation
 import SwiftUI
 
 struct GACHeadlineChannelAuthorTimeView: View {
+    var logo: Utility.ImageName?
+    
     var body: some View {
         HStack(spacing: Dimensions.Spacing.spacing5) {
-            Image(for: Utility.getNewsOutletImage())
+            Image(for: logo ?? Utility.getNewsOutletImage())
                 .renderAsResizable(.fit, false)
                 .frame(width: Dimensions.FrameSize.size35,
                        height: Dimensions.FrameSize.size35)

@@ -62,6 +62,7 @@ struct Utility {
         case np = "np"
         case cnn = "cnn"
         case gn = "gn"
+        case natgeo = "nat-geo"
         
         case bear = "bear"
         case cheetah = "cheetah"
@@ -104,7 +105,8 @@ struct Utility {
         return [Utility.ImageName.np,
                 Utility.ImageName.gm,
                 Utility.ImageName.gn,
-                Utility.ImageName.cnn].randomElement()!
+                Utility.ImageName.cnn,
+                Utility.ImageName.natgeo].randomElement()!
     }
     
     static var webview: WKWebView = {
