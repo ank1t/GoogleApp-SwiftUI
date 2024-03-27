@@ -21,7 +21,8 @@ struct GACTabView: View {
             .tabViewStyle(.page(indexDisplayMode: .never))
             .ignoresSafeArea()
             
-            
+            Color.orange.ignoresSafeArea()
+                .frame(height: Dimensions.FrameSize.size60)
         }
     }
 }
