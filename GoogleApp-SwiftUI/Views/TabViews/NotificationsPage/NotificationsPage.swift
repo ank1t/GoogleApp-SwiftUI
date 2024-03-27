@@ -10,6 +10,6 @@ import SwiftUI
 
 struct NotificationsPage: View {
     var body: some View {
-        VStack { }
+        Color.green
     }
 }

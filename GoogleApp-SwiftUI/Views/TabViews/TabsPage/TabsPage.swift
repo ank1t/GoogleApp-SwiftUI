@@ -10,6 +10,6 @@ import SwiftUI
 
 struct TabsPage: View {
     var body: some View {
-        VStack { }
+        Color.red
     }
 }

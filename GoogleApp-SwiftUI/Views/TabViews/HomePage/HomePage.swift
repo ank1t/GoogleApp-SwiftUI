@@ -28,50 +28,62 @@ struct HomePage: View {
     @StateObject var networkMonitor = Monitor()
     
     var body: some View {
-        NavigationView {
-            ZStack(alignment: .topTrailing) {
-                LightTheme.tabBarBGColor
-                    .ignoresSafeArea()
-                
-                OffsetObservingScrollView(showsIndicators: false,
-                                          offset: $scrollViewOffset) {
-                    VStack(spacing: Dimensions.Spacing.spacing2) {
-                        HStack {
-                            Spacer()
-                            Image(for: .user)
-                                .renderAsResizable(.fit)
-                                .frame(width: Dimensions.FrameSize.size25)
-                                .padding([.top, .trailing])
-                                .foregroundColor(.accentColor)
-                                .onTapGesture {
-                                    withAnimation(.easeOut(duration: Constants.shortAnimationDuration)) {
-                                        profileScreenShown.toggle()
-                                    }
+        ZStack(alignment: .topTrailing) {
+            LightTheme.tabBarBGColor
+                .ignoresSafeArea()
+            
+            OffsetObservingScrollView(showsIndicators: false,
+                                      offset: $scrollViewOffset) {
+                VStack(spacing: Dimensions.Spacing.spacing2) {
+                    HStack {
+                        Spacer()
+                        Image(for: .user)
+                            .renderAsResizable(.fit)
+                            .frame(width: Dimensions.FrameSize.size25)
+                            .padding([.top, .trailing])
+                            .foregroundColor(.accentColor)
+                            .onTapGesture {
+                                withAnimation(.easeOut(duration: Constants.shortAnimationDuration)) {
+                                    profileScreenShown.toggle()
                                 }
-                        }
-                        HStack {
-                            Spacer()
-                            ZStack {
-                                Image(for: .google)
-                                    .renderAsResizable(.fit, false)
-                                    .frame(width: Dimensions.FrameSize.size40, height: Dimensions.FrameSize.size40)
-                                    .opacity(tileOpacity)
-                                ScrollView(.horizontal, showsIndicators: false) {
-                                    HStack(spacing: Dimensions.Spacing.spacing15) {
-                                        Spacer(minLength: Dimensions.Spacing.spacing250)
-                                        ForEach(1...3, id: \.self) { _ in
-                                            GACStocksTileView()
-                                        }
-                                        HStack {}
-                                    }
-                                }
+                            }
+                    }
+                    HStack {
+                        Spacer()
+                        ZStack {
+                            Image(for: .google)
+                                .renderAsResizable(.fit, false)
+                                .frame(width: Dimensions.FrameSize.size40, height: Dimensions.FrameSize.size40)
                                 .opacity(tileOpacity)
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                HStack(spacing: Dimensions.Spacing.spacing15) {
+                                    Spacer(minLength: Dimensions.Spacing.spacing250)
+                                    ForEach(1...3, id: \.self) { _ in
+                                        GACStocksTileView()
+                                    }
+                                    HStack {}
+                                }
+                            }
+                            .opacity(tileOpacity)
+                        }
+                    }
+                    .padding(.top, Dimensions.Padding.padding20)
+                    
+                    GACSearchTextField(appearence: .homepage,
+                                       textfieldIsActive: $textfieldIsActive)
+                    .overlay {
+                        GeometryReader { proxy in
+                            Color.clear.onAppear {
+                                searchFieldFrame = proxy.frame(in: .global)
                             }
                         }
-                        .padding(.top, Dimensions.Padding.padding20)
-                        
-                        GACSearchTextField(appearence: .homepage,
-                                           textfieldIsActive: $textfieldIsActive)
+                    }
+                    .opacity(!shouldShowStaticSearchbar ? 1 : 0)
+                    
+                    GACSearchTypesView()
+                        .opacity(searchTypeOpacity)
+                    Divider()
+                        .padding(.top, Dimensions.Padding.padding10)
                         .overlay {
                             GeometryReader { proxy in
                                 Color.clear.onAppear {
@@ -79,79 +91,66 @@ struct HomePage: View {
                                 }
                             }
                         }
-                        .opacity(!shouldShowStaticSearchbar ? 1 : 0)
-                        
-                        GACSearchTypesView()
-                            .opacity(searchTypeOpacity)
-                        Divider()
-                            .padding(.top, Dimensions.Padding.padding10)
-                            .overlay {
-                                GeometryReader { proxy in
-                                    Color.clear.onAppear {
-                                        searchFieldFrame = proxy.frame(in: .global)
-                                    }
-                                }
-                            }
-                        LazyVStack {
-                            GACLocalWeatherView()
-                            ForEach(1..<10) { _ in
-                                GACYouTubeArticlesView(videoID: "FelYPK4p3Bo")
-                                GACHeadlinesView(url: "https://cnn.com")
-                                GACCarouselArticleView()
-                            }
+                    LazyVStack {
+                        GACLocalWeatherView()
+                        ForEach(1..<10) { _ in
+                            GACYouTubeArticlesView(videoID: "FelYPK4p3Bo")
+                            GACHeadlinesView(url: "https://cnn.com")
+                            GACCarouselArticleView()
                         }
                     }
-                }
-                
-                if profileScreenShown {
-                    Color.black.opacity(Constants.overlayOpacity)
-                        .ignoresSafeArea()
-                        .onTapGesture {
-                            profileScreenShown.toggle()
-                            showProfileRelatedRows = false
-                        }
-                }
-                GACProfile(profileScreenShown: $profileScreenShown,
-                           showProfileRelatedRows: $showProfileRelatedRows)
-                    .frame(width: profileScreenShown ? contentFrame.width : nil, height: profileScreenShown ? contentFrame.height : nil)
-                    .offset(x: profileScreenShown ? 0 : contentFrame.width, y: 0)
-                
-                if shouldShowStaticSearchbar {
-                    ZStack {
-                        VStack(spacing: Dimensions.Spacing.spacing0) {
-                            LightTheme.tabBarBGColor
-                                .ignoresSafeArea(edges: .top)
-                                .frame(height: staticSearchFieldFrame.height)
-                            Divider()
-                                .opacity(dividerOpacity)
-                        }
-                        GACSearchTextField(appearence: .homepage,
-                                           textfieldIsActive: $textfieldIsActive)
-                        .overlay {
-                            GeometryReader { proxy in
-                                Color.clear.onAppear {
-                                    staticSearchFieldFrame = proxy.frame(in: .global)
-                                }
-                            }
-                        }
-                    }
-                }
-                
-                if textfieldIsActive {
-                    GACTrendingSearchesView(textfieldIsActive: $textfieldIsActive)
-                        .ignoresSafeArea()
-                }
-                
-                if isHistoryModalPresented {
-                    BottomDrawerSheet(config: BottomSheetDrawerConfig(isPresented: $isHistoryModalPresented))
-                }
-                
-                if !networkDialogVisible && networkMonitor.status != .connected  {
-                    NoNetworkDialogView(dialogIsVisible: $networkDialogVisible)
                 }
             }
-            .preferredColorScheme(.dark)
+            
+            if profileScreenShown {
+                Color.black.opacity(Constants.overlayOpacity)
+                    .ignoresSafeArea()
+                    .onTapGesture {
+                        profileScreenShown.toggle()
+                        showProfileRelatedRows = false
+                    }
+            }
+            GACProfile(profileScreenShown: $profileScreenShown,
+                       showProfileRelatedRows: $showProfileRelatedRows)
+            .frame(width: profileScreenShown ? contentFrame.width : nil, height: profileScreenShown ? contentFrame.height : nil)
+            .offset(x: profileScreenShown ? 0 : contentFrame.width, y: 0)
+            .opacity(profileScreenShown ? 1 : 0)
+            
+            if shouldShowStaticSearchbar {
+                ZStack {
+                    VStack(spacing: Dimensions.Spacing.spacing0) {
+                        LightTheme.tabBarBGColor
+                            .ignoresSafeArea(edges: .top)
+                            .frame(height: staticSearchFieldFrame.height)
+                        Divider()
+                            .opacity(dividerOpacity)
+                    }
+                    GACSearchTextField(appearence: .homepage,
+                                       textfieldIsActive: $textfieldIsActive)
+                    .overlay {
+                        GeometryReader { proxy in
+                            Color.clear.onAppear {
+                                staticSearchFieldFrame = proxy.frame(in: .global)
+                            }
+                        }
+                    }
+                }
+            }
+            
+            if textfieldIsActive {
+                GACTrendingSearchesView(textfieldIsActive: $textfieldIsActive)
+                    .ignoresSafeArea()
+            }
+            
+            if isHistoryModalPresented {
+                BottomDrawerSheet(config: BottomSheetDrawerConfig(isPresented: $isHistoryModalPresented))
+            }
+            
+            if !networkDialogVisible && networkMonitor.status != .connected  {
+                NoNetworkDialogView(dialogIsVisible: $networkDialogVisible)
+            }
         }
+        .preferredColorScheme(.dark)
         .overlay {
             GeometryReader { proxy in
                 Color.clear.onAppear {
