@@ -21,6 +21,7 @@
 		841EF2E12BB7353900D758AE /* GACCarouselArticleVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841EF2E02BB7353900D758AE /* GACCarouselArticleVM.swift */; };
 		841EF2E32BB75BE200D758AE /* GACTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841EF2E22BB75BE200D758AE /* GACTabView.swift */; };
 		841EF2E52BB78B0800D758AE /* GACTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841EF2E42BB78B0800D758AE /* GACTabbar.swift */; };
+		841EF2E72BB790FF00D758AE /* GACTabbarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841EF2E62BB790FF00D758AE /* GACTabbarItem.swift */; };
 		8428A11D2B70690600EF4BDF /* GACSecureConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428A11C2B70690600EF4BDF /* GACSecureConnectionView.swift */; };
 		8428A11F2B70698100EF4BDF /* GACURLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428A11E2B70698100EF4BDF /* GACURLView.swift */; };
 		8428A1212B70773000EF4BDF /* GACBottomBarIconModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428A1202B70773000EF4BDF /* GACBottomBarIconModel.swift */; };
@@ -125,6 +126,7 @@
 		841EF2E02BB7353900D758AE /* GACCarouselArticleVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACCarouselArticleVM.swift; sourceTree = "<group>"; };
 		841EF2E22BB75BE200D758AE /* GACTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACTabView.swift; sourceTree = "<group>"; };
 		841EF2E42BB78B0800D758AE /* GACTabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACTabbar.swift; sourceTree = "<group>"; };
+		841EF2E62BB790FF00D758AE /* GACTabbarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACTabbarItem.swift; sourceTree = "<group>"; };
 		8428A11C2B70690600EF4BDF /* GACSecureConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACSecureConnectionView.swift; sourceTree = "<group>"; };
 		8428A11E2B70698100EF4BDF /* GACURLView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACURLView.swift; sourceTree = "<group>"; };
 		8428A1202B70773000EF4BDF /* GACBottomBarIconModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACBottomBarIconModel.swift; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 			children = (
 				841EF2E22BB75BE200D758AE /* GACTabView.swift */,
 				841EF2E42BB78B0800D758AE /* GACTabbar.swift */,
+				841EF2E62BB790FF00D758AE /* GACTabbarItem.swift */,
 				84DA16BF2B8F28B90066336D /* NotificationsPage */,
 				84DA16BC2B8F28550066336D /* TabsPage */,
 				84DA16BB2B8F27E60066336D /* HomePage */,
@@ -740,6 +743,7 @@
 				841079D72B75BFE600E335B4 /* GACTitleMessageButtonView.swift in Sources */,
 				841EF2E52BB78B0800D758AE /* GACTabbar.swift in Sources */,
 				846CAA662B7C4A42001F16DE /* GACTabPageSearchResult.swift in Sources */,
+				841EF2E72BB790FF00D758AE /* GACTabbarItem.swift in Sources */,
 				8493B38A2B9D07ED0000C256 /* GACSavedArticles.swift in Sources */,
 				84DB7FD92B5B655700830FE6 /* GACTitle1Title2.swift in Sources */,
 				84DA16C32B8F29760066336D /* HomePage.swift in Sources */,

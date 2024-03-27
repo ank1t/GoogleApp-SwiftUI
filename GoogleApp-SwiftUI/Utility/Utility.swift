@@ -13,6 +13,7 @@ struct Utility {
     enum ImageName: String {
         case home = "house.fill"
         case notifications = "bell.circle"
+        case bell = "bell"
         case tabs
         case user = "person.circle"
         case google
