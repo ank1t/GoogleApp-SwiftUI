@@ -95,8 +95,8 @@ struct HomePage: View {
                         LazyVStack {
                             GACLocalWeatherView()
                             ForEach(1..<10) { _ in
-//                                GACYouTubeArticlesView(videoID: "FelYPK4p3Bo")
-//                                GACHeadlinesView(url: "https://cnn.com")
+                                GACYouTubeArticlesView(videoID: "FelYPK4p3Bo")
+                                GACHeadlinesView(url: "https://cnn.com")
                                 GACCarouselArticleView()
                             }
                         }
