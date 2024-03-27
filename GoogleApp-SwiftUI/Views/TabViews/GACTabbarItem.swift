@@ -9,18 +9,32 @@ import Foundation
 import SwiftUI
 
 struct GACTabbarItem: View {
-    let imageName: Utility.ImageName
+    var imageName: Utility.ImageName?
+    /*
+     Used in lieu of imageName
+     */
+    var text: String?
     let title: String
+    @Binding var indexOfSelectedTab: Int
+    let indexOfTab: Int
     
     var body: some View {
-        VStack(spacing: Dimensions.Spacing.spacing5) {
-            Image(for: imageName)
-                .resizable()
-                .frame(width: Dimensions.FrameSize.size15,
-                       height: Dimensions.FrameSize.size15)
+        VStack(spacing: Dimensions.Spacing.spacing0) {
+            if let imageName {
+                Image(for: imageName)
+                    .resizable()
+                    .frame(width: Dimensions.FrameSize.size15,
+                           height: Dimensions.FrameSize.size15)
+                    .padding(.bottom, Dimensions.Padding.padding5)
+            } else if let text {
+                Text(text)
+                    .applyTextStyle(.gray, .body)
+            }
             Text(title)
                 .applyTextStyle(.gray, .caption)
         }
-        .padding(.leading, Dimensions.Padding.padding20)
+        .onTapGesture {
+            indexOfSelectedTab = indexOfTab
+        }
     }
 }

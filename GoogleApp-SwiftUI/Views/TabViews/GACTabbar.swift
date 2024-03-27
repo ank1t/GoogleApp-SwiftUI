@@ -9,6 +9,8 @@ import Foundation
 import SwiftUI
 
 struct GACTabbar: View {
+    @Binding var indexOfSelectedTab: Int
+    
     var body: some View {
         ZStack {
             LightTheme.tabBarBGColor
@@ -16,15 +18,23 @@ struct GACTabbar: View {
                 Divider()
                 Spacer()
                 HStack(spacing: Dimensions.Spacing.spacing20) {
-                    GACTabbarItem(imageName: .home, title: "Home")
+                    GACTabbarItem(imageName: .home, title: "Home",
+                                  indexOfSelectedTab: $indexOfSelectedTab,
+                                  indexOfTab: 0)
+                        .padding(.leading, Dimensions.Padding.padding20)
                     
                     Spacer()
-                    Image(for: .home)
-                        .resizable()
-                        .frame(width: Dimensions.FrameSize.size15,
-                            height: Dimensions.FrameSize.size15)
+                    GACTabbarItem(text: "\(Utility.numberOfOpenTabs)",
+                                  title: "Tabs",
+                                  indexOfSelectedTab: $indexOfSelectedTab,
+                                  indexOfTab: 1)
+                    .padding(.leading, Dimensions.Padding.padding20)
+                    
                     Spacer()
-                    GACTabbarItem(imageName: .bear, title: "Notifications")
+                    GACTabbarItem(imageName: .bell, title: "Notifications",
+                                  indexOfSelectedTab: $indexOfSelectedTab,
+                                  indexOfTab: 2)
+                        .padding(.trailing, Dimensions.Padding.padding20)
                 }
                 Spacer()
             }

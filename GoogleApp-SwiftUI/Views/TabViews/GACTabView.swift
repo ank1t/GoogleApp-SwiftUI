@@ -21,7 +21,7 @@ struct GACTabView: View {
             .tabViewStyle(.page(indexDisplayMode: .never))
             .ignoresSafeArea()
             
-            GACTabbar()
+            GACTabbar(indexOfSelectedTab: $indexOfSelectedTab)
                 .ignoresSafeArea()
                 .frame(height: Dimensions.FrameSize.size60)
         }

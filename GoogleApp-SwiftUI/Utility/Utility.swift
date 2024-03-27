@@ -113,6 +113,10 @@ struct Utility {
     static var webview: WKWebView = {
        return WKWebView()
     }()
+    
+    static var numberOfOpenTabs: Int {
+        return 2
+    }
 }
 
 
