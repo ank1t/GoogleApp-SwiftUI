@@ -10,6 +10,7 @@ import SwiftUI
 
 struct TabsPage: View {
     var body: some View {
-        Color.red
+        GACTabsSearchBarAndResults()
+            .preferredColorScheme(.dark)
     }
 }
