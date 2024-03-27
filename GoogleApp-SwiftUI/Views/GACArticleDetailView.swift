@@ -14,7 +14,7 @@ struct GACArticleDetailView: View {
     var body: some View {
         VStack {
             GACArticleDetailTopBar()
-            if false /*networkMonitor.status == .connected*/ {
+            if networkMonitor.status == .connected {
                 GACWebview(urlStr: "https://cnn.com")
             } else {
                 GACNoNetworkConnection()
