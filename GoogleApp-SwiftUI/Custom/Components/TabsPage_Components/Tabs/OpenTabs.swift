@@ -11,22 +11,25 @@ import SwiftUI
 struct OpenTabs: View {
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
-            Color.red
+            LightTheme.tabBarBGColor
                 .ignoresSafeArea()
             
             Button(action: {}) {
-                HStack(spacing: Dimensions.Spacing.spacing20) {
+                HStack(spacing: Dimensions.Spacing.spacing15) {
                     Image(for: .plus)
                         .resizable()
                         .frame(width: Dimensions.FrameSize.size15,
                                height: Dimensions.FrameSize.size15)
-                        .foregroundColor(.gray)
+                        .foregroundColor(.white)
                     
                     Text("New Tab")
-                        .applyTextStyle(.gray, .callout)
+                        .applyTextStyle(.white, .callout)
                 }
+                .padding()
+                .background(LightTheme.searchBarPlaceholderColor)
+                .cornerRadius(Dimensions.CornerRadius.cornerRadius15)
             }
-            .offset(x: -50 ,y: -100)
+            .offset(x: -40 ,y: -85)
         }
         
     }
