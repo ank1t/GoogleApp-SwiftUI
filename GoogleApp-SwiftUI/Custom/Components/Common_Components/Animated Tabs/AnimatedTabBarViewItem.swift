@@ -22,7 +22,7 @@ struct AnimatedTabBarViewItem: View {
             VStack(spacing: Dimensions.Spacing.spacing10) {
                 Spacer()
                 Text(itemName)
-                    .applyTextStyle(.white, .title3)
+                    .applyTextStyle(.white, .subheadline)
                 
                 if selectedIndex == itemIndex {
                     Color.gray

@@ -58,6 +58,7 @@ struct Utility {
         case read = "speaker.wave.2.circle"
         case reload = "goforward"
         case noNetwork = "exclamationmark.icloud"
+        case plus = "plus"
         case cbc = "cbc"
         case gm = "gm"
         case np = "np"

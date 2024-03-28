@@ -28,7 +28,7 @@ struct AnimatedTabBarView: View {
             .scrollDisabled(true)
         }
         .background(.black)
-        .frame(height: Dimensions.FrameSize.size60)
+        .frame(height: Dimensions.FrameSize.size50)
         .edgesIgnoringSafeArea(.top)
     }
 }
