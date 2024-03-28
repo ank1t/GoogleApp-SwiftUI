@@ -14,7 +14,9 @@ struct OpenTabs: View {
             LightTheme.tabBarBGColor
                 .ignoresSafeArea()
             
-            Button(action: {}) {
+            Button(action: {
+                
+            }) {
                 HStack(spacing: Dimensions.Spacing.spacing15) {
                     Image(for: .plus)
                         .resizable()
@@ -26,10 +28,10 @@ struct OpenTabs: View {
                         .applyTextStyle(.white, .callout)
                 }
                 .padding()
-                .background(LightTheme.searchBarPlaceholderColor)
+                .background(Color(cgColor: LightTheme.gray400))
                 .cornerRadius(Dimensions.CornerRadius.cornerRadius15)
             }
-            .offset(x: -40 ,y: -85)
+            .offset(x: -30 ,y: -85)
         }
         
     }
