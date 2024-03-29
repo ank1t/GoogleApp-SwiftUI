@@ -9,13 +9,15 @@ import Foundation
 import SwiftUI
 
 struct OpenTabs: View {
+    @State private var presentingOpenTab: Bool = false
+    
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
             LightTheme.tabBarBGColor
                 .ignoresSafeArea()
             
             Button(action: {
-                
+                presentingOpenTab.toggle()
             }) {
                 HStack(spacing: Dimensions.Spacing.spacing15) {
                     Image(for: .plus)
@@ -32,6 +34,9 @@ struct OpenTabs: View {
                 .cornerRadius(Dimensions.CornerRadius.cornerRadius15)
             }
             .offset(x: -30 ,y: -85)
+            .fullScreenCover(isPresented: $presentingOpenTab, content: {
+                GACArticleDetailView()
+            })
         }
         
     }
