@@ -11,5 +11,5 @@ import SwiftUI
 struct GACBottomBarIconModel: Identifiable {
     var id: UUID = UUID()
     let icon: Utility.ImageName
-    let actionHandler: (() -> Void)?
+    var actionHandler: (() -> Void)?
 }

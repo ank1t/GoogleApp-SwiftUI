@@ -9,6 +9,8 @@ import Foundation
 import SwiftUI
 
 struct GACArticleDetailBottomBar: View {
+    @EnvironmentObject private var newTabSetting: NewTabSetting
+    
     private let iconModels: [GACBottomBarIconModel] = [
         GACBottomBarIconModel(icon: .backArrow, actionHandler: nil),
         GACBottomBarIconModel(icon: .forwardArrow, actionHandler: nil),
@@ -22,7 +24,7 @@ struct GACArticleDetailBottomBar: View {
             
             VStack {
                 HStack(spacing: Dimensions.Spacing.spacing5) {
-                    ForEach(iconModels) { iconModel in
+                    ForEach(iconModels.enumerated()) { index, iconModel in
                         Image(for: iconModel.icon)
                             .renderAsResizable(.fit)
                             .foregroundColor(.white)

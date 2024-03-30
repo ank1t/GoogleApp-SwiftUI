@@ -8,8 +8,12 @@
 import Foundation
 import SwiftUI
 
+class NewTabSetting : ObservableObject {
+    @Published var shouldShowWindow = false
+}
+
 struct OpenTabs: View {
-    @State private var presentingOpenTab: Bool = false
+    @StateObject var newTabSetting = NewTabSetting()
     
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
@@ -17,7 +21,7 @@ struct OpenTabs: View {
                 .ignoresSafeArea()
             
             Button(action: {
-                presentingOpenTab.toggle()
+                newTabSetting.shouldShowWindow.toggle()
             }) {
                 HStack(spacing: Dimensions.Spacing.spacing15) {
                     Image(for: .plus)
@@ -34,8 +38,9 @@ struct OpenTabs: View {
                 .cornerRadius(Dimensions.CornerRadius.cornerRadius15)
             }
             .offset(x: -30 ,y: -85)
-            .fullScreenCover(isPresented: $presentingOpenTab, content: {
+            .fullScreenCover(isPresented: $newTabSetting.shouldShowWindow, content: {
                 GACArticleDetailView()
+                    .environmentObject(newTabSetting)
             })
         }
         

@@ -9,6 +9,8 @@ import Foundation
 import SwiftUI
 
 struct GACArticleDetailTopBar: View {
+    @EnvironmentObject var newTabSetting: NewTabSetting
+    
     var body: some View {
         ZStack {
             LightTheme.tabBarBGColor
@@ -21,6 +23,9 @@ struct GACArticleDetailTopBar: View {
                     .frame(width: Dimensions.FrameSize.size15,
                            height: Dimensions.FrameSize.size15)
                     .padding(.leading, Dimensions.Padding.padding12)
+                    .onTapGesture {
+                        newTabSetting.shouldShowWindow.toggle()
+                    }
                 
                 GACURLView()
                     .padding(.horizontal, Dimensions.Padding.padding8)
