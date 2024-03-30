@@ -20,8 +20,20 @@ struct SavedTabs: View {
                         .frame(height: Dimensions.FrameSize.size60)
                     Text("Recently saved")
                     
-                    Spacer()
+                    HStack(spacing: Dimensions.Spacing.spacing0) {
+                        Spacer()
+                        Button(action: {}) {
+                            Text("View all saved items →")
+                                .foregroundColor(.white)
+                        }
+                        Spacer()
+                    }
+                    .padding(.vertical, Dimensions.Padding.padding15)
+                    .background(Color(LightTheme.gray400))
+                    .clipShape(Capsule())
+                    
                 }
+                .padding(.horizontal, Dimensions.Padding.padding15)
             }
         }
     }
