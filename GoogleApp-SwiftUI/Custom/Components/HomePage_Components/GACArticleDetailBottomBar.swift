@@ -24,7 +24,7 @@ struct GACArticleDetailBottomBar: View {
             
             VStack {
                 HStack(spacing: Dimensions.Spacing.spacing5) {
-                    ForEach(iconModels.enumerated()) { index, iconModel in
+                    ForEach(iconModels) { iconModel in
                         Image(for: iconModel.icon)
                             .renderAsResizable(.fit)
                             .foregroundColor(.white)

@@ -10,7 +10,7 @@ import SwiftUI
 
 struct SavedTabs: View {
     var body: some View {
-        Color.orange
+        LightTheme.tabBarBGColor
             .ignoresSafeArea()
     }
 }
