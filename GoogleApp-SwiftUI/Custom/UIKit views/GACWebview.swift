@@ -13,15 +13,11 @@ struct GACWebview: UIViewRepresentable {
     let urlStr: String
     
     func makeUIView(context: Context) -> WKWebView {
-        let webView = Utility.webview
-        guard let url = URL(string: urlStr) else {
-            return webView
-        }
-        webView.load(URLRequest(url: url))
-        return webView
+        return WKWebView()
     }
     
     func updateUIView(_ view: WKWebView, context: Context) {
-        
+        guard let url = URL(string: urlStr) else { return }
+        view.load(URLRequest(url: url))
     }
 }

@@ -10,6 +10,9 @@ import UIKit
 import WebKit
 
 struct Utility {
+    static var shared = Utility()
+    private init() { }
+    
     enum ImageName: String {
         case home = "house.fill"
         case notifications = "bell.circle"
@@ -111,7 +114,7 @@ struct Utility {
                 Utility.ImageName.natgeo].randomElement()!
     }
     
-    static var webview: WKWebView = {
+    lazy var webview: WKWebView = {
        return WKWebView()
     }()
     
