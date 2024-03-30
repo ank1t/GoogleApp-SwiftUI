@@ -4,7 +4,10 @@
 //
 //  Created by Singh, Ankit on 2024-02-06
 //
-        
+
+/*
+ https://forums.developer.apple.com/forums/thread/713290
+ */
 import Foundation
 import WebKit
 import SwiftUI
