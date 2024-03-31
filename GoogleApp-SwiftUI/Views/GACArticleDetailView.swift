@@ -17,7 +17,7 @@ struct GACArticleDetailView: View {
             GACArticleDetailTopBar()
                 .environmentObject(newTabSetting)
             if networkMonitor.status == .connected {
-                GACWebview(urlStr: newTabSetting.preSelectedURL ?? "https://cnn.com")
+                GACWebview(urlStr: newTabSetting.preSelectedURL ?? Constants.defaultURL)
             } else {
                 GACNoNetworkConnection()
             }
