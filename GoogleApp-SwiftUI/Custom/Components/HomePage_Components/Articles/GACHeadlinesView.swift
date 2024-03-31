@@ -22,6 +22,7 @@ struct GACHeadlinesView: View {
                 Text("Some long news article text that should go to 2 lines")
                     .font(.system(size: Dimensions.FontSize.font18, weight: .medium))
                     .foregroundColor(.white)
+                Spacer()
                 AsyncImage(url: URL(string: ""),
                            content: { image in
                     image.resizable()
