@@ -10,6 +10,7 @@ import SwiftUI
 struct GACRecommendedSearchesRow: View {
     var text: String = "Some text"
     var icon: Utility.ImageName = .trending
+    @StateObject var newTabSetting = NewTabSetting()
     
     var body: some View {
         HStack {
@@ -30,6 +31,16 @@ struct GACRecommendedSearchesRow: View {
             Text(text)
                 .foregroundColor(.white)
                 .font(.system(size: Dimensions.FontSize.font18))
+        }
+        .onTapGesture {
+            if let urlEncoded = text.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) {
+                newTabSetting.preSelectedURL = String(format: Constants.googleBaseURL, urlEncoded)
+            }
+            newTabSetting.shouldShowWindow.toggle()
+        }
+        .fullScreenCover(isPresented: $newTabSetting.shouldShowWindow) {
+            GACArticleDetailView()
+                .environmentObject(newTabSetting)
         }
     }
 }

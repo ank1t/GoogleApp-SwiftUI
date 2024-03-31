@@ -10,14 +10,14 @@ import SwiftUI
 
 struct GACArticleDetailView: View {
     @StateObject var networkMonitor = Monitor()
-    @EnvironmentObject private var newTabSetting: NewTabSetting
+    @EnvironmentObject var newTabSetting: NewTabSetting
     
     var body: some View {
         VStack {
             GACArticleDetailTopBar()
                 .environmentObject(newTabSetting)
             if networkMonitor.status == .connected {
-                GACWebview(urlStr: "https://cnn.com")
+                GACWebview(urlStr: newTabSetting.preSelectedURL ?? "https://cnn.com")
             } else {
                 GACNoNetworkConnection()
             }

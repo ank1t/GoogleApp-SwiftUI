@@ -24,4 +24,5 @@ struct Constants {
     static let searchOrURLTextfieldPlaceholder: String = "Search or type URL"
     static let animationID: String = "SearchTextfieldAnimation"
     static let youtubeBaseURL: String = "https://www.youtube.com/"
+    static let googleBaseURL: String = "https://www.google.com/search?client=safari&q=%@"
 }

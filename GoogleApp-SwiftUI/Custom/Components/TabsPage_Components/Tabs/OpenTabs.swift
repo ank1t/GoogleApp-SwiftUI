@@ -10,6 +10,7 @@ import SwiftUI
 
 class NewTabSetting : ObservableObject {
     @Published var shouldShowWindow = false
+    @Published var preSelectedURL: String?
 }
 
 struct OpenTabs: View {
