@@ -17,7 +17,7 @@ struct GACHeadlinesView: View {
     let url: String
     
     var body: some View {
-        VStack(spacing: Dimensions.Spacing.spacing5) {
+        VStack(alignment: .leading, spacing: Dimensions.Spacing.spacing5) {
             HStack(alignment: .top, spacing: Dimensions.Spacing.spacing10) {
                 Text("Some long news article text that should go to 2 lines")
                     .font(.system(size: Dimensions.FontSize.font18, weight: .medium))

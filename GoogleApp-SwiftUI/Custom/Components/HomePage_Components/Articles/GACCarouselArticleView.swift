@@ -26,7 +26,7 @@ struct GACCarouselArticleView: View {
                                 .resizable()
                                 .frame(width: scrollViewFrame.width/2,
                                        height: Dimensions.FrameSize.size200)
-                                .aspectRatio(contentMode: .fit)
+                                .aspectRatio(contentMode: .fill)
                         }
                     }
                 }
