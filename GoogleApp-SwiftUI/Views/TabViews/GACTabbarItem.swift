@@ -28,10 +28,10 @@ struct GACTabbarItem: View {
                     .padding(.bottom, Dimensions.Padding.padding5)
             } else if let text {
                 Text(text)
-                    .applyTextStyle(.gray, .body)
+                    .applyTextStyle(.white, .body)
             }
             Text(title)
-                .applyTextStyle(.gray, .caption)
+                .applyTextStyle(.white, .caption)
         }
         .onTapGesture {
             indexOfSelectedTab = indexOfTab
