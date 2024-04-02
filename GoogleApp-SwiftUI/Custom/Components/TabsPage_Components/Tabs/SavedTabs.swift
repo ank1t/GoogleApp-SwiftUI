@@ -59,9 +59,7 @@ struct SavedTabs: View {
         }
         .task {
             do {
-                savedArticles = DataManager.shared.getRecentlySavedArticles()
-            } catch {
-                savedArticles = []
+                savedArticles = await DataManager.shared.getRecentlySavedArticles()
             }
         }
     }
