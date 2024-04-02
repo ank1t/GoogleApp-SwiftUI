@@ -31,8 +31,8 @@ struct GACLastOpenedIconTitleSubtitle: View {
         .padding(.horizontal, Dimensions.Padding.padding15)
         .padding(.vertical, Dimensions.Padding.padding10)
         .overlay(
-            RoundedRectangle(cornerRadius: Dimensions.CornerRadius.cornerRadius8)
-                .stroke(.gray, lineWidth: 1)
+            config.showOverlay ? RoundedRectangle(cornerRadius: Dimensions.CornerRadius.cornerRadius8)
+                .stroke(.gray, lineWidth: 1) : nil
         )
         
     }

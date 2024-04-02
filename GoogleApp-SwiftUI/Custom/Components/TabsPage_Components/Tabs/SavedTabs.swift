@@ -9,6 +9,8 @@ import Foundation
 import SwiftUI
 
 struct SavedTabs: View {
+    @State private var savedArticles: [GACIconTitleSubtitleConfig]?
+    
     var body: some View {
         ZStack {
             LightTheme.tabBarBGColor
@@ -53,6 +55,13 @@ struct SavedTabs: View {
                         .frame(height: Dimensions.FrameSize.size70)
                 }
                 .padding(.horizontal, Dimensions.Padding.padding15)
+            }
+        }
+        .task {
+            do {
+                savedArticles = DataManager.shared.getRecentlySavedArticles()
+            } catch {
+                savedArticles = []
             }
         }
     }

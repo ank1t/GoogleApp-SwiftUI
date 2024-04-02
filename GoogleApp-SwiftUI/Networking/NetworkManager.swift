@@ -18,7 +18,7 @@ struct DataManager {
                                subtitle: "https://www.cbc.ca/news/canada/toronto/bald-eagle-nest-toronto-1.7135876")
     }
     
-    func getRecentlySavedArticles() -> [GACIconTitleSubtitleConfig] {
+    func getRecentlySavedArticles() async -> [GACIconTitleSubtitleConfig] {
         [GACIconTitleSubtitleConfig(icon: .eagle,
                                title: "Bald eagle nest found in Toronto for the first time in recorded history",
                                subtitle: "https://www.cbc.ca/news/canada/toronto/bald-eagle-nest-toronto-1.7135876"),
