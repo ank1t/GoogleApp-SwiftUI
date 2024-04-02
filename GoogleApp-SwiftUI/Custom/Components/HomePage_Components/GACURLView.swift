@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct GACURLView: View {
-    @State private var url: String = "https://www.google.com"
+    @EnvironmentObject var newTabSetting: NewTabSetting
     
     var body: some View {
         HStack {
@@ -19,7 +19,7 @@ struct GACURLView: View {
                 .frame(width: Dimensions.FrameSize.size15, height: Dimensions.FrameSize.size15)
                 .padding(.leading, Dimensions.Padding.padding15)
             
-            TextField("", text: $url)
+            TextField("", text: $newTabSetting.preSelectedURL ?? Constants.defaultURL)
                 .padding(.vertical)
                 .font(.system(size: Dimensions.FontSize.font14, weight: .semibold))
                 .foregroundColor(Color(.white))
@@ -38,7 +38,7 @@ struct GACURLView: View {
                 .contentShape(Rectangle())
                 .allowsHitTesting(true)
                 .onTapGesture {
-                    guard let urlFromLink = URL(string: url) else { return }
+                    guard let urlFromLink = URL(string: newTabSetting.preSelectedURL ?? Constants.defaultURL) else { return }
                     Utility.shareActivityItems([urlFromLink])
                 }
         }

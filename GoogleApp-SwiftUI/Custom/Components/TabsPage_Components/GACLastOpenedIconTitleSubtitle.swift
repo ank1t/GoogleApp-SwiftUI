@@ -34,6 +34,7 @@ struct GACLastOpenedIconTitleSubtitle: View {
             RoundedRectangle(cornerRadius: Dimensions.CornerRadius.cornerRadius8)
                 .stroke(.gray, lineWidth: 1)
         )
+        
     }
 }
 
