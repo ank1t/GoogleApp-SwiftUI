@@ -31,7 +31,6 @@ struct SavedTabs: View {
                     .padding(.vertical, Dimensions.Padding.padding15)
                     .background(Color(LightTheme.gray400))
                     .clipShape(Capsule())
-                    
                 }
                 .padding(.horizontal, Dimensions.Padding.padding15)
             }
