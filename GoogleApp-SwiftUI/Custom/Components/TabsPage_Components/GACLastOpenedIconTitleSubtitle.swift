@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct GACLastOpenedIconTitleSubtitle: View {
-    @Binding var config: GACLastOpenedURLConfig
+    @Binding var config: GACIconTitleSubtitleConfig
     
     var body: some View {
         HStack(alignment: .top,

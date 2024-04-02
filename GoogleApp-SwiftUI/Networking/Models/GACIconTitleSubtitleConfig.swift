@@ -7,7 +7,7 @@
         
 import Foundation
 
-struct GACLastOpenedURLConfig {
+struct GACIconTitleSubtitleConfig {
     var icon: Utility.ImageName
     let title: String
     let subtitle: String

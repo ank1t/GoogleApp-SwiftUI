@@ -12,10 +12,20 @@ struct DataManager {
     
     private init() { }
     
-    func getLastOpenedConfig() -> GACLastOpenedURLConfig {
-        GACLastOpenedURLConfig(icon: .cnn,
+    func getLastOpenedConfig() -> GACIconTitleSubtitleConfig {
+        GACIconTitleSubtitleConfig(icon: .cnn,
                                title: "Bald eagle nest found in Toronto for the first time in recorded history",
                                subtitle: "https://www.cbc.ca/news/canada/toronto/bald-eagle-nest-toronto-1.7135876")
+    }
+    
+    func getRecentlySavedArticles() -> GACIconTitleSubtitleConfig {
+        [GACIconTitleSubtitleConfig(icon: .eagle,
+                               title: "Bald eagle nest found in Toronto for the first time in recorded history",
+                               subtitle: "https://www.cbc.ca/news/canada/toronto/bald-eagle-nest-toronto-1.7135876"),
+         GACIconTitleSubtitleConfig(icon: .bear,
+                                    title: "Bears are carnivoran mammals of the family Ursidae",
+                                    subtitle: "https://www.nationalgeographic.com/animals/mammals/facts/bears-grizzly-polar-panda")
+        ]
     }
     
     func getSavedArticles() -> [GACSavedArticlesConfig] {
