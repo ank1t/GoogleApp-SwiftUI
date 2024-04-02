@@ -31,6 +31,21 @@ struct SavedTabs: View {
                     .padding(.vertical, Dimensions.Padding.padding15)
                     .background(Color(LightTheme.gray400))
                     .clipShape(Capsule())
+                    
+                    Text("Recent collections")
+                        .padding(.top, Dimensions.Padding.padding20)
+                    
+                    HStack(spacing: Dimensions.Spacing.spacing0) {
+                        Spacer()
+                        Button(action: {}) {
+                            Text("View all collections →")
+                                .foregroundColor(.white)
+                        }
+                        Spacer()
+                    }
+                    .padding(.vertical, Dimensions.Padding.padding15)
+                    .background(Color(LightTheme.gray400))
+                    .clipShape(Capsule())
                 }
                 .padding(.horizontal, Dimensions.Padding.padding15)
             }
