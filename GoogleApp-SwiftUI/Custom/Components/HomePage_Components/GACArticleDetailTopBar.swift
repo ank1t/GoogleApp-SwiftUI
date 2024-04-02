@@ -30,6 +30,7 @@ struct GACArticleDetailTopBar: View {
                 GACURLView()
                     .padding(.horizontal, Dimensions.Padding.padding8)
                     .padding(.bottom, Dimensions.Padding.padding5)
+                    .environmentObject(newTabSetting)
                 
                 Menu {
                     Button(role: nil) { } label: {
