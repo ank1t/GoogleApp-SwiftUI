@@ -11,6 +11,7 @@ import SwiftUI
 struct GACRecentActivity: View {
     @Binding var searchTerm: String
     @State private var config = DataManager.shared.getLastOpenedConfig()
+    @EnvironmentObject var newTabSetting: NewTabSetting
     
     var body: some View {
         if searchTerm.isEmpty {
@@ -21,7 +22,16 @@ struct GACRecentActivity: View {
                 
                 ForEach(0..<1) { _ in
                     GACLastOpenedIconTitleSubtitle(config: $config)
+                        .onTapGesture {
+                            newTabSetting.preSelectedURL = config.subtitle
+                            newTabSetting.shouldShowWindow.toggle()
+                        }
+                        .fullScreenCover(isPresented: $newTabSetting.shouldShowWindow) {
+                            GACArticleDetailView()
+                                .environmentObject(newTabSetting)
+                        }
                 }
+                
                 Spacer()
             }
             .padding(.horizontal, Dimensions.Padding.padding20)
