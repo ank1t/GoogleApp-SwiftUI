@@ -34,6 +34,7 @@
 		846CAA642B7C4A02001F16DE /* GACMaterialTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846CAA632B7C4A02001F16DE /* GACMaterialTabs.swift */; };
 		846CAA662B7C4A42001F16DE /* GACTabPageSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846CAA652B7C4A42001F16DE /* GACTabPageSearchResult.swift */; };
 		846E63B22B73029D0084CEC6 /* GACWebview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E63B12B73029D0084CEC6 /* GACWebview.swift */; };
+		847A82072BBB91E1008A47BE /* Operator+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A82062BBB91E1008A47BE /* Operator+Extensions.swift */; };
 		847FC7482B901A7F0034E537 /* HomePageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847FC7472B901A7F0034E537 /* HomePageResponse.swift */; };
 		84861F772B96AE6C00E02BDA /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84861F762B96AE6C00E02BDA /* ToastView.swift */; };
 		848F62032B95487F00CDF743 /* NoNetworkDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F62022B95487F00CDF743 /* NoNetworkDialogView.swift */; };
@@ -139,6 +140,7 @@
 		846CAA632B7C4A02001F16DE /* GACMaterialTabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACMaterialTabs.swift; sourceTree = "<group>"; };
 		846CAA652B7C4A42001F16DE /* GACTabPageSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACTabPageSearchResult.swift; sourceTree = "<group>"; };
 		846E63B12B73029D0084CEC6 /* GACWebview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACWebview.swift; sourceTree = "<group>"; };
+		847A82062BBB91E1008A47BE /* Operator+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Operator+Extensions.swift"; sourceTree = "<group>"; };
 		847FC7472B901A7F0034E537 /* HomePageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageResponse.swift; sourceTree = "<group>"; };
 		84861F762B96AE6C00E02BDA /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		848F62022B95487F00CDF743 /* NoNetworkDialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoNetworkDialogView.swift; sourceTree = "<group>"; };
@@ -523,6 +525,7 @@
 				84DB7FE62B5B657000830FE6 /* UIImage+Extensions.swift */,
 				8428A1222B7080D400EF4BDF /* UIApplication+Extensions.swift */,
 				848F62062B95678000CDF743 /* UIView+Extensions.swift */,
+				847A82062BBB91E1008A47BE /* Operator+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -694,6 +697,7 @@
 				845EAC6C2B6B40D300F15D71 /* NetworkManager.swift in Sources */,
 				8404D3642B746FDF00ADF190 /* NetworkMonitor.swift in Sources */,
 				8493B3882B9CF95D0000C256 /* GACOpenedSavedTabConfig.swift in Sources */,
+				847A82072BBB91E1008A47BE /* Operator+Extensions.swift in Sources */,
 				84DB7FE02B5B655700830FE6 /* Popup.swift in Sources */,
 				8493B38E2B9D470B0000C256 /* GACOpenTab.swift in Sources */,
 				84DE20952B649B1D00622BBE /* GACSearchTextField.swift in Sources */,
