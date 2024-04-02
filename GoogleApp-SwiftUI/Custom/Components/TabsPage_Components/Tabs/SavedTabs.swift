@@ -19,6 +19,7 @@ struct SavedTabs: View {
                     LightTheme.tabBarBGColor
                         .frame(height: Dimensions.FrameSize.size60)
                     Text("Recently saved")
+                        .padding(.bottom, Dimensions.Padding.padding8)
                     
                     HStack(spacing: Dimensions.Spacing.spacing0) {
                         Spacer()
@@ -34,6 +35,7 @@ struct SavedTabs: View {
                     
                     Text("Recent collections")
                         .padding(.top, Dimensions.Padding.padding20)
+                        .padding(.bottom, Dimensions.Padding.padding8)
                     
                     HStack(spacing: Dimensions.Spacing.spacing0) {
                         Spacer()
