@@ -10,6 +10,7 @@ import SwiftUI
 
 struct SavedTabs: View {
     @State private var savedArticles: [GACIconTitleSubtitleConfig]?
+    @StateObject var newTabSetting = NewTabSetting()
     
     var body: some View {
         ZStack {
@@ -28,12 +29,24 @@ struct SavedTabs: View {
                             .clipShape(RoundedRectangle(cornerRadius: Dimensions.CornerRadius.cornerRadius8))
                         
                         VStack(spacing: Dimensions.Spacing.spacing0) {
-                            ForEach(savedArticles ?? []) { article in
-                                GACSavedResult(config: article)
-                                    .padding(.horizontal, Dimensions.Padding.padding15)
-                                    .padding(.vertical, Dimensions.Padding.padding15)
-                                Divider()
-                                    .background(.black)
+                            if let items = savedArticles {
+                                ForEach(Array(zip(items.indices, items)), id: \.0) { index, article in
+                                    GACSavedResult(config: article)
+                                        .padding(.horizontal, Dimensions.Padding.padding15)
+                                        .padding(.vertical, Dimensions.Padding.padding15)
+                                        .onTapGesture {
+                                            newTabSetting.preSelectedURL = article.subtitle
+                                            newTabSetting.shouldShowWindow.toggle()
+                                        }
+                                        .fullScreenCover(isPresented: $newTabSetting.shouldShowWindow) {
+                                            GACArticleDetailView()
+                                                .environmentObject(newTabSetting)
+                                        }
+                                    if index != items.count - 1 {
+                                        Divider()
+                                            .background(LightTheme.tabBarBGColor)
+                                    }
+                                }
                             }
                         }
                     }
