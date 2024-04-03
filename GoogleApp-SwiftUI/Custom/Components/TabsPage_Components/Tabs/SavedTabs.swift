@@ -10,6 +10,7 @@ import SwiftUI
 
 struct SavedTabs: View {
     @State private var savedArticles: [GACIconTitleSubtitleConfig]?
+    @State private var recentCollections: [GACIconTitleSubtitleConfig]?
     @StateObject var envSettings = EnvironmentSettings()
     @State private var showProgressView: Bool = false
     
@@ -100,11 +101,13 @@ struct SavedTabs: View {
             showProgressView.toggle()
             do {
                 savedArticles = await DataManager.shared.getRecentlySavedArticles()
+                recentCollections = await DataManager.shared.getRecentCollections()
                 showProgressView.toggle()
             }
         }
         .onDisappear {
             savedArticles = nil
+            recentCollections = nil
         }
     }
 }

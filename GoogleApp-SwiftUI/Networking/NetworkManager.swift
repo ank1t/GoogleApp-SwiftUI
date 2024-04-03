@@ -28,6 +28,22 @@ struct DataManager {
         ]
     }
     
+    func getRecentCollections() async -> [GACIconTitleSubtitleConfig] {
+        [GACIconTitleSubtitleConfig(icon: .eagle,
+                                    title: "Favorite pages",
+                                    subtitle: "2 items"),
+         GACIconTitleSubtitleConfig(icon: .bear,
+                                    title: "Favorite places",
+                                    subtitle: "1 item"),
+         GACIconTitleSubtitleConfig(icon: .bear,
+                                    title: "Favorite images",
+                                    subtitle: "No items"),
+         GACIconTitleSubtitleConfig(icon: .bear,
+                                    title: "Favorite itineraries",
+                                    subtitle: "No items")
+        ]
+    }
+    
     func getSavedArticles() -> [GACSavedArticlesConfig] {
         [GACSavedArticlesConfig(image: .lion, title: "Lion is generally regarded as the king of the jungle",
                                icon: .cnn, url: "wikipedia.com"),
