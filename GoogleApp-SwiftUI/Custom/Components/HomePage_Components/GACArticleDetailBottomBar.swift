@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct GACArticleDetailBottomBar: View {
-    @EnvironmentObject private var newTabSetting: NewTabSetting
+    @EnvironmentObject private var newTabSetting: EnvironmentSettings
     
     private let iconModels: [GACBottomBarIconModel] = [
         GACBottomBarIconModel(icon: .backArrow, actionHandler: nil),

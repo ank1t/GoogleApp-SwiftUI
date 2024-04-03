@@ -11,7 +11,7 @@ import SwiftUI
 struct GACRecentActivity: View {
     @Binding var searchTerm: String
     @State private var config = DataManager.shared.getLastOpenedConfig()
-    @EnvironmentObject var newTabSetting: NewTabSetting
+    @EnvironmentObject var newTabSetting: EnvironmentSettings
     
     var body: some View {
         if searchTerm.isEmpty {

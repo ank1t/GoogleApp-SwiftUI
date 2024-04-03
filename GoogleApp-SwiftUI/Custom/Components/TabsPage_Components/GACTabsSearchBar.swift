@@ -12,7 +12,7 @@ struct GACTabsSearchBarAndResults: View {
     @State var searchStr: String = ""
     @FocusState private var searchFieldIsFocused: Bool
     @State private var showingRecentActivity: Bool = false
-    @StateObject var newTabSetting = NewTabSetting()
+    @StateObject var newTabSetting = EnvironmentSettings()
     
     var body: some View {
         ZStack {

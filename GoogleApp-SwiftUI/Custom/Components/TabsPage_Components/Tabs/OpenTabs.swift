@@ -8,13 +8,14 @@
 import Foundation
 import SwiftUI
 
-class NewTabSetting : ObservableObject {
+class EnvironmentSettings : ObservableObject {
     @Published var shouldShowWindow = false
     @Published var preSelectedURL: String?
+    @Published var showActivityIndicator: Bool = false
 }
 
 struct OpenTabs: View {
-    @StateObject var newTabSetting = NewTabSetting()
+    @StateObject var newTabSetting = EnvironmentSettings()
     
     var body: some View {
         ZStack(alignment: .bottomTrailing) {

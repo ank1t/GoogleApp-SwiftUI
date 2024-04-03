@@ -10,7 +10,7 @@ import SwiftUI
 struct GACRecommendedSearchesRow: View {
     var text: String = "Some text"
     var icon: Utility.ImageName = .trending
-    @StateObject var newTabSetting = NewTabSetting()
+    @StateObject var newTabSetting = EnvironmentSettings()
     
     var body: some View {
         HStack {

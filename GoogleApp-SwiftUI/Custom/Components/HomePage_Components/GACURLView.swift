@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct GACURLView: View {
-    @EnvironmentObject var newTabSetting: NewTabSetting
+    @EnvironmentObject var newTabSetting: EnvironmentSettings
     
     var body: some View {
         HStack {

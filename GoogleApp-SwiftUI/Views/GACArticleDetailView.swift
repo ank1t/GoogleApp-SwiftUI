@@ -10,7 +10,7 @@ import SwiftUI
 
 struct GACArticleDetailView: View {
     @StateObject var networkMonitor = Monitor()
-    @EnvironmentObject var newTabSetting: NewTabSetting
+    @EnvironmentObject var newTabSetting: EnvironmentSettings
     
     var body: some View {
         VStack {
