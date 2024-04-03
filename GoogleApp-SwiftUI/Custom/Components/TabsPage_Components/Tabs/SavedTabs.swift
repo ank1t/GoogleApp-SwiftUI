@@ -13,6 +13,7 @@ struct SavedTabs: View {
     @State private var recentCollections: [GACIconTitleSubtitleConfig]?
     @StateObject var envSettings = EnvironmentSettings()
     @State private var showProgressView: Bool = false
+    @State private var viewItemDetails: Bool = false
     
     var body: some View {
         GeometryReader { geometry in
@@ -57,7 +58,9 @@ struct SavedTabs: View {
                         
                         HStack(spacing: Dimensions.Spacing.spacing0) {
                             Spacer()
-                            Button(action: {}) {
+                            Button(action: {
+                                viewItemDetails.toggle()
+                            }) {
                                 Text("View all saved items →")
                                     .foregroundColor(.white)
                             }
@@ -73,7 +76,9 @@ struct SavedTabs: View {
                         
                         HStack(spacing: Dimensions.Spacing.spacing0) {
                             Spacer()
-                            Button(action: {}) {
+                            Button(action: {
+                                viewItemDetails.toggle()
+                            }) {
                                 Text("View all collections →")
                                     .foregroundColor(.white)
                             }
@@ -97,6 +102,9 @@ struct SavedTabs: View {
                     .opacity(showProgressView ? 0.2 : 0.0)
             }
         }
+        .actionSheet(isPresented: viewItemDetails, content: {
+            
+        })
         .task {
             showProgressView.toggle()
             do {
