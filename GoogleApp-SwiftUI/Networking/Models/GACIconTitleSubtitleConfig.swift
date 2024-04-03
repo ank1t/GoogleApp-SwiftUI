@@ -7,7 +7,8 @@
         
 import Foundation
 
-struct GACIconTitleSubtitleConfig {
+struct GACIconTitleSubtitleConfig: Identifiable {
+    var id: UUID = UUID()
     var icon: Utility.ImageName
     let title: String
     let subtitle: String

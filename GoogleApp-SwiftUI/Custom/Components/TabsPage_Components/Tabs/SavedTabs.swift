@@ -23,6 +23,22 @@ struct SavedTabs: View {
                     Text("Recently saved")
                         .padding(.bottom, Dimensions.Padding.padding8)
                     
+                    ZStack {
+                        Color(LightTheme.gray400)
+                            .clipShape(RoundedRectangle(cornerRadius: Dimensions.CornerRadius.cornerRadius8))
+                        
+                        VStack(spacing: Dimensions.Spacing.spacing0) {
+                            ForEach(savedArticles ?? []) { article in
+                                GACSavedResult(config: article)
+                                    .padding(.horizontal, Dimensions.Padding.padding15)
+                                    .padding(.vertical, Dimensions.Padding.padding15)
+                                Divider()
+                                    .background(.black)
+                            }
+                        }
+                    }
+                    .padding(.bottom, Dimensions.Padding.padding5)
+                    
                     HStack(spacing: Dimensions.Spacing.spacing0) {
                         Spacer()
                         Button(action: {}) {
