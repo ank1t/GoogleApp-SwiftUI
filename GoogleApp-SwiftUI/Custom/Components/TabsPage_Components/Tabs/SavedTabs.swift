@@ -10,7 +10,7 @@ import SwiftUI
 
 struct SavedTabs: View {
     @State private var savedArticles: [GACIconTitleSubtitleConfig]?
-    @State private var recentCollections: [GACIconTitleSubtitleConfig]?
+    @State private var recentCollections: [GACRecentCollectionsVM]?
     @StateObject var envSettings = EnvironmentSettings()
     @State private var showProgressView: Bool = false
     @State private var viewItemDetails: Bool = false
@@ -74,6 +74,14 @@ struct SavedTabs: View {
                             .padding(.top, Dimensions.Padding.padding20)
                             .padding(.bottom, Dimensions.Padding.padding8)
                         
+                        VStack(spacing: Dimensions.Spacing.spacing10) {
+                            ForEach(recentCollections?.enumerated()) { index, collection in
+                                <#code#>
+                            }
+                            HStack(spacing: Dimensions.Spacing.spacing10) {
+                                
+                            }
+                        }
                         HStack(spacing: Dimensions.Spacing.spacing0) {
                             Spacer()
                             Button(action: {
@@ -102,8 +110,8 @@ struct SavedTabs: View {
                     .opacity(showProgressView ? 0.2 : 0.0)
             }
         }
-        .actionSheet(isPresented: viewItemDetails, content: {
-            
+        .actionSheet(isPresented: $viewItemDetails, content: {
+            VStack { Text("") }
         })
         .task {
             showProgressView.toggle()

@@ -28,19 +28,15 @@ struct DataManager {
         ]
     }
     
-    func getRecentCollections() async -> [GACIconTitleSubtitleConfig] {
-        [GACIconTitleSubtitleConfig(icon: .eagle,
-                                    title: "Favorite pages",
-                                    subtitle: "2 items"),
-         GACIconTitleSubtitleConfig(icon: .bear,
-                                    title: "Favorite places",
-                                    subtitle: "1 item"),
-         GACIconTitleSubtitleConfig(icon: .bear,
-                                    title: "Favorite images",
-                                    subtitle: "No items"),
-         GACIconTitleSubtitleConfig(icon: .bear,
-                                    title: "Favorite itineraries",
-                                    subtitle: "No items")
+    func getRecentCollections() async -> [GACRecentCollectionsVM] {
+        [GACRecentCollectionsVM(image: .eagle, title: "Favorite pages",
+                                itemCount: "2 items", imageSize: .zero),
+         GACRecentCollectionsVM(image: .bear, title: "Favorite places",
+                                itemCount: "19 items", imageSize: .zero),
+         GACRecentCollectionsVM(image: .bear, title: "Favorite images",
+                                itemCount: "No items", imageSize: .zero),
+         GACRecentCollectionsVM(image: .bear, title: "Favorite itineraries",
+                                itemCount: "No items", imageSize: .zero)
         ]
     }
     

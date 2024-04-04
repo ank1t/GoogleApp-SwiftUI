@@ -35,6 +35,8 @@
 		846E63B22B73029D0084CEC6 /* GACWebview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E63B12B73029D0084CEC6 /* GACWebview.swift */; };
 		847A82072BBB91E1008A47BE /* Operator+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A82062BBB91E1008A47BE /* Operator+Extensions.swift */; };
 		847A82092BBCD661008A47BE /* GACSavedResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A82082BBCD661008A47BE /* GACSavedResult.swift */; };
+		847A820D2BBE3A47008A47BE /* GACRecentCollections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A820C2BBE3A47008A47BE /* GACRecentCollections.swift */; };
+		847A820F2BBE3B22008A47BE /* GACRecentCollectionsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A820E2BBE3B22008A47BE /* GACRecentCollectionsVM.swift */; };
 		847FC7482B901A7F0034E537 /* HomePageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847FC7472B901A7F0034E537 /* HomePageResponse.swift */; };
 		84861F772B96AE6C00E02BDA /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84861F762B96AE6C00E02BDA /* ToastView.swift */; };
 		848F62032B95487F00CDF743 /* NoNetworkDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F62022B95487F00CDF743 /* NoNetworkDialogView.swift */; };
@@ -141,6 +143,8 @@
 		846E63B12B73029D0084CEC6 /* GACWebview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACWebview.swift; sourceTree = "<group>"; };
 		847A82062BBB91E1008A47BE /* Operator+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Operator+Extensions.swift"; sourceTree = "<group>"; };
 		847A82082BBCD661008A47BE /* GACSavedResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACSavedResult.swift; sourceTree = "<group>"; };
+		847A820C2BBE3A47008A47BE /* GACRecentCollections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACRecentCollections.swift; sourceTree = "<group>"; };
+		847A820E2BBE3B22008A47BE /* GACRecentCollectionsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACRecentCollectionsVM.swift; sourceTree = "<group>"; };
 		847FC7472B901A7F0034E537 /* HomePageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageResponse.swift; sourceTree = "<group>"; };
 		84861F762B96AE6C00E02BDA /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		848F62022B95487F00CDF743 /* NoNetworkDialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoNetworkDialogView.swift; sourceTree = "<group>"; };
@@ -306,6 +310,8 @@
 				8493B3892B9D07ED0000C256 /* GACSavedArticles.swift */,
 				8493B38D2B9D470B0000C256 /* GACOpenTab.swift */,
 				847A82082BBCD661008A47BE /* GACSavedResult.swift */,
+				847A820C2BBE3A47008A47BE /* GACRecentCollections.swift */,
+				847A820E2BBE3B22008A47BE /* GACRecentCollectionsVM.swift */,
 			);
 			path = TabsPage_Components;
 			sourceTree = "<group>";
@@ -718,9 +724,11 @@
 				84DE20992B65ECAE00622BBE /* GACNotificationsView.swift in Sources */,
 				84DB7FDD2B5B655700830FE6 /* GACLocalWeatherView.swift in Sources */,
 				8428A1232B7080D400EF4BDF /* UIApplication+Extensions.swift in Sources */,
+				847A820D2BBE3A47008A47BE /* GACRecentCollections.swift in Sources */,
 				848F62092B9567F200CDF743 /* RoundedCorners.swift in Sources */,
 				84D0EF4C2B9FD91300F8D1A0 /* AnimatedTabs.swift in Sources */,
 				849A21832B6F8914006BE8F3 /* GACArticleDetailBottomBar.swift in Sources */,
+				847A820F2BBE3B22008A47BE /* GACRecentCollectionsVM.swift in Sources */,
 				84DA16BA2B8F27680066336D /* HomePageViewModel.swift in Sources */,
 				84DB7FD82B5B655700830FE6 /* GACHeadlineArticleActionsView.swift in Sources */,
 				847A82092BBCD661008A47BE /* GACSavedResult.swift in Sources */,
