@@ -68,6 +68,9 @@ struct Utility {
         case cnn = "cnn"
         case gn = "gn"
         case natgeo = "nat-geo"
+        case plane = "plane"
+        case earth = "earth"
+        case toronto = "toronto"
         
         case bear = "bear"
         case cheetah = "cheetah"
