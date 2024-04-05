@@ -14,6 +14,7 @@ struct SavedTabs: View {
     @StateObject var envSettings = EnvironmentSettings()
     @State private var showProgressView: Bool = false
     @State private var viewItemDetails: Bool = false
+    @State private var sheetDetent = PresentationDetent.large
     
     var body: some View {
         GeometryReader { geometry in
@@ -109,7 +110,10 @@ struct SavedTabs: View {
                     .opacity(showProgressView ? 0.2 : 0.0)
             }
         }
-//
+        .sheet(isPresented: $viewItemDetails, content: {
+            VStack { Text("") }
+                .presentationDetents([.medium, .large], selection: $sheetDetent)
+        })
         .task {
             showProgressView.toggle()
             do {
