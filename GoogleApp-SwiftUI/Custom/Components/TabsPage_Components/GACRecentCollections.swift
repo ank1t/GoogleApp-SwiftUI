@@ -22,7 +22,7 @@ struct GACRecentCollections: View {
                 .applyTextStyle(.white, .footnote)
                 .padding(.top, Dimensions.Padding.padding5)
             
-            Text("\(viewModel.itemCount) items")
+            Text("\(viewModel.itemCount)")
                 .applyTextStyle(.gray, .footnote)
         }
     }

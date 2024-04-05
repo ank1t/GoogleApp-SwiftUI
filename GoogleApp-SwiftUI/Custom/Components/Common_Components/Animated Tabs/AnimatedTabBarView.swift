@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct AnimatedTabBarView: View {
-    private let tabNames: [String] = AnimatedTabsVM.tabs
+    let tabNames: [String]
     @Binding var selectedIndex: Int
     @Namespace var nameSpace
     

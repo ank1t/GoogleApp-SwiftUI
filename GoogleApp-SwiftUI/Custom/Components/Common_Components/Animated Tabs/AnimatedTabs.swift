@@ -21,7 +21,8 @@ struct AnimatedTabs: View {
             .tabViewStyle(.page(indexDisplayMode: .never))
             .ignoresSafeArea()
             
-            AnimatedTabBarView(selectedIndex: $selectedIndex)
+            AnimatedTabBarView(tabNames: viewModel.tabs,
+                               selectedIndex: $selectedIndex)
         }
     }
 }
