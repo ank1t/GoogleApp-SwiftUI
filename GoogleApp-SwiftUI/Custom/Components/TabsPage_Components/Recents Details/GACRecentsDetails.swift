@@ -29,6 +29,8 @@ struct GACRecentsDetails: View {
                 
             }
             .padding(.horizontal, Dimensions.Padding.padding15)
+            
+            Spacer()
         }
     }
 }

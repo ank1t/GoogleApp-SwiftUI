@@ -304,6 +304,7 @@
 		846CAA612B7C498F001F16DE /* TabsPage_Components */ = {
 			isa = PBXGroup;
 			children = (
+				847A82122BBF83FA008A47BE /* Recents Details */,
 				84B2DE962BB31C5600BDB146 /* Tabs */,
 				846CAA652B7C4A42001F16DE /* GACTabPageSearchResult.swift */,
 				8493B37F2B9CA2700000C256 /* GACTabsSearchBar.swift */,
@@ -314,7 +315,6 @@
 				847A82082BBCD661008A47BE /* GACSavedResult.swift */,
 				847A820C2BBE3A47008A47BE /* GACRecentCollections.swift */,
 				847A820E2BBE3B22008A47BE /* GACRecentCollectionsVM.swift */,
-				847A82102BBF81A7008A47BE /* GACRecentsDetails.swift */,
 			);
 			path = TabsPage_Components;
 			sourceTree = "<group>";
@@ -347,6 +347,14 @@
 				846E63B12B73029D0084CEC6 /* GACWebview.swift */,
 			);
 			path = "UIKit views";
+			sourceTree = "<group>";
+		};
+		847A82122BBF83FA008A47BE /* Recents Details */ = {
+			isa = PBXGroup;
+			children = (
+				847A82102BBF81A7008A47BE /* GACRecentsDetails.swift */,
+			);
+			path = "Recents Details";
 			sourceTree = "<group>";
 		};
 		84B2DE932BB31B3800BDB146 /* Animated Tabs */ = {
