@@ -74,14 +74,13 @@ struct SavedTabs: View {
                             .padding(.top, Dimensions.Padding.padding20)
                             .padding(.bottom, Dimensions.Padding.padding8)
                         
-                        VStack(spacing: Dimensions.Spacing.spacing10) {
-                            ForEach(recentCollections?.enumerated()) { index, collection in
-                                <#code#>
-                            }
-                            HStack(spacing: Dimensions.Spacing.spacing10) {
-                                
+                        LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())],
+                                  alignment: .) {
+                            ForEach(recentCollections ?? [], id: \.id) { collection in
+                                GACRecentCollections(viewModel: collection)
                             }
                         }
+                        
                         HStack(spacing: Dimensions.Spacing.spacing0) {
                             Spacer()
                             Button(action: {
@@ -110,9 +109,7 @@ struct SavedTabs: View {
                     .opacity(showProgressView ? 0.2 : 0.0)
             }
         }
-        .actionSheet(isPresented: $viewItemDetails, content: {
-            VStack { Text("") }
-        })
+//
         .task {
             showProgressView.toggle()
             do {

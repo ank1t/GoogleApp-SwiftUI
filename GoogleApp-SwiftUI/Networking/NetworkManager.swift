@@ -31,11 +31,11 @@ struct DataManager {
     func getRecentCollections() async -> [GACRecentCollectionsVM] {
         [GACRecentCollectionsVM(image: .eagle, title: "Favorite pages",
                                 itemCount: "2 items", imageSize: .zero),
-         GACRecentCollectionsVM(image: .bear, title: "Favorite places",
+         GACRecentCollectionsVM(image: .eagle, title: "Favorite places",
                                 itemCount: "19 items", imageSize: .zero),
-         GACRecentCollectionsVM(image: .bear, title: "Favorite images",
+         GACRecentCollectionsVM(image: .eagle, title: "Favorite images",
                                 itemCount: "No items", imageSize: .zero),
-         GACRecentCollectionsVM(image: .bear, title: "Favorite itineraries",
+         GACRecentCollectionsVM(image: .eagle, title: "Favorite itineraries",
                                 itemCount: "No items", imageSize: .zero)
         ]
     }

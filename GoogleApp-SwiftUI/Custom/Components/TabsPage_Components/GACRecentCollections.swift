@@ -13,10 +13,12 @@ struct GACRecentCollections: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: Dimensions.Spacing.spacing5) {
-            Image(for: image)
+            Image(for: viewModel.image)
                 .resizable()
-                .frame(width: viewModel.imageSize.width,
-                       height: viewModel.imageSize.height)
+//                .frame(width: viewModel.imageSize.width,
+//                       height: viewModel.imageSize.height)
+                .aspectRatio(contentMode: .fit)
+                .clipShape(RoundedRectangle(cornerRadius: Dimensions.CornerRadius.cornerRadius8))
             
             Text(viewModel.title)
                 .applyTextStyle(.white, .footnote)
