@@ -34,9 +34,9 @@ struct DataManager {
          GACRecentCollectionsVM(image: .toronto, title: "Favorite places",
                                 itemCount: "19 items"),
          GACRecentCollectionsVM(image: .earth, title: "Favorite images",
-                                itemCount: "No items"),
+                                itemCount: "4 items"),
          GACRecentCollectionsVM(image: .plane, title: "Favorite itineraries",
-                                itemCount: "No items")
+                                itemCount: "7 items")
         ]
     }
     
