@@ -111,7 +111,7 @@ struct SavedTabs: View {
             }
         }
         .sheet(isPresented: $viewItemDetails, content: {
-            GACRecentsDetails
+            GACRecentsDetails()
                 .presentationDetents([.medium, .large], selection: $sheetDetent)
         })
         .task {
