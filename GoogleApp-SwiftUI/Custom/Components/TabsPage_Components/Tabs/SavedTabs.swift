@@ -75,7 +75,7 @@ struct SavedTabs: View {
                             .padding(.bottom, Dimensions.Padding.padding8)
                         
                         LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())],
-                                  alignment: .) {
+                                  alignment: .listRowSeparatorLeading) {
                             ForEach(recentCollections ?? [], id: \.id) { collection in
                                 GACRecentCollections(viewModel: collection)
                             }
