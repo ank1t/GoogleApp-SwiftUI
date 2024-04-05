@@ -14,20 +14,21 @@ struct GACRecentsDetails: View {
         VStack(spacing: Dimensions.Spacing.spacing10) {
             HStack(spacing: Dimensions.Spacing.spacing10) {
                 Text("Interests")
-                    .applyTextStyle(.white, .subheadline)
+                    .applyTextStyle(.white, .title2)
                 Spacer()
                 
                 Image(for: .help)
                     .resizable()
-                    .frame(width: Dimensions.FrameSize.size40,
-                           height: Dimensions.FrameSize.size40)
+                    .frame(width: Dimensions.FrameSize.size20,
+                           height: Dimensions.FrameSize.size20)
                 
                 Image(for: .user)
                     .resizable()
-                    .frame(width: Dimensions.FrameSize.size40,
-                           height: Dimensions.FrameSize.size40)
+                    .frame(width: Dimensions.FrameSize.size30,
+                           height: Dimensions.FrameSize.size30)
                 
             }
+            .padding(.horizontal, Dimensions.Padding.padding15)
         }
     }
 }
