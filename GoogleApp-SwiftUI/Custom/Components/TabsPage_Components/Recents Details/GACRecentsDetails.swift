@@ -39,5 +39,6 @@ struct GACRecentsDetails: View {
             
             AnimatedTabs(viewModel: animatedTabsVM)
         }
+        .background(LightTheme.tabBarBGColor)
     }
 }
