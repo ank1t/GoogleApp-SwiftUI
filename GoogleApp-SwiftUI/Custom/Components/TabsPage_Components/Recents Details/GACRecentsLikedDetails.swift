@@ -10,6 +10,6 @@ import SwiftUI
 
 struct GACRecentsLikedDetails: View {
     var body: some View {
-        Color.blue
+        Color.blue.i.ignoresSafeArea()
     }
 }
