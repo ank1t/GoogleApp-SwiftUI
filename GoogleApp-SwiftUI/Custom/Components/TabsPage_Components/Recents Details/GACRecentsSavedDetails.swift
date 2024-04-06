@@ -10,6 +10,7 @@ import SwiftUI
 
 struct GACRecentsSavedDetails: View {
     @State private var savedArticles: [GACRecentCollectionsVM]?
+    @State private var savedCollections: [GACRecentCollectionsVM]?
     @State private var showProgressView: Bool = false
     
     var body: some View {
@@ -29,6 +30,17 @@ struct GACRecentsSavedDetails: View {
                                 GACRecentCollections(viewModel: collection)
                             }
                         }
+                        .padding(.bottom, Dimensions.Padding.padding20)
+                        
+                        Text("Recents collections")
+                            .applyTextStyle(.white, .title3)
+                        
+                        LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())],
+                                  alignment: .center) {
+                            ForEach(savedCollections ?? [], id: \.id) { collection in
+                                GACRecentCollections(viewModel: collection)
+                            }
+                        }
                         
                         Spacer()
                     }
@@ -42,6 +54,7 @@ struct GACRecentsSavedDetails: View {
                             .resizable()
                             .frame(width: Dimensions.FrameSize.size15,
                                    height: Dimensions.FrameSize.size15)
+                            .foregroundColor(.white)
                         
                         Text("Create")
                             .applyTextStyle(.white, .title3)
@@ -66,6 +79,7 @@ struct GACRecentsSavedDetails: View {
             showProgressView.toggle()
             do {
                 savedArticles = await DataManager.shared.getRecentCollectionsDetails()
+                savedCollections = await DataManager.shared.getCollectionsDetails()
                 showProgressView.toggle()
             }
         }

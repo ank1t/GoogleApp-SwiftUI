@@ -79,6 +79,11 @@ struct Utility {
         case mountain
         case orion
         
+        case wallpaper1
+        case wallpaper2
+        case wallpaper3
+        case wallpaper4
+        
         case bear = "bear"
         case cheetah = "cheetah"
         case lion = "lion"

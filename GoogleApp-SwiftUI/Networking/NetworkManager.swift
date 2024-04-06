@@ -44,16 +44,28 @@ struct DataManager {
     func getRecentCollectionsDetails() async -> [GACRecentCollectionsVM] {
         [GACRecentCollectionsVM(image: .lake, title: "Lorem ipsum",
                                 itemCount: "2 items"),
-         GACRecentCollectionsVM(image: .snow, title: "Lorem ipsum",
+         GACRecentCollectionsVM(image: .snow, title: "Is simply",
                                 itemCount: "19 items"),
-         GACRecentCollectionsVM(image: .forest, title: "Lorem ipsum",
+         GACRecentCollectionsVM(image: .forest, title: "Dummy text",
                                 itemCount: "4 items"),
-         GACRecentCollectionsVM(image: .ocean, title: "Lorem ipsum",
+         GACRecentCollectionsVM(image: .ocean, title: "Neque porro",
                                 itemCount: "17 items"),
-         GACRecentCollectionsVM(image: .mountain, title: "Lorem ipsum",
+         GACRecentCollectionsVM(image: .mountain, title: "Quisquam est",
                                 itemCount: "25 items"),
-         GACRecentCollectionsVM(image: .orion, title: "Lorem ipsum",
+         GACRecentCollectionsVM(image: .orion, title: "Dolorem ipsum",
                                 itemCount: "90 items")
+        ]
+    }
+    
+    func getCollectionsDetails() async -> [GACRecentCollectionsVM] {
+        [GACRecentCollectionsVM(image: .wallpaper1, title: "Lorem ipsum",
+                                itemCount: "2 items"),
+         GACRecentCollectionsVM(image: .wallpaper2, title: "Is simply",
+                                itemCount: "19 items"),
+         GACRecentCollectionsVM(image: .wallpaper3, title: "Dummy text",
+                                itemCount: "4 items"),
+         GACRecentCollectionsVM(image: .wallpaper4, title: "Neque porro",
+                                itemCount: "17 items")
         ]
     }
     
