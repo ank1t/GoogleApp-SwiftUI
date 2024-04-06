@@ -11,4 +11,5 @@ import SwiftUI
 struct AnimatedTabsVM {
     var tabs: [String] = ["Tabs", "Saved"]
     var views: [AnyView] = [AnyView(OpenTabs()), AnyView(SavedTabs())]
+    var tabItemsBackgroundColor: Color = .black
 }

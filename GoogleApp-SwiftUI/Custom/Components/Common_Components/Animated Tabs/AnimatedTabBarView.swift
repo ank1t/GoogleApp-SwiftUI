@@ -10,6 +10,7 @@ import SwiftUI
 
 struct AnimatedTabBarView: View {
     let tabNames: [String]
+    let tabItemsBackgroundColor: Color
     @Binding var selectedIndex: Int
     @Namespace var nameSpace
     
@@ -27,7 +28,7 @@ struct AnimatedTabBarView: View {
             }
             .scrollDisabled(true)
         }
-        .background(.black)
+        .background(tabItemsBackgroundColor)
         .frame(height: Dimensions.FrameSize.size50)
         .edgesIgnoringSafeArea(.top)
     }

@@ -8,3 +8,8 @@
 import Foundation
 import SwiftUI
 
+struct GACRecentsSavedDetails: View {
+    var body: some View {
+        Color.red
+    }
+}

@@ -8,3 +8,8 @@
 import Foundation
 import SwiftUI
 
+struct GACRecentsFollowedDetails: View {
+    var body: some View {
+        Color.orange
+    }
+}

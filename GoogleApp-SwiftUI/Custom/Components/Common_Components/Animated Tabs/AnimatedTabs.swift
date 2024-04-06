@@ -24,6 +24,7 @@ struct AnimatedTabs: View {
             .ignoresSafeArea()
             
             AnimatedTabBarView(tabNames: viewModel.tabs,
+                               tabItemsBackgroundColor: viewModel.tabItemsBackgroundColor,
                                selectedIndex: $selectedIndex)
         }
     }

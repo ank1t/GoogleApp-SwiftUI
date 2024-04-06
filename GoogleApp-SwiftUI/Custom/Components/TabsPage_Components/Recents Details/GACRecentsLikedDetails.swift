@@ -8,4 +8,8 @@
 import Foundation
 import SwiftUI
 
-
+struct GACRecentsLikedDetails: View {
+    var body: some View {
+        Color.blue
+    }
+}
