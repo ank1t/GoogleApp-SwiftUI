@@ -19,7 +19,9 @@ struct GACRecentsLikedDetails: View {
                     .resizable()
                     .frame(width: Dimensions.FrameSize.size20,
                            height: Dimensions.FrameSize.size20)
+                    .padding(Dimensions.Padding.padding12)
                     .background(.pink)
+                    .clipShape(RoundedRectangle(cornerRadius: Dimensions.CornerRadius.cornerRadius8))
                 
                 Text("Find what you like")
                     .applyTextStyle(.white, .title3)
