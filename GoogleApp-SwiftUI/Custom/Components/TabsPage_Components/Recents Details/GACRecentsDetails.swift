@@ -38,8 +38,6 @@ struct GACRecentsDetails: View {
             .padding(.top, Dimensions.Padding.padding24)
             
             AnimatedTabs(viewModel: animatedTabsVM)
-                         
-            Spacer()
         }
     }
 }
