@@ -16,30 +16,34 @@ struct GACRecentsSavedDetails: View {
         GeometryReader { geometry in
             ZStack {
                 LightTheme.tabBarBGColor
-                VStack(alignment: .leading,
-                       spacing: Dimensions.Spacing.spacing15) {
-                    Text("Saved items")
-                        .applyTextStyle(.white, .title3)
-                    
-                    LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())],
-                              alignment: .center) {
-                        GACRecentCollections(viewModel: savedArticles?[0])
-                        GACRecentCollections(viewModel: savedArticles?[1])
+                ScrollView {
+                    VStack(alignment: .leading,
+                           spacing: Dimensions.Spacing.spacing15) {
+                        Text("Saved items")
+                            .applyTextStyle(.white, .title3)
+                        
+                        LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())],
+                                  alignment: .center) {
+                            ForEach(savedArticles ?? [], id: \.id) { collection in
+                                GACRecentCollections(viewModel: collection)
+                            }
+                        }
+                        
                     }
-                    
+                           .padding(.horizontal, Dimensions.Padding.padding15)
                 }
-                
                 ProgressView()
                     .frame(width: geometry.frame(in: .global).width,
                            height: geometry.frame(in: .global).height)
                     .background(.black)
                     .opacity(showProgressView ? 0.2 : 0.0)
             }
+            
         }
         .task {
             showProgressView.toggle()
             do {
-                savedArticles = await DataManager.shared.getRecentlySavedArticles()
+                savedArticles = await DataManager.shared.getRecentCollections()
                 showProgressView.toggle()
             }
         }
