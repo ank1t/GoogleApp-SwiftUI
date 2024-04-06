@@ -15,6 +15,12 @@ struct GACRecentsLikedDetails: View {
             
             VStack(spacing: Dimensions.Spacing.spacing10) {
                 
+                Image(for: .like)
+                    .resizable()
+                    .frame(width: Dimensions.FrameSize.size20,
+                           height: Dimensions.FrameSize.size20)
+                    .background(.pink)
+                
                 Text("Find what you like")
                     .applyTextStyle(.white, .title3)
                 
