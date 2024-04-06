@@ -10,7 +10,7 @@ import SwiftUI
 
 struct GACRecentsLikedDetails: View {
     var body: some View {
-        ZStack {
+        ZStack(alignment: .top) {
             LightTheme.tabBarBGColor
             
             VStack(spacing: Dimensions.Spacing.spacing10) {
@@ -31,7 +31,7 @@ struct GACRecentsLikedDetails: View {
                     .multilineTextAlignment(.center)
             }
             .padding(.horizontal, Dimensions.Padding.padding15)
-            .padding(.top, Dimensions.Padding.padding20)
+            .padding(.top, Dimensions.Padding.padding75)
             
             Spacer()
         }
