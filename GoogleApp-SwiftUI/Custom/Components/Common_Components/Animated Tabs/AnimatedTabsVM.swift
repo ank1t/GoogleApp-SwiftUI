@@ -9,6 +9,6 @@ import Foundation
 import SwiftUI
 
 struct AnimatedTabsVM {
-    let tabs: [String] = ["Tabs", "Saved"]
-    let views: [AnyView] = [AnyView(OpenTabs()), AnyView(SavedTabs())]
+    var tabs: [String] = ["Tabs", "Saved"]
+    var views: [AnyView] = [AnyView(OpenTabs()), AnyView(SavedTabs())]
 }

@@ -9,13 +9,14 @@ import Foundation
 import SwiftUI
 
 struct AnimatedTabs: View {
-    let viewModel = AnimatedTabsVM()
+    var viewModel = AnimatedTabsVM()
     @State private var selectedIndex: Int = 0
     
     var body: some View {
         ZStack(alignment: .top) {
             TabView(selection: $selectedIndex) {
-                ForEach(Array(zip(viewModel.views.indices, viewModel.views)), id: \.0) { index, view in
+                ForEach(Array(zip(viewModel.views.indices,
+                                  viewModel.views)), id: \.0) { index, view in
                     view.tag(index)
                 }
             }
