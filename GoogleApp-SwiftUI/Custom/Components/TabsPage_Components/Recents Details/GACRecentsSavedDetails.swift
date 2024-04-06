@@ -16,38 +16,43 @@ struct GACRecentsSavedDetails: View {
         GeometryReader { geometry in
             ZStack(alignment: .bottomTrailing) {
                 LightTheme.tabBarBGColor
-                    .frame(height: Dimensions.FrameSize.size75)
                 
-                VStack(alignment: .leading,
-                       spacing: Dimensions.Spacing.spacing15) {
-                    Text("Saved items")
-                        .applyTextStyle(.white, .title3)
-                    
-                    LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())],
-                              alignment: .center) {
-                        ForEach(savedArticles ?? [], id: \.id) { collection in
-                            GACRecentCollections(viewModel: collection)
+                ScrollView {
+                    VStack(alignment: .leading,
+                           spacing: Dimensions.Spacing.spacing15) {
+                        Text("Saved items")
+                            .applyTextStyle(.white, .title3)
+                        
+                        LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())],
+                                  alignment: .center) {
+                            ForEach(savedArticles ?? [], id: \.id) { collection in
+                                GACRecentCollections(viewModel: collection)
+                            }
                         }
+                        
+                        Spacer()
                     }
-                    
+                           .padding(.horizontal, Dimensions.Padding.padding15)
+                           .padding(.top, Dimensions.Padding.padding75)
                 }
-                .padding(.horizontal, Dimensions.Padding.padding15)
                 
                 Button(action: {}) {
-                    HStack {
+                    HStack(spacing: Dimensions.Spacing.spacing15) {
                         Image(for: .plus)
                             .resizable()
                             .frame(width: Dimensions.FrameSize.size15,
                                    height: Dimensions.FrameSize.size15)
                         
                         Text("Create")
+                            .applyTextStyle(.white, .title3)
                     }
                     .padding(.horizontal, Dimensions.Padding.padding15)
-                    .padding(.vertical, Dimensions.Padding.padding8)
-                    .background(.blue)
+                    .padding(.vertical, Dimensions.Padding.padding15)
+                    .background(LightTheme.ctaButtonblue)
                     .clipShape(RoundedRectangle(cornerRadius: Dimensions.CornerRadius.cornerRadius8))
                 }
-                .offset(x: -20, y:-20)
+                .offset(x: -Dimensions.Spacing.spacing20,
+                        y: -Dimensions.Spacing.spacing20)
                 
                 ProgressView()
                     .frame(width: geometry.frame(in: .global).width,
@@ -60,7 +65,7 @@ struct GACRecentsSavedDetails: View {
         .task {
             showProgressView.toggle()
             do {
-                savedArticles = await DataManager.shared.getRecentCollections()
+                savedArticles = await DataManager.shared.getRecentCollectionsDetails()
                 showProgressView.toggle()
             }
         }

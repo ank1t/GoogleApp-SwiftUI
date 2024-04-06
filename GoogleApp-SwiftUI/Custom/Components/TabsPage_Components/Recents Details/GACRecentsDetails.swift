@@ -13,7 +13,7 @@ struct GACRecentsDetails: View {
                                         views: [AnyView(GACRecentsSavedDetails()),
                                                 AnyView(GACRecentsLikedDetails()),
                                                 AnyView(GACRecentsFollowedDetails())],
-                                        tabItemsBackgroundColor: .clear)
+                                        tabItemsBackgroundColor: LightTheme.tabBarBGColor)
     
     var body: some View {
         VStack(spacing: Dimensions.Spacing.spacing10) {

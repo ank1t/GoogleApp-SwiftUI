@@ -40,6 +40,23 @@ struct DataManager {
         ]
     }
     
+    
+    func getRecentCollectionsDetails() async -> [GACRecentCollectionsVM] {
+        [GACRecentCollectionsVM(image: .lake, title: "Lorem ipsum",
+                                itemCount: "2 items"),
+         GACRecentCollectionsVM(image: .snow, title: "Lorem ipsum",
+                                itemCount: "19 items"),
+         GACRecentCollectionsVM(image: .forest, title: "Lorem ipsum",
+                                itemCount: "4 items"),
+         GACRecentCollectionsVM(image: .ocean, title: "Lorem ipsum",
+                                itemCount: "17 items"),
+         GACRecentCollectionsVM(image: .mountain, title: "Lorem ipsum",
+                                itemCount: "25 items"),
+         GACRecentCollectionsVM(image: .orion, title: "Lorem ipsum",
+                                itemCount: "90 items")
+        ]
+    }
+    
     func getSavedArticles() -> [GACSavedArticlesConfig] {
         [GACSavedArticlesConfig(image: .lion, title: "Lion is generally regarded as the king of the jungle",
                                icon: .cnn, url: "wikipedia.com"),

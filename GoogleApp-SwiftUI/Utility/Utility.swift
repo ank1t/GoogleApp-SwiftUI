@@ -72,6 +72,13 @@ struct Utility {
         case earth = "earth"
         case toronto = "toronto"
         
+        case lake
+        case snow
+        case forest
+        case ocean
+        case mountain
+        case orion
+        
         case bear = "bear"
         case cheetah = "cheetah"
         case lion = "lion"
@@ -173,6 +180,7 @@ struct Dimensions {
         static let padding32: CGFloat = 32
         static let padding45: CGFloat = 45
         static let padding50: CGFloat = 50
+        static let padding75: CGFloat = 75
     }
     
     struct Spacing {
@@ -185,6 +193,7 @@ struct Dimensions {
         static let spacing20: CGFloat = 20
         static let spacing25: CGFloat = 25
         static let spacing40: CGFloat = 40
+        static let spacing100: CGFloat = 100
         static let spacing250: CGFloat = 250
     }
     
