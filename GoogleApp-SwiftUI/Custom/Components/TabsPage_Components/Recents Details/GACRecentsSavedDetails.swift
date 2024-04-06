@@ -14,24 +14,41 @@ struct GACRecentsSavedDetails: View {
     
     var body: some View {
         GeometryReader { geometry in
-            ZStack {
+            ZStack(alignment: .bottomTrailing) {
                 LightTheme.tabBarBGColor
-                ScrollView {
-                    VStack(alignment: .leading,
-                           spacing: Dimensions.Spacing.spacing15) {
-                        Text("Saved items")
-                            .applyTextStyle(.white, .title3)
-                        
-                        LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())],
-                                  alignment: .center) {
-                            ForEach(savedArticles ?? [], id: \.id) { collection in
-                                GACRecentCollections(viewModel: collection)
-                            }
+                    .frame(height: Dimensions.FrameSize.size75)
+                
+                VStack(alignment: .leading,
+                       spacing: Dimensions.Spacing.spacing15) {
+                    Text("Saved items")
+                        .applyTextStyle(.white, .title3)
+                    
+                    LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())],
+                              alignment: .center) {
+                        ForEach(savedArticles ?? [], id: \.id) { collection in
+                            GACRecentCollections(viewModel: collection)
                         }
-                        
                     }
-                           .padding(.horizontal, Dimensions.Padding.padding15)
+                    
                 }
+                .padding(.horizontal, Dimensions.Padding.padding15)
+                
+                Button(action: {}) {
+                    HStack {
+                        Image(for: .plus)
+                            .resizable()
+                            .frame(width: Dimensions.FrameSize.size15,
+                                   height: Dimensions.FrameSize.size15)
+                        
+                        Text("Create")
+                    }
+                    .padding(.horizontal, Dimensions.Padding.padding15)
+                    .padding(.vertical, Dimensions.Padding.padding8)
+                    .background(.blue)
+                    .clipShape(RoundedRectangle(cornerRadius: Dimensions.CornerRadius.cornerRadius8))
+                }
+                .offset(x: -20, y:-20)
+                
                 ProgressView()
                     .frame(width: geometry.frame(in: .global).width,
                            height: geometry.frame(in: .global).height)
