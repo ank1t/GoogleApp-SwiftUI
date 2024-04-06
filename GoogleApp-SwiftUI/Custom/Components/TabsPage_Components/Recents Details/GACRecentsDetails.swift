@@ -13,7 +13,7 @@ struct GACRecentsDetails: View {
                                         views: [AnyView(GACRecentsSavedDetails()),
                                                 AnyView(GACRecentsLikedDetails()),
                                                 AnyView(GACRecentsFollowedDetails())],
-                                        tabItemsBackgroundColor: LightTheme.tabBarBGColor)
+                                        tabItemsBackgroundColor: .clear)
     
     var body: some View {
         VStack(spacing: Dimensions.Spacing.spacing10) {
@@ -33,9 +33,9 @@ struct GACRecentsDetails: View {
                            height: Dimensions.FrameSize.size30)
                 
             }
-            .padding(.top, Dimensions.Padding.padding15)
+            .padding(.horizontal, Dimensions.Padding.padding15)
             .padding(.bottom, Dimensions.Padding.padding10)
-            .padding(.vertical, Dimensions.Padding.padding24)
+            .padding(.top, Dimensions.Padding.padding24)
             
             AnimatedTabs(viewModel: animatedTabsVM)
                          
