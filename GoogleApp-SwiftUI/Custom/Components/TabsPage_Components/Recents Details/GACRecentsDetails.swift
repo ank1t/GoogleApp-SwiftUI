@@ -31,7 +31,8 @@ struct GACRecentsDetails: View {
             .padding(.horizontal, Dimensions.Padding.padding15)
             .padding(.vertical, Dimensions.Padding.padding24)
             
-            AnimatedTabs(viewModel: AnimatedTabsVM(
+            AnimatedTabs(viewModel: AnimatedTabsVM(tabs: [],
+                                                   views: [])
         }
     }
 }
