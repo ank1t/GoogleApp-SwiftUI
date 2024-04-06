@@ -15,8 +15,9 @@ struct AnimatedTabs: View {
     var body: some View {
         ZStack(alignment: .top) {
             TabView(selection: $selectedIndex) {
-                OpenTabs().tag(0)
-                SavedTabs().tag(1)
+                ForEach(Array(zip(viewModel.views.indices, viewModel.views)), id: \.0) { index, view in
+                    view.tag(index)
+                }
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
             .ignoresSafeArea()
