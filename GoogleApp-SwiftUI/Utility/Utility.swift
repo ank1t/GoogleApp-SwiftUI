@@ -43,6 +43,7 @@ struct Utility {
         case google_logo
         case upArrow = "arrow.up"
         case like = "heart"
+        case follow = "lasso.and.sparkles"
         case share = "square.and.arrow.up"
         case more = "ellipsis"
         case doc
