@@ -13,7 +13,8 @@ struct GACCreateCollectionBottomSheet: View {
         VStack(spacing: Dimensions.Spacing.spacing15) {
             HStack {
                 Text("Create collection from")
-                    .applyTextStyle(.white, .title)
+                    .applyTextStyle(.white, .title3)
+                    .padding(.top, Dimensions.Padding.padding15)
                 
                 Spacer()
                 
@@ -22,6 +23,8 @@ struct GACCreateCollectionBottomSheet: View {
                     .frame(width: Dimensions.FrameSize.size15,
                            height: Dimensions.FrameSize.size15)
             }
+            .background(LightTheme.searchBarPlaceholderColor)
+            Spacer()
         }
         .padding(.horizontal, Dimensions.Padding.padding15)
     }
