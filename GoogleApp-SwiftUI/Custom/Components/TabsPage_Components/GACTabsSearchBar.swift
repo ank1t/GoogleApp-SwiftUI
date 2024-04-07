@@ -54,8 +54,41 @@ struct GACTabsSearchBarAndResults: View {
                     if !showingRecentActivity {
                         Image(for: .searchPrevious)
                             .foregroundColor(.gray)
-                        Image(for: .more)
-                            .foregroundColor(.gray)
+                        
+                        Menu {
+                            Button(role: nil) {
+                                UIPasteboard.general.string = newTabSetting.preSelectedURL
+                            } label: {
+                                Label("Copy URL", systemImage: Utility.ImageName.copy.rawValue)
+                            }
+                            
+                            Button(role: nil) { } label: {
+                                Label("Find on page", systemImage: Utility.ImageName.searchMenu.rawValue)
+                            }
+                            
+                            Button(role: nil) { } label: {
+                                Label("Read aloud", systemImage: Utility.ImageName.read.rawValue)
+                            }
+                            
+                            Button(role: nil) { } label: {
+                                Label("Refresh", systemImage: Utility.ImageName.reload.rawValue)
+                            }
+                        } label: {
+//                            Image(for: .more)
+//                                .renderAsResizable(.fit)
+//                                .foregroundColor(.white)
+//                                .frame(width: Dimensions.FrameSize.size15,
+//                                       height: Dimensions.FrameSize.size15)
+//                                .padding(.trailing, Dimensions.Padding.padding12)
+//                                .contentShape(Rectangle())
+//                                .allowsHitTesting(true)
+                            Image(for: .more)
+                                .foregroundColor(.gray)
+                                .contentShape(Rectangle())
+                                .allowsHitTesting(true)
+                        }
+                        .preferredColorScheme(.dark)
+                        
                     }
                 }
                 .padding(.vertical, Dimensions.Padding.padding10)

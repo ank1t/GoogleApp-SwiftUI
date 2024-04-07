@@ -33,7 +33,9 @@ struct GACArticleDetailTopBar: View {
                     .environmentObject(newTabSetting)
                 
                 Menu {
-                    Button(role: nil) { } label: {
+                    Button(role: nil) {
+                        UIPasteboard.general.string = newTabSetting.preSelectedURL
+                    } label: {
                         Label("Copy URL", systemImage: Utility.ImageName.copy.rawValue)
                     }
                     
