@@ -23,9 +23,10 @@ struct GACCreateCollectionBottomSheet: View {
                     .frame(width: Dimensions.FrameSize.size15,
                            height: Dimensions.FrameSize.size15)
             }
-            .background(LightTheme.searchBarPlaceholderColor)
+            .background(Color(LightTheme.gray400))
+            .padding(.horizontal, Dimensions.Padding.padding15)
             Spacer()
         }
-        .padding(.horizontal, Dimensions.Padding.padding15)
+        
     }
 }
