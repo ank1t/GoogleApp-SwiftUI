@@ -59,29 +59,17 @@ struct GACTabsSearchBarAndResults: View {
                             Button(role: nil) {
                                 UIPasteboard.general.string = newTabSetting.preSelectedURL
                             } label: {
-                                Label("Copy URL", systemImage: Utility.ImageName.copy.rawValue)
+                                Label("Tabs settings", systemImage: Utility.ImageName.settings.rawValue)
                             }
                             
                             Button(role: nil) { } label: {
-                                Label("Find on page", systemImage: Utility.ImageName.searchMenu.rawValue)
+                                Label("Close all open tabs", systemImage: Utility.ImageName.bin.rawValue)
                             }
                             
                             Button(role: nil) { } label: {
-                                Label("Read aloud", systemImage: Utility.ImageName.read.rawValue)
-                            }
-                            
-                            Button(role: nil) { } label: {
-                                Label("Refresh", systemImage: Utility.ImageName.reload.rawValue)
+                                Label("Send feedback", systemImage: Utility.ImageName.feedback.rawValue)
                             }
                         } label: {
-//                            Image(for: .more)
-//                                .renderAsResizable(.fit)
-//                                .foregroundColor(.white)
-//                                .frame(width: Dimensions.FrameSize.size15,
-//                                       height: Dimensions.FrameSize.size15)
-//                                .padding(.trailing, Dimensions.Padding.padding12)
-//                                .contentShape(Rectangle())
-//                                .allowsHitTesting(true)
                             Image(for: .more)
                                 .foregroundColor(.gray)
                                 .contentShape(Rectangle())
