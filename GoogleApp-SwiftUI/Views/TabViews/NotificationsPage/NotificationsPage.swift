@@ -20,10 +20,25 @@ struct NotificationsPage: View {
                     Text("Notifications")
                         .applyTextStyle(.white, .headline)
                     Spacer()
-                    Image(for: .more)
-                        .renderAsResizable(.fit )
-                        .frame(width: Dimensions.FrameSize.size15,
-                               height: Dimensions.FrameSize.size15)
+                    
+                    Menu {
+                        Button(role: nil) { } label: {
+                            Label("Don't show badges", systemImage: Utility.ImageName.noBadge.rawValue)
+                        }
+                        
+                        Button(role: nil) { } label: {
+                            Label("Send feedback", systemImage: Utility.ImageName.feedback.rawValue)
+                        }
+                    } label: {
+                        Image(for: .more)
+                            .renderAsResizable(.fit )
+                            .frame(width: Dimensions.FrameSize.size15,
+                                   height: Dimensions.FrameSize.size15)
+                            .contentShape(Rectangle())
+                            .allowsHitTesting(true)
+                    }
+                    .preferredColorScheme(.dark)
+                    
                 }
                 .padding(.horizontal, Dimensions.Padding.padding15)
                 .padding(.top, Dimensions.Padding.padding15)
@@ -31,10 +46,13 @@ struct NotificationsPage: View {
                 Spacer()
                 
                 Text("No recent notifications")
-                    .applyTextStyle(.white, .title2)
+                    .applyTextStyle(.white, .title3)
+                    .padding(.bottom, Dimensions.Padding.padding4)
                 
                 Text("Follow topics as you search to get updates on the things you care about")
-                    .applyTextStyle(.white, .title3)
+                    .applyTextStyle(.white, .callout)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, Dimensions.Padding.padding15)
                 
                 Spacer()
             }

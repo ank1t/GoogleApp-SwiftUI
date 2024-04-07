@@ -65,6 +65,7 @@ struct Utility {
         case plus = "plus"
         case bin = "xmark.bin"
         case feedback = "bubble.left.and.exclamationmark.bubble.right.fill"
+        case noBadge = "calendar.badge.minus"
         case cbc = "cbc"
         case gm = "gm"
         case np = "np"
