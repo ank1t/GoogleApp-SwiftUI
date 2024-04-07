@@ -13,7 +13,10 @@ struct GACYoutubeThumbnail: View {
     
     var body: some View {
         ZStack {
-            Color.gray
+            Image(for: .eclipse)
+                .resizable()
+                .frame(height: 200)
+            
             VStack(alignment: .leading) {
                 Spacer()
                 HStack {

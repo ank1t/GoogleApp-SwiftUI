@@ -66,6 +66,8 @@ struct Utility {
         case bin = "xmark.bin"
         case feedback = "bubble.left.and.exclamationmark.bubble.right.fill"
         case noBadge = "calendar.badge.minus"
+        case basketball = "basketball"
+        case eclipse = "eclipse"
         
         case link = "link"
         case allSavedItems = "bookmark.fill"

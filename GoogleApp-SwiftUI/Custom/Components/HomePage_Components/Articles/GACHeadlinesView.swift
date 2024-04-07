@@ -23,17 +23,19 @@ struct GACHeadlinesView: View {
                     .font(.system(size: Dimensions.FontSize.font18, weight: .medium))
                     .foregroundColor(.white)
                 Spacer()
-                AsyncImage(url: URL(string: ""),
-                           content: { image in
-                    image.resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: Dimensions.FrameSize.size100, height: Dimensions.FrameSize.size100)
-                        .clipShape(RoundedRectangle(cornerRadius: Dimensions.CornerRadius.cornerRadius15))
-                }) {
-                    Color.red
-                        .frame(width: Dimensions.FrameSize.size100, height: Dimensions.FrameSize.size100)
-                        .clipShape(RoundedRectangle(cornerRadius: Dimensions.CornerRadius.cornerRadius15))
-                }
+//                AsyncImage(url: URL(string: ""),
+//                           content: { image in
+//
+//                }) {
+//                    Color.red
+//                        .frame(width: Dimensions.FrameSize.size100, height: Dimensions.FrameSize.size100)
+//                        .clipShape(RoundedRectangle(cornerRadius: Dimensions.CornerRadius.cornerRadius15))
+//                }
+                Image(for: .basketball)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: Dimensions.FrameSize.size100, height: Dimensions.FrameSize.size100)
+                    .clipShape(RoundedRectangle(cornerRadius: Dimensions.CornerRadius.cornerRadius15))
             }
             HStack {
                 GACHeadlineChannelAuthorTimeView()
