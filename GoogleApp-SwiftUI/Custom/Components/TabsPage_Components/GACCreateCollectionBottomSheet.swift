@@ -28,7 +28,7 @@ struct GACCreateCollectionBottomSheet: View {
             .padding(.bottom, Dimensions.Padding.padding10)
             .background(Color(LightTheme.gray400))
             
-            List {
+            VStack {
                 HStack {
                     Image(for: .link)
                         .resizable()
