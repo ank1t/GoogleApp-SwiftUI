@@ -22,10 +22,46 @@ struct GACCreateCollectionBottomSheet: View {
                     .resizable()
                     .frame(width: Dimensions.FrameSize.size15,
                            height: Dimensions.FrameSize.size15)
+                    .padding(.top, Dimensions.Padding.padding15)
             }
-            .background(Color(LightTheme.gray400))
             .padding(.horizontal, Dimensions.Padding.padding15)
-            Spacer()
+            .padding(.bottom, Dimensions.Padding.padding10)
+            .background(Color(LightTheme.gray400))
+            
+            List {
+                HStack {
+                    Image(for: .link)
+                        .resizable()
+                        .frame(width: Dimensions.FrameSize.size15,
+                               height: Dimensions.FrameSize.size15)
+                        .padding(.trailing, Dimensions.FrameSize.size20)
+                    
+                    Text("Link")
+                        .applyTextStyle(.white, .callout)
+                }
+                
+                HStack {
+                    Image(for: .allSavedItems)
+                        .resizable()
+                        .frame(width: Dimensions.FrameSize.size15,
+                               height: Dimensions.FrameSize.size15)
+                        .padding(.trailing, Dimensions.FrameSize.size20)
+                    
+                    Text("All saved items")
+                        .applyTextStyle(.white, .callout)
+                }
+                
+                HStack {
+                    Image(for: .blank)
+                        .resizable()
+                        .frame(width: Dimensions.FrameSize.size15,
+                               height: Dimensions.FrameSize.size15)
+                        .padding(.trailing, Dimensions.FrameSize.size20)
+                    
+                    Text("Blank")
+                        .applyTextStyle(.white, .callout)
+                }
+            }
         }
         
     }
