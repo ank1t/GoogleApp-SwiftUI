@@ -28,7 +28,7 @@ struct GACCreateCollectionBottomSheet: View {
             .padding(.bottom, Dimensions.Padding.padding10)
             .background(Color(LightTheme.gray400))
             
-            VStack {
+            VStack(alignment: .leading) {
                 HStack {
                     Image(for: .link)
                         .resizable()
@@ -38,6 +38,8 @@ struct GACCreateCollectionBottomSheet: View {
                     
                     Text("Link")
                         .applyTextStyle(.white, .callout)
+                    
+                    Spacer()
                 }
                 
                 HStack {
