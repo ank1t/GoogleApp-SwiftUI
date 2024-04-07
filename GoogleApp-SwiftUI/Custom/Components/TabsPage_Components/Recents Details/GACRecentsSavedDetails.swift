@@ -87,7 +87,7 @@ struct GACRecentsSavedDetails: View {
             }
         }
         .sheet(isPresented: $showCreateBottomSheet) {
-            GACCreateCollectionBottomSheet()
+            GACCreateCollectionBottomSheet(showCreateBottomSheet: $showCreateBottomSheet)
                 .presentationDetents([.height(200)])
         }
     }

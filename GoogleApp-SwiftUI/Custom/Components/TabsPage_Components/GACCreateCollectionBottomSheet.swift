@@ -9,6 +9,8 @@ import Foundation
 import SwiftUI
 
 struct GACCreateCollectionBottomSheet: View {
+    @Binding var showCreateBottomSheet: Bool
+    
     var body: some View {
         VStack(spacing: Dimensions.Spacing.spacing15) {
             HStack {
@@ -23,6 +25,10 @@ struct GACCreateCollectionBottomSheet: View {
                     .frame(width: Dimensions.FrameSize.size15,
                            height: Dimensions.FrameSize.size15)
                     .padding(.top, Dimensions.Padding.padding15)
+                    .allowsHitTesting(true)
+                    .onTapGesture {
+                        showCreateBottomSheet.toggle()
+                    }
             }
             .padding(.horizontal, Dimensions.Padding.padding15)
             .padding(.bottom, Dimensions.Padding.padding10)
