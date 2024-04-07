@@ -27,6 +27,7 @@ struct GACCreateCollectionBottomSheet: View {
             .padding(.horizontal, Dimensions.Padding.padding15)
             .padding(.bottom, Dimensions.Padding.padding10)
             .background(Color(LightTheme.gray400))
+            .clipShape(RoundedCorners(radius: Dimensions.CornerRadius.cornerRadius8, corners: [.topLeft, .topRight]))
             
             VStack(alignment: .leading) {
                 HStack {
@@ -41,6 +42,7 @@ struct GACCreateCollectionBottomSheet: View {
                     
                     Spacer()
                 }
+                .padding(.leading, Dimensions.Padding.padding15)
                 
                 HStack {
                     Image(for: .allSavedItems)
@@ -52,6 +54,7 @@ struct GACCreateCollectionBottomSheet: View {
                     Text("All saved items")
                         .applyTextStyle(.white, .callout)
                 }
+                .padding(.leading, Dimensions.Padding.padding15)
                 
                 HStack {
                     Image(for: .blank)
@@ -63,8 +66,8 @@ struct GACCreateCollectionBottomSheet: View {
                     Text("Blank")
                         .applyTextStyle(.white, .callout)
                 }
+                .padding(.leading, Dimensions.Padding.padding15)
             }
         }
-        
     }
 }
