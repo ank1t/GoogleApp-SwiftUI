@@ -32,6 +32,7 @@ struct NotificationsPage: View {
                     } label: {
                         Image(for: .more)
                             .renderAsResizable(.fit )
+                            .foregroundColor(.gray)
                             .frame(width: Dimensions.FrameSize.size15,
                                    height: Dimensions.FrameSize.size15)
                             .contentShape(Rectangle())
