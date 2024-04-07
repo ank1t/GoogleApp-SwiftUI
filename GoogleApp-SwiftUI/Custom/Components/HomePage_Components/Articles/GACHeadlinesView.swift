@@ -9,11 +9,6 @@ import Foundation
 import SwiftUI
 
 struct GACHeadlinesView: View {
-//    let headlineText: String
-//    let headlineImage: String
-//    let newsOutletLogo: String
-//    let newsOutletName: String
-//    let headlineTimeStamp: String
     let url: String
     
     var body: some View {
@@ -23,14 +18,6 @@ struct GACHeadlinesView: View {
                     .font(.system(size: Dimensions.FontSize.font18, weight: .medium))
                     .foregroundColor(.white)
                 Spacer()
-//                AsyncImage(url: URL(string: ""),
-//                           content: { image in
-//
-//                }) {
-//                    Color.red
-//                        .frame(width: Dimensions.FrameSize.size100, height: Dimensions.FrameSize.size100)
-//                        .clipShape(RoundedRectangle(cornerRadius: Dimensions.CornerRadius.cornerRadius15))
-//                }
                 Image(for: .basketball)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
