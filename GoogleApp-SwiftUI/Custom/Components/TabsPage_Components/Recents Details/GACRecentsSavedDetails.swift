@@ -12,6 +12,7 @@ struct GACRecentsSavedDetails: View {
     @State private var savedArticles: [GACRecentCollectionsVM]?
     @State private var savedCollections: [GACRecentCollectionsVM]?
     @State private var showProgressView: Bool = false
+    @State private var showCreateBottomSheet: Bool = false
     
     var body: some View {
         GeometryReader { geometry in
@@ -48,7 +49,9 @@ struct GACRecentsSavedDetails: View {
                            .padding(.top, Dimensions.Padding.padding75)
                 }
                 
-                Button(action: {}) {
+                Button(action: {
+                    showCreateBottomSheet.toggle()
+                }) {
                     HStack(spacing: Dimensions.Spacing.spacing15) {
                         Image(for: .plus)
                             .resizable()
@@ -82,6 +85,10 @@ struct GACRecentsSavedDetails: View {
                 savedCollections = await DataManager.shared.getCollectionsDetails()
                 showProgressView.toggle()
             }
+        }
+        .sheet(isPresented: $showCreateBottomSheet) {
+            GACCreateCollectionBottomSheet()
+                .presentationDetents([.height(200)])
         }
     }
 }
