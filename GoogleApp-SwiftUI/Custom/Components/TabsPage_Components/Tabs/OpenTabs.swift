@@ -16,6 +16,7 @@ class EnvironmentSettings : ObservableObject {
 
 struct OpenTabs: View {
     @StateObject var newTabSetting = EnvironmentSettings()
+    @State private var openTabs: [String]?
     
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
@@ -25,8 +26,8 @@ struct OpenTabs: View {
             ScrollView {
                 LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())],
                           alignment: .center) {
-                    ForEach(savedArticles ?? [], id: \.id) { collection in
-                        GACRecentCollections(viewModel: collection)
+                    ForEach(openTabs ?? [], id: \.self) { url in
+                        GACOpenTab(url: url)
                     }
                 }
                 .padding(.bottom, Dimensions.Padding.padding20)
