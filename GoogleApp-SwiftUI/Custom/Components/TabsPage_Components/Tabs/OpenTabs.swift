@@ -31,6 +31,7 @@ struct OpenTabs: View {
                     }
                 }
                 .padding(.bottom, Dimensions.Padding.padding20)
+                .padding(.top, Dimensions.Padding.padding75)
             }
             Button(action: {
                 newTabSetting.shouldShowWindow.toggle()
@@ -55,6 +56,8 @@ struct OpenTabs: View {
                     .environmentObject(newTabSetting)
             })
         }
-        
+        .task {
+            openTabs = DataManager.shared.getOpenTabs()
+        }
     }
 }
