@@ -22,6 +22,15 @@ struct OpenTabs: View {
             LightTheme.tabBarBGColor
                 .ignoresSafeArea()
             
+            ScrollView {
+                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())],
+                          alignment: .center) {
+                    ForEach(savedArticles ?? [], id: \.id) { collection in
+                        GACRecentCollections(viewModel: collection)
+                    }
+                }
+                .padding(.bottom, Dimensions.Padding.padding20)
+            }
             Button(action: {
                 newTabSetting.shouldShowWindow.toggle()
             }) {
