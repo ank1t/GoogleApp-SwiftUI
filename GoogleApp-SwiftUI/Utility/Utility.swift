@@ -145,7 +145,7 @@ struct Utility {
     }()
     
     static var numberOfOpenTabs: Int {
-        return 2
+        return DataManager.shared.getOpenTabs().count
     }
 }
 
