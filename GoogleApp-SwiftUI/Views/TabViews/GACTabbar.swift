@@ -25,7 +25,7 @@ struct GACTabbar: View {
                     
                     Spacer()
                     GACTabbarItem(text: "\(Utility.numberOfOpenTabs)",
-                                  title: "Tabs",
+                                  title: "Tab",
                                   indexOfSelectedTab: $indexOfSelectedTab,
                                   indexOfTab: 1)
                     .padding(.leading, Dimensions.Padding.padding20)
