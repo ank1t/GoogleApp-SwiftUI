@@ -26,12 +26,13 @@ struct GACTabbarItem: View {
                     .frame(width: Dimensions.FrameSize.size15,
                            height: Dimensions.FrameSize.size15)
                     .padding(.bottom, Dimensions.Padding.padding5)
+                    .foregroundColor(indexOfSelectedTab == indexOfTab ? .blue : .white)
             } else if let text {
                 Text(text)
-                    .applyTextStyle(.white, .body)
+                    .applyTextStyle(indexOfSelectedTab == indexOfTab ? .blue : .white, .body)
             }
             Text(title)
-                .applyTextStyle(.white, .caption)
+                .applyTextStyle(indexOfSelectedTab == indexOfTab ? .blue : .white, .caption)
         }
         .onTapGesture {
             indexOfSelectedTab = indexOfTab
