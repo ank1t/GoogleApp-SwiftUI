@@ -139,7 +139,7 @@ struct HomePage: View {
             
             if textfieldIsActive {
                 GACTrendingSearchesView(textfieldIsActive: $textfieldIsActive)
-                    .ignoresSafeArea()
+                    
             }
             
             if isHistoryModalPresented {

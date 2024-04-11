@@ -25,7 +25,7 @@ struct GACHeadlinesView: View {
                     .clipShape(RoundedRectangle(cornerRadius: Dimensions.CornerRadius.cornerRadius15))
             }
             HStack {
-                GACHeadlineChannelAuthorTimeView()
+                GACHeadlineChannelAuthorTimeView(logo: .np)
                 Spacer()
                 GACHeadlineArticleActionsView(url: url)
             }

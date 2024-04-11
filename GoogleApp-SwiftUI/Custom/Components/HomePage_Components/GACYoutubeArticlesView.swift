@@ -16,7 +16,7 @@ struct GACYouTubeArticlesView: View {
                 .frame(height: Dimensions.FrameSize.size200)
                 .clipShape(RoundedRectangle(cornerRadius:  Dimensions.CornerRadius.cornerRadius15))
             HStack {
-                GACHeadlineChannelAuthorTimeView()
+                GACHeadlineChannelAuthorTimeView(logo: .cnn)
                 Spacer()
                 GACHeadlineArticleActionsView(url: Utility.generateYTURL(from: videoID))
             }
